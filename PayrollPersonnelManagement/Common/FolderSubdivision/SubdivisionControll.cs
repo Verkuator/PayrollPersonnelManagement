@@ -32,7 +32,7 @@ namespace PayrollPersonnelManagement.Common
 
         private void DeleteButton_MouseClick(object sender, MouseEventArgs e)
         {
-            PhisicalFace getItem = (PhisicalFace)GetSelectItem();
+            Subdivision getItem = (Subdivision)GetSelectItem();
             if (getItem != null)
             {
                 int ID = getItem.ID;
