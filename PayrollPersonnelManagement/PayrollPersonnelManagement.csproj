@@ -48,19 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\AddEditRead.cs" />
-    <Compile Include="Common\ComboboxItem.cs" />
-    <Compile Include="Common\DataSQLite.cs" />
-    <Compile Include="Common\FolderEmployee\Employee.cs" />
-    <Compile Include="Common\FolderEmployee\EmployeeContoll.cs" />
-    <Compile Include="Common\FolderPhisicalFace\PhisicalFace.cs" />
-    <Compile Include="Common\FolderPhisicalFace\PhisicalFaceControll.cs" />
-    <Compile Include="Common\FolderPost\Post.cs" />
-    <Compile Include="Common\FolderPost\PostContoll.cs" />
-    <Compile Include="Common\FolderSubdivision\Subdivision.cs" />
-    <Compile Include="Common\FolderSubdivision\SubdivisionControll.cs" />
-    <Compile Include="Common\FolderOneAccrual\OneAccrual.cs" />
-    <Compile Include="Common\FolderOneAccrual\OneAccuralControll.cs" />
     <Compile Include="Directorys.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +72,11 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\Employee.cs" />
+    <Compile Include="model\OneAccrual.cs" />
+    <Compile Include="model\PhisicalFace.cs" />
+    <Compile Include="model\Post.cs" />
+    <Compile Include="model\Subdivision.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Directorys.resx">
