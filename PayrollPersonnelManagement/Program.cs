@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PayrollPersonnelManagement.CreateSQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,10 @@ namespace PayrollPersonnelManagement
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            SQLiteCreateDb.CreateSQLite();
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Main());
         }
     }
 }
