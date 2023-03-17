@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="context\Model1.cs" />
     <Compile Include="model\Employee.cs" />
     <Compile Include="model\OneAccrual.cs" />
     <Compile Include="model\PhisicalFace.cs" />
@@ -91,11 +94,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="EntityFramework.ru">
+      <Version>6.2.0</Version>
+    </PackageReference>
     <PackageReference Include="System.Data.SQLite">
-      <Version>1.0.116</Version>
+      <Version>1.0.117</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.Core">
+      <Version>1.0.117</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.EF6">
+      <Version>1.0.117</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.Linq">
+      <Version>1.0.117</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
