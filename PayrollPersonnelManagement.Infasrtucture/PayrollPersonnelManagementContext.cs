@@ -7,7 +7,7 @@ namespace PayrollPersonnelManagement.context
 {
     class PayrollPersonnelManagementContext : DbContext
     {
-        PayrollPersonnelManagementContext(): base(SQLiteCreateDb.ConnectionSring)
+        public PayrollPersonnelManagementContext(): base(SQLiteCreateDb.ConnectionSring)
         {
         }
 
@@ -23,6 +23,8 @@ namespace PayrollPersonnelManagement.context
             modelBuilder.Configurations.Add(new EmployeeConfiguration());
             modelBuilder.Configurations.Add(new PhisicalFaceConfiguration());
             modelBuilder.Configurations.Add(new OneAccrualConfiguration());
+            modelBuilder.Configurations.Add(new PostConfiguration());
+            modelBuilder.Configurations.Add(new SubdivisionConfiguration());
         }
 
 
