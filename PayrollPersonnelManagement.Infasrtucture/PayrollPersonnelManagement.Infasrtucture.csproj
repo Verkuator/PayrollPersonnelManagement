@@ -60,8 +60,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\SubdivisionConfiguration.cs" />
     <Compile Include="Configuration\EmployeeConfiguration.cs" />
+    <Compile Include="Configuration\OneAccrualConfiguration.cs" />
     <Compile Include="Configuration\PhisicalFaceConfiguration.cs" />
+    <Compile Include="Configuration\PostConfiguration.cs" />
     <Compile Include="SQLiteCreateDb.cs" />
     <Compile Include="Model\Employee.cs" />
     <Compile Include="Model\OneAccrual.cs" />

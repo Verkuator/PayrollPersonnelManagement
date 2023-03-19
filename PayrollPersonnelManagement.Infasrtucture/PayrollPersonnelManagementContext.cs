@@ -22,6 +22,7 @@ namespace PayrollPersonnelManagement.context
         {
             modelBuilder.Configurations.Add(new EmployeeConfiguration());
             modelBuilder.Configurations.Add(new PhisicalFaceConfiguration());
+            modelBuilder.Configurations.Add(new OneAccrualConfiguration());
         }
 
 
