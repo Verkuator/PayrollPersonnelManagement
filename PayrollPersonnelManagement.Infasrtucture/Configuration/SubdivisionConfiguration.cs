@@ -8,7 +8,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Configuration
     {
         public SubdivisionConfiguration()
         {
-            ToTable("Post");
+            ToTable("Subdivision");
 
             HasKey(a => a.Id).Property(c => c.Id)
             .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);

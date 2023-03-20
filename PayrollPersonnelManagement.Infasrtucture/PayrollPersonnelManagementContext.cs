@@ -7,7 +7,7 @@ namespace PayrollPersonnelManagement.context
 {
     class PayrollPersonnelManagementContext : DbContext
     {
-        public PayrollPersonnelManagementContext(): base(SQLiteCreateDb.ConnectionSring)
+        public PayrollPersonnelManagementContext(): base("Data Source=" + "PayrollPersonnelManagement.sqlite" + ";")
         {
         }
 
