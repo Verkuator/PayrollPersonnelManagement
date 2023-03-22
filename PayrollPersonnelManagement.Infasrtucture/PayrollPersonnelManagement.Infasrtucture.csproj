@@ -163,9 +163,9 @@
     <Compile Include="Configuration\OneAccrualConfiguration.cs" />
     <Compile Include="Configuration\PhisicalFaceConfiguration.cs" />
     <Compile Include="Configuration\PostConfiguration.cs" />
-    <Compile Include="Migrations\20230322151309_Initilize.cs" />
-    <Compile Include="Migrations\20230322151309_Initilize.Designer.cs">
-      <DependentUpon>20230322151309_Initilize.cs</DependentUpon>
+    <Compile Include="Migrations\20230322193753_FirstMigration.cs" />
+    <Compile Include="Migrations\20230322193753_FirstMigration.designer.cs">
+      <DependentUpon>20230322193753_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\PayrollPersonnelManagementContextModelSnapshot.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
