@@ -2,6 +2,8 @@
 using PayrollPersonnelManagement.Common;
 using PayrollPersonnelManagement.CreateSQLite;
 using PayrollPersonnelManagement.Infasrtucture.Configuration;
+using System.Data.Entity;
+
 namespace PayrollPersonnelManagement.context
 {
     class PayrollPersonnelManagementContext : DbContext
