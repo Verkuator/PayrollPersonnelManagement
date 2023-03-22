@@ -1,13 +1,12 @@
-﻿using PayrollPersonnelManagement.Common;
+﻿using Microsoft.EntityFrameworkCore;
+using PayrollPersonnelManagement.Common;
 using PayrollPersonnelManagement.CreateSQLite;
 using PayrollPersonnelManagement.Infasrtucture.Configuration;
-using System.Data.Entity;
-
 namespace PayrollPersonnelManagement.context
 {
     class PayrollPersonnelManagementContext : DbContext
     {
-        public PayrollPersonnelManagementContext(): base(SQLiteCreateDb.ConnectionSring)
+        public PayrollPersonnelManagementContext()
         {
         }
 
@@ -18,13 +17,16 @@ namespace PayrollPersonnelManagement.context
         public DbSet<Post> Posts { get; set; }
         public DbSet<Subdivision> Subdivisions { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseSqlite("Data Source=PayrollPersonnelManagement.sqlite");
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new EmployeeConfiguration());
-            modelBuilder.Configurations.Add(new PhisicalFaceConfiguration());
-            modelBuilder.Configurations.Add(new OneAccrualConfiguration());
-            modelBuilder.Configurations.Add(new PostConfiguration());
-            modelBuilder.Configurations.Add(new SubdivisionConfiguration());
+            modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
+            modelBuilder.ApplyConfiguration(new PhisicalFaceConfiguration());
+            modelBuilder.ApplyConfiguration(new OneAccrualConfiguration());
+            modelBuilder.ApplyConfiguration(new PostConfiguration());
+            modelBuilder.ApplyConfiguration(new SubdivisionConfiguration());
         }
 
 

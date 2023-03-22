@@ -1,23 +1,25 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PayrollPersonnelManagement.Common;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Configuration
 {
-    class OneAccrualConfiguration : EntityTypeConfiguration<OneAccrual>
+    class OneAccrualConfiguration : IEntityTypeConfiguration<OneAccrual>
     {
-        public OneAccrualConfiguration()
+
+        public void Configure(EntityTypeBuilder<OneAccrual> builder)
         {
-            ToTable("OneAccrual");
+            builder.ToTable("OneAccrual");
 
-            HasKey(a => a.Id).Property(c => c.Id)
-            .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            builder.HasKey(a => a.Id);
+            builder.Property(a => a.Id).ValueGeneratedOnAdd();
 
-            Property(c => c.InDate).HasColumnName("InDate").IsRequired();
-            Property(c => c.HoursMonth).HasColumnName("HoursMonth").IsRequired();
-            Property(c => c.Sum).HasColumnName("Sum").IsRequired();
-            HasRequired(a => a.Employee);
-
+            builder.Property(c => c.InDate).HasColumnName("InDate").IsRequired();
+            builder.Property(c => c.HoursMonth).HasColumnName("HoursMonth").IsRequired();
+            builder.Property(c => c.Sum).HasColumnName("Sum").IsRequired();
+            builder.HasOne(a => a.Employee);
         }
     }
 }

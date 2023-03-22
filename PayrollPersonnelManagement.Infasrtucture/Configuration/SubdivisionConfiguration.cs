@@ -1,20 +1,20 @@
-﻿using PayrollPersonnelManagement.Common;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using PayrollPersonnelManagement.Common;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Configuration
 {
-    class SubdivisionConfiguration : EntityTypeConfiguration<Subdivision>
+    class SubdivisionConfiguration : IEntityTypeConfiguration<Subdivision>
     {
-        public SubdivisionConfiguration()
+        public void Configure(EntityTypeBuilder<Subdivision> builder)
         {
-            ToTable("Post");
+            builder.ToTable("Subdivision");
 
-            HasKey(a => a.Id).Property(c => c.Id)
-            .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            builder.HasKey(a => a.Id);
+            builder.Property(a => a.Id).ValueGeneratedOnAdd();
 
-            Property(c => c.Name).HasColumnName("Name").HasMaxLength(30).IsRequired();
-            Property(c => c.Allowance).HasColumnName("Allowance").IsRequired();
+            builder.Property(c => c.Name).HasColumnName("Name").HasMaxLength(30).IsRequired();
+            builder.Property(c => c.Allowance).HasColumnName("Allowance").IsRequired();
         }
     }
 }

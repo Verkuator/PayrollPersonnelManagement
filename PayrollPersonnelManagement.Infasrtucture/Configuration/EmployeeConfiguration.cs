@@ -1,24 +1,23 @@
-﻿using PayrollPersonnelManagement.Common;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using PayrollPersonnelManagement.Common;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Configuration
 {
-    class EmployeeConfiguration : EntityTypeConfiguration<Employee>
+    class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
     {
-        public EmployeeConfiguration()
+
+        public void Configure(EntityTypeBuilder<Employee> builder)
         {
-            ToTable("Employee");
+            builder.ToTable("Employee");
 
-            HasKey(a => a.Id).Property(c => c.Id)
-            .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            builder.HasKey(a => a.Id);
+            builder.Property(p => p.Id).ValueGeneratedOnAdd();
 
-            HasRequired(a => a.PhisicalFace);
-
-            HasRequired(a => a.Subdivision);
-
-            HasRequired(a => a.Post);
-
+            builder.HasOne(a => a.PhisicalFace);
+            builder.HasOne(a => a.Subdivision);
+            builder.HasOne(a => a.Post);
         }
     }
 }

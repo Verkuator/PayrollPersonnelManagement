@@ -1,5 +1,5 @@
-﻿using System;
-using System.Data.SQLite;
+﻿using Microsoft.Data.Sqlite;
+using System;
 using System.IO;
 
 namespace PayrollPersonnelManagement.CreateSQLite
@@ -11,12 +11,16 @@ namespace PayrollPersonnelManagement.CreateSQLite
 
         public static void CreateSQLite()
         {
-            ConnectionSring = "Data Source=" + _sqliteFile + "; Version=3;";
-            if (File.Exists(Environment.CurrentDirectory + @"\" + _sqliteFile))
-            {
-                return;
-            }
-            SQLiteConnection.CreateFile(_sqliteFile);
+            //SQLitePCL.Batteries.Init();
+
+            //using (var connection = new SqliteConnection("Data Source=PayrollPersonnelManagement.db"))
+            //{
+            //    connection.Open();
+            //}
+
+            //var MyDataConnection = new SqliteConnection("Data Source=PayrollPersonnelManagement.db;");
+            SQLitePCL.Batteries.Init();
+            //MyDataConnection.Open();
         }
     }
 }

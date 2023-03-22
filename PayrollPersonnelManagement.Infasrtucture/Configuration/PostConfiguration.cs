@@ -1,21 +1,20 @@
-﻿using PayrollPersonnelManagement.Common;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using PayrollPersonnelManagement.Common;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Configuration
 {
-    class PostConfiguration : EntityTypeConfiguration<Post>
+    class PostConfiguration : IEntityTypeConfiguration<Post>
     {
-        public PostConfiguration()
+        public void Configure(EntityTypeBuilder<Post> builder)
         {
-            ToTable("Post");
+            builder.ToTable("Post");
 
-            HasKey(a => a.Id).Property(c => c.Id)
-            .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            builder.HasKey(a => a.Id);
+            builder.Property(p => p.Id).ValueGeneratedOnAdd();
 
-            Property(c => c.Name).HasColumnName("Name").HasMaxLength(30).IsRequired();
-            Property(c => c.Salary).HasColumnName("Salary").IsRequired();
-
+            builder.Property(c => c.Name).HasColumnName("Name").HasMaxLength(30).IsRequired();
+            builder.Property(c => c.Salary).HasColumnName("Salary").IsRequired();
         }
     }
 }

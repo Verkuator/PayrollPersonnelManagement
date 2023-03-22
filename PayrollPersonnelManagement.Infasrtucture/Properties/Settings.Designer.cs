@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PayrollPersonnelManagement.Properties {
+namespace PayrollPersonnelManagement.Infasrtucture.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -20,6 +20,16 @@ namespace PayrollPersonnelManagement.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"Driver={Driver do Microsoft Paradox (*.db )};collatingsequence=ASCII;defaultdir=C:\WINDOWS;driverid=538;fil=Paradox 5.X;filedsn=C:\Users\vanta\OneDrive\Документы\PayrollPersonnelManagement.dsn;maxbuffersize=2048;maxscanrows=8;pagetimeout=5;paradoxnetpath=C:\WINDOWS\system32;paradoxnetstyle=4.x;paradoxusername=admin;safetransactions=0;threads=3;uid=admin;usercommitsync=Yes")]
+        public string ConnectionString {
+            get {
+                return ((string)(this["ConnectionString"]));
             }
         }
     }
