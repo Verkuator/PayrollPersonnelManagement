@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PayrollPersonnelManagement.Common;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Configuration
 {

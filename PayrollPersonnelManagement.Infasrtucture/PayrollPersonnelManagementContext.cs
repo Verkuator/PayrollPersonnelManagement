@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PayrollPersonnelManagement.Common;
-using PayrollPersonnelManagement.CreateSQLite;
 using PayrollPersonnelManagement.Infasrtucture.Configuration;
-using System.Data.Entity;
 
 namespace PayrollPersonnelManagement.context
 {
@@ -20,7 +18,7 @@ namespace PayrollPersonnelManagement.context
         public DbSet<Subdivision> Subdivisions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlite("Data Source=PayrollPersonnelManagement.sqlite");
+        => optionsBuilder.UseSqlite("Data Source=D:\\PayrollPersonnelManagement.sqlite");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

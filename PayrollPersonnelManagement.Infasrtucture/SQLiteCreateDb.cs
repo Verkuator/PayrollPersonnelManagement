@@ -1,8 +1,4 @@
-﻿using Microsoft.Data.Sqlite;
-using System;
-using System.IO;
-
-namespace PayrollPersonnelManagement.CreateSQLite
+﻿namespace PayrollPersonnelManagement.CreateSQLite
 {
     public class SQLiteCreateDb
     {
