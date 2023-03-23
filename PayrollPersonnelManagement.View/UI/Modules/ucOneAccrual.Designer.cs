@@ -1,7 +1,7 @@
 ﻿
 namespace PayrollPersonnelManagement.View.UI.Modules
 {
-    partial class OneAccrual
+    partial class ucOneAccrual
     {
         /// <summary> 
         /// Required designer variable.

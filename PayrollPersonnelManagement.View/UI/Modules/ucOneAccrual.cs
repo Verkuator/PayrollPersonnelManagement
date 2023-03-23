@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.UI.Modules
 {
-    public partial class OneAccrual : DevExpress.DXperience.Demos.TutorialControlBase //DevExpress.XtraEditors.XtraUserControl
+    public partial class ucOneAccrual : DevExpress.DXperience.Demos.TutorialControlBase //DevExpress.XtraEditors.XtraUserControl
     {
-        public OneAccrual()
+        public ucOneAccrual()
         {
             InitializeComponent();
         }

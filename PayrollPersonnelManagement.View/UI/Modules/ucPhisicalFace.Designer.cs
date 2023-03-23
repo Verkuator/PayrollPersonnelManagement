@@ -1,7 +1,7 @@
 ﻿
 namespace PayrollPersonnelManagement.View.UI.Modules
 {
-    partial class Subdivision
+    partial class ucPhisicalFace
     {
         /// <summary> 
         /// Required designer variable.
@@ -41,7 +41,7 @@ namespace PayrollPersonnelManagement.View.UI.Modules
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1487, 950);
+            this.gridControl1.Size = new System.Drawing.Size(1529, 987);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -51,15 +51,15 @@ namespace PayrollPersonnelManagement.View.UI.Modules
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // Subdivision
+            // PhisicalFace
             // 
             this.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl1);
-            this.Name = "Subdivision";
-            this.Size = new System.Drawing.Size(1487, 950);
+            this.Name = "PhisicalFace";
+            this.Size = new System.Drawing.Size(1529, 987);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

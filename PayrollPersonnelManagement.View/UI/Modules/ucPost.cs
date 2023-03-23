@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.UI.Modules
 {
-    public partial class Subdivision : DevExpress.DXperience.Demos.TutorialControlBase //DevExpress.XtraEditors.XtraUserControl
+    public partial class ucPost : DevExpress.DXperience.Demos.TutorialControlBase //DevExpress.XtraEditors.XtraUserControl
     {
-        public Subdivision()
+        public ucPost()
         {
             InitializeComponent();
         }

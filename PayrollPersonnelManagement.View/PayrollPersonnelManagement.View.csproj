@@ -103,29 +103,29 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Modules\OneAccrual.cs">
+    <Compile Include="UI\Modules\ucOneAccrual.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Modules\OneAccrual.Designer.cs">
-      <DependentUpon>OneAccrual.cs</DependentUpon>
+    <Compile Include="UI\Modules\ucOneAccrual.Designer.cs">
+      <DependentUpon>ucOneAccrual.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Modules\PhisicalFace.cs">
+    <Compile Include="UI\Modules\ucPhisicalFace.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Modules\PhisicalFace.Designer.cs">
-      <DependentUpon>PhisicalFace.cs</DependentUpon>
+    <Compile Include="UI\Modules\ucPhisicalFace.Designer.cs">
+      <DependentUpon>ucPhisicalFace.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Modules\Post.cs">
+    <Compile Include="UI\Modules\ucPost.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Modules\Post.Designer.cs">
-      <DependentUpon>Post.cs</DependentUpon>
+    <Compile Include="UI\Modules\ucPost.Designer.cs">
+      <DependentUpon>ucPost.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Modules\Subdivision.cs">
+    <Compile Include="UI\Modules\ucSubdivision.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Modules\Subdivision.Designer.cs">
-      <DependentUpon>Subdivision.cs</DependentUpon>
+    <Compile Include="UI\Modules\ucSubdivision.Designer.cs">
+      <DependentUpon>ucSubdivision.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Modules\ucEmploee.cs">
       <SubType>UserControl</SubType>
@@ -142,17 +142,17 @@
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="UI\Modules\OneAccrual.resx">
-      <DependentUpon>OneAccrual.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Modules\ucOneAccrual.resx">
+      <DependentUpon>ucOneAccrual.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Modules\PhisicalFace.resx">
-      <DependentUpon>PhisicalFace.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Modules\ucPhisicalFace.resx">
+      <DependentUpon>ucPhisicalFace.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Modules\Post.resx">
-      <DependentUpon>Post.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Modules\ucPost.resx">
+      <DependentUpon>ucPost.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Modules\Subdivision.resx">
-      <DependentUpon>Subdivision.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Modules\ucSubdivision.resx">
+      <DependentUpon>ucSubdivision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Modules\ucEmploee.resx">
       <DependentUpon>ucEmploee.cs</DependentUpon>

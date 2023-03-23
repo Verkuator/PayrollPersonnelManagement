@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.UI.Modules
 {
-    public partial class PhisicalFace : DevExpress.DXperience.Demos.TutorialControlBase //DevExpress.XtraEditors.XtraUserControl
+    public partial class ucPhisicalFace : DevExpress.DXperience.Demos.TutorialControlBase //DevExpress.XtraEditors.XtraUserControl
     {
-        public PhisicalFace()
+        public ucPhisicalFace()
         {
             InitializeComponent();
         }
