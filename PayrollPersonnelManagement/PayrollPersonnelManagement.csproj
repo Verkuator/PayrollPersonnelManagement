@@ -145,6 +145,10 @@
       <Project>{b8bc2433-b4ae-4c7c-9dc6-562249585db9}</Project>
       <Name>PayrollPersonnelManagement.Infasrtucture</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PayrollPersonnelManagement.View\PayrollPersonnelManagement.View.csproj">
+      <Project>{F48B1B42-3097-4225-BD60-ABFD30E46B0D}</Project>
+      <Name>PayrollPersonnelManagement.View</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

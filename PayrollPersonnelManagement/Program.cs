@@ -1,5 +1,7 @@
 ﻿using PayrollPersonnelManagement.CreateSQLite;
+using PayrollPersonnelManagement.View;
 using System;
+using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement
 {
@@ -12,9 +14,9 @@ namespace PayrollPersonnelManagement
         static void Main()
         {
             SQLiteCreateDb.CreateSQLite();
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Main());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new frmMain());
         }
     }
 }
