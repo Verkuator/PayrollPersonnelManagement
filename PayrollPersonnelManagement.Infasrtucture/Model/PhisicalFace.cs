@@ -2,7 +2,7 @@
 
 namespace PayrollPersonnelManagement.Common
 {
-    class PhisicalFace
+    public class PhisicalFace
     {
         public int Id { get; set; }
         public string Surname { get; set; }

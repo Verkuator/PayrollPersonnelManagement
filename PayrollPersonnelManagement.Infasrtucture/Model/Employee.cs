@@ -1,6 +1,6 @@
 ﻿namespace PayrollPersonnelManagement.Common
 {
-    class Employee
+    public class Employee
     {
         public int Id { get; set; }
         public PhisicalFace PhisicalFace { get; set; }

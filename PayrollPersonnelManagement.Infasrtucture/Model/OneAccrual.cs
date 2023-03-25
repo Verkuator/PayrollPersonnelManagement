@@ -2,7 +2,7 @@
 
 namespace PayrollPersonnelManagement.Common
 {
-    class OneAccrual
+    public class OneAccrual
     {
         public int Id { get; set; }
         public DateTime InDate { get; set; }

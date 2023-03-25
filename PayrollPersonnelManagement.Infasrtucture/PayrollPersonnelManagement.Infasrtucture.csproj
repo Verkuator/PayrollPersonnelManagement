@@ -163,6 +163,8 @@
     <Compile Include="Configuration\OneAccrualConfiguration.cs" />
     <Compile Include="Configuration\PhisicalFaceConfiguration.cs" />
     <Compile Include="Configuration\PostConfiguration.cs" />
+    <Compile Include="Controll\PhisicalFaceControll.cs" />
+    <Compile Include="Controll\EmployeeControll.cs" />
     <Compile Include="Migrations\20230322193753_FirstMigration.cs" />
     <Compile Include="Migrations\20230322193753_FirstMigration.designer.cs">
       <DependentUpon>20230322193753_FirstMigration.cs</DependentUpon>

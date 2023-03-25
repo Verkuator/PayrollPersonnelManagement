@@ -2,6 +2,7 @@
 using PayrollPersonnelManagement.View;
 using System;
 using System.Windows.Forms;
+using PayrollPersonnelManagement.Infasrtucture.Controll;
 
 namespace PayrollPersonnelManagement
 {
@@ -17,6 +18,10 @@ namespace PayrollPersonnelManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
+            DateTime date = new DateTime(1969, 5, 15);
+            PhisicalFaceControll.AddPhisicalFace("Жмышенко", "Валерий", "Альбертович", date);
+            var persons = PhisicalFaceControll.GetPhisicalFaceList();
+            Console.WriteLine(persons);
         }
     }
 }
