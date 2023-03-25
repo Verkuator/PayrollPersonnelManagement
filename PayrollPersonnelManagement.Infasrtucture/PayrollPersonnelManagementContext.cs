@@ -4,7 +4,7 @@ using PayrollPersonnelManagement.Infasrtucture.Configuration;
 
 namespace PayrollPersonnelManagement.context
 {
-    class PayrollPersonnelManagementContext : DbContext
+    public class PayrollPersonnelManagementContext : DbContext
     {
         public PayrollPersonnelManagementContext()
         {

@@ -3,6 +3,7 @@ using PayrollPersonnelManagement.View;
 using System;
 using System.Windows.Forms;
 using PayrollPersonnelManagement.Infasrtucture.Controll;
+using PayrollPersonnelManagement.context;
 
 namespace PayrollPersonnelManagement
 {
@@ -19,8 +20,13 @@ namespace PayrollPersonnelManagement
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
             DateTime date = new DateTime(1969, 5, 15);
-            PhisicalFaceControll.AddPhisicalFace("Жмышенко", "Валерий", "Альбертович", date);
-            var persons = PhisicalFaceControll.GetPhisicalFaceList();
+
+            PayrollPersonnelManagementContext _dbContext = new PayrollPersonnelManagementContext();
+
+            PhisicalFaceControll phisicalFaceControll = new PhisicalFaceControll(_dbContext);
+
+            phisicalFaceControll.AddPhisicalFace("Жмышенко", "Валерий", "Альбертович", date);
+            var persons = phisicalFaceControll.GetPhisicalFaceList();
             Console.WriteLine(persons);
         }
     }

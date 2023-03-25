@@ -10,24 +10,30 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
 {
     public class PhisicalFaceControll
     {
-        public static List<PhisicalFace> GetPhisicalFaceList()
+        public PayrollPersonnelManagementContext _dbContext;
+
+        public PhisicalFaceControll(PayrollPersonnelManagementContext dbContext)
         {
-            using (PayrollPersonnelManagementContext db =  new PayrollPersonnelManagementContext())
-            {
-                var phisicalFaces = db.PhisicalFaces.ToList();
-                return phisicalFaces;
-            }
+            _dbContext = dbContext;
         }
 
-        public static void AddPhisicalFace(string surname, string name, string patronymic, DateTime birthDate)
+        public List<PhisicalFace> GetPhisicalFaceList()
         {
-            using (PayrollPersonnelManagementContext db = new PayrollPersonnelManagementContext())
+            var phisicalFaces = _dbContext.PhisicalFaces.ToList();
+            return phisicalFaces;
+        }
+
+        public void AddPhisicalFace(string surname, string name, string patronymic, DateTime birthDate)
+        {
+            PhisicalFace person = new PhisicalFace()
             {
-                PhisicalFace person = new PhisicalFace() {Surname = surname, Name = name,
-                                                          Patronymic = patronymic, DateBirth = birthDate};
-                db.PhisicalFaces.Add(person);
-                db.SaveChanges();
-            }
+                Surname = surname,
+                Name = name,
+                Patronymic = patronymic,
+                DateBirth = birthDate
+            };
+            _dbContext.PhisicalFaces.Add(person);
+            _dbContext.SaveChanges();
         }
     }
 }
