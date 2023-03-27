@@ -18,7 +18,7 @@ namespace PayrollPersonnelManagement
             SQLiteCreateDb.CreateSQLite();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new Main());
             DateTime date = new DateTime(1969, 5, 15);
 
             PayrollPersonnelManagementContext _dbContext = new PayrollPersonnelManagementContext();

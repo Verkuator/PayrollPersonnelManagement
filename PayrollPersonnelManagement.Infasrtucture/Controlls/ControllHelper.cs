@@ -11,19 +11,20 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
 {
     public class ControllHelper
     {
-        public ControllHelper(PayrollPersonnelManagementContext dbContext)
+        public static PhisicalFaceControll PhisicalFaceControll { get; set; }
+        public static EmployeeControll EmployeeControll { get; set; }
+        public static OneAccrualControll OneAccrualControll { get; set; }
+        public static PostControll PostControll { get; set; }
+        public static SubdivisionControll SubdivisionControll { get; set; }
+
+        public ControllHelper (PayrollPersonnelManagementContext dbContext)
         {
             PhisicalFaceControll = new PhisicalFaceControll(dbContext);
             EmployeeControll = new EmployeeControll(dbContext);
             OneAccrualControll = new OneAccrualControll(dbContext);
             PostControll = new PostControll(dbContext);
             SubdivisionControll = new SubdivisionControll(dbContext);
-        }
-        PhisicalFaceControll PhisicalFaceControll { get; set; }
-        EmployeeControll EmployeeControll { get; set; }
-        OneAccrualControll OneAccrualControll { get; set; }
-        PostControll PostControll { get; set; }
-        SubdivisionControll SubdivisionControll { get; set; }
+        }        
 
     }
 }

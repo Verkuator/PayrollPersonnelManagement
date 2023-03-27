@@ -19,5 +19,11 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
             var employees = _dbContext.Employees.ToList();
             return employees;
         }
+
+        public void  SaveEmployeeList(Employee employee)
+        {
+            //_dbContext.Employees.Add(employee);
+            //return employees;
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Configuration
             builder.HasKey(a => a.Id);
             builder.Property(p => p.Id).ValueGeneratedOnAdd();
 
-            builder.HasOne(a => a.PhisicalFace);
+            builder.HasOne(a => a.PhisicalFace).WithMany(c => c.Employee).HasForeignKey(c => c.PhisicalFaceId);
             builder.HasOne(a => a.Subdivision);
             builder.HasOne(a => a.Post);
         }

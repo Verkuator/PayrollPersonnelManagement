@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PayrollPersonnelManagement.Common
 {
@@ -9,5 +10,6 @@ namespace PayrollPersonnelManagement.Common
         public string Name { get; set; }
         public string Patronymic { get; set; }
         public DateTime DateBirth { get; set; }
+        public ICollection<Employee> Employee { get; set; }
     }
 }
