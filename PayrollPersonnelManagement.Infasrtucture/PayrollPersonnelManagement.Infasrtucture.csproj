@@ -163,8 +163,12 @@
     <Compile Include="Configuration\OneAccrualConfiguration.cs" />
     <Compile Include="Configuration\PhisicalFaceConfiguration.cs" />
     <Compile Include="Configuration\PostConfiguration.cs" />
-    <Compile Include="Controll\PhisicalFaceControll.cs" />
-    <Compile Include="Controll\EmployeeControll.cs" />
+    <Compile Include="Controlls\ControllHelper.cs" />
+    <Compile Include="Controlls\OneAccrualControll.cs" />
+    <Compile Include="Controlls\PhisicalFaceControll.cs" />
+    <Compile Include="Controlls\EmployeeControll.cs" />
+    <Compile Include="Controlls\PostControll.cs" />
+    <Compile Include="Controlls\SubdivisionControll.cs" />
     <Compile Include="Migrations\20230322193753_FirstMigration.cs" />
     <Compile Include="Migrations\20230322193753_FirstMigration.designer.cs">
       <DependentUpon>20230322193753_FirstMigration.cs</DependentUpon>

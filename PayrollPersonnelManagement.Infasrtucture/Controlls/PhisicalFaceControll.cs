@@ -10,7 +10,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
 {
     public class PhisicalFaceControll
     {
-        public PayrollPersonnelManagementContext _dbContext;
+        private readonly PayrollPersonnelManagementContext _dbContext;
 
         public PhisicalFaceControll(PayrollPersonnelManagementContext dbContext)
         {
