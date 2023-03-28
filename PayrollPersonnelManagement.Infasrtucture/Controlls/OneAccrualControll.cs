@@ -22,5 +22,23 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
             var accrualList = _dbContext.OneAccrual.ToList();
             return accrualList;
         }
+
+        public void AddOneAccrual(OneAccrual oneAccrual)
+        {
+            _dbContext.Add(oneAccrual);
+            _dbContext.SaveChanges();
+        }
+
+        public void UpdateOneAccrual(OneAccrual oneAccrual)
+        {
+            _dbContext.Update(oneAccrual);
+            _dbContext.SaveChanges();
+        }
+
+        public void RemoveOneAccrual(OneAccrual oneAccrual)
+        {
+            _dbContext.Remove(oneAccrual);
+            _dbContext.SaveChanges();
+        }
     }
 }

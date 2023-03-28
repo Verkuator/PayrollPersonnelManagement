@@ -9,8 +9,8 @@ using PayrollPersonnelManagement.context;
 namespace PayrollPersonnelManagement.Infasrtucture.Migrations
 {
     [DbContext(typeof(PayrollPersonnelManagementContext))]
-    [Migration("20230322193753_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20230328101449_UpdateLinks")]
+    partial class UpdateLinks
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,13 +24,13 @@ namespace PayrollPersonnelManagement.Infasrtucture.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("PhisicalFaceId")
+                    b.Property<int>("PhisicalFaceId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("PostId")
+                    b.Property<int>("PostId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("SubdivisionId")
+                    b.Property<int>("SubdivisionId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
@@ -50,7 +50,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("EmployeeId")
+                    b.Property<int>("EmployeeId")
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal>("HoursMonth")
@@ -149,23 +149,31 @@ namespace PayrollPersonnelManagement.Infasrtucture.Migrations
             modelBuilder.Entity("PayrollPersonnelManagement.Common.Employee", b =>
                 {
                     b.HasOne("PayrollPersonnelManagement.Common.PhisicalFace", "PhisicalFace")
-                        .WithMany()
-                        .HasForeignKey("PhisicalFaceId");
+                        .WithMany("Employee")
+                        .HasForeignKey("PhisicalFaceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("PayrollPersonnelManagement.Common.Post", "Post")
-                        .WithMany()
-                        .HasForeignKey("PostId");
+                        .WithMany("Employee")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("PayrollPersonnelManagement.Common.Subdivision", "Subdivision")
-                        .WithMany()
-                        .HasForeignKey("SubdivisionId");
+                        .WithMany("Employee")
+                        .HasForeignKey("SubdivisionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("PayrollPersonnelManagement.Common.OneAccrual", b =>
                 {
                     b.HasOne("PayrollPersonnelManagement.Common.Employee", "Employee")
-                        .WithMany()
-                        .HasForeignKey("EmployeeId");
+                        .WithMany("OneAccrual")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -169,9 +169,9 @@
     <Compile Include="Controlls\EmployeeControll.cs" />
     <Compile Include="Controlls\PostControll.cs" />
     <Compile Include="Controlls\SubdivisionControll.cs" />
-    <Compile Include="Migrations\20230322193753_FirstMigration.cs" />
-    <Compile Include="Migrations\20230322193753_FirstMigration.designer.cs">
-      <DependentUpon>20230322193753_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20230328101449_UpdateLinks.cs" />
+    <Compile Include="Migrations\20230328101449_UpdateLinks.designer.cs">
+      <DependentUpon>20230328101449_UpdateLinks.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\PayrollPersonnelManagementContextModelSnapshot.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

@@ -22,5 +22,23 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
             var subdivisions = _dbContext.Subdivisions.ToList();
             return subdivisions;
         }
+
+        public void AddSubdivision(Subdivision subdivision)
+        {
+            _dbContext.Add(subdivision);
+            _dbContext.SaveChanges();
+        }
+
+        public void UpdateSubdivision(Subdivision subdivision)
+        {
+            _dbContext.Update(subdivision);
+            _dbContext.SaveChanges();
+        }
+
+        public void RemoveSubdivision(Subdivision subdivision)
+        {
+            _dbContext.Remove(subdivision);
+            _dbContext.SaveChanges();
+        }
     }
 }

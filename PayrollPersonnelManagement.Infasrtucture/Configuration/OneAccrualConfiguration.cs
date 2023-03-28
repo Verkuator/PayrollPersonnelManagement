@@ -17,7 +17,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Configuration
             builder.Property(c => c.InDate).HasColumnName("InDate").IsRequired();
             builder.Property(c => c.HoursMonth).HasColumnName("HoursMonth").IsRequired();
             builder.Property(c => c.Sum).HasColumnName("Sum").IsRequired();
-            builder.HasOne(a => a.Employee);
+            builder.HasOne(a => a.Employee).WithMany(c => c.OneAccrual).HasForeignKey(c => c.EmployeeId);
         }
     }
 }

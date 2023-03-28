@@ -19,15 +19,6 @@ namespace PayrollPersonnelManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
-            DateTime date = new DateTime(1969, 5, 15);
-
-            PayrollPersonnelManagementContext _dbContext = new PayrollPersonnelManagementContext();
-
-            PhisicalFaceControll phisicalFaceControll = new PhisicalFaceControll(_dbContext);
-
-            phisicalFaceControll.AddPhisicalFace("Жмышенко", "Валерий", "Альбертович", date);
-            var persons = phisicalFaceControll.GetPhisicalFaceList();
-            Console.WriteLine(persons);
         }
     }
 }

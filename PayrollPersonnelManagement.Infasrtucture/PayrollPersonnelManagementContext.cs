@@ -10,7 +10,6 @@ namespace PayrollPersonnelManagement.context
         {
         }
 
-
         public DbSet<Employee> Employees { get; set; }
         public DbSet<OneAccrual> OneAccrual { get; set; }
         public DbSet<PhisicalFace> PhisicalFaces { get; set; }

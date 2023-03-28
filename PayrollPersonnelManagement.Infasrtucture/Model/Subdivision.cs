@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace PayrollPersonnelManagement.Common
 {
     public class Subdivision
@@ -6,5 +8,6 @@ namespace PayrollPersonnelManagement.Common
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Allowance { get; set; }
+        public ICollection<Employee> Employee { get; set; }
     }
 }

@@ -23,16 +23,21 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
             return phisicalFaces;
         }
 
-        public void AddPhisicalFace(string surname, string name, string patronymic, DateTime birthDate)
+        public void AddPhisicalFace(PhisicalFace phisicalFace)
         {
-            PhisicalFace person = new PhisicalFace()
-            {
-                Surname = surname,
-                Name = name,
-                Patronymic = patronymic,
-                DateBirth = birthDate
-            };
-            _dbContext.PhisicalFaces.Add(person);
+            _dbContext.PhisicalFaces.Add(phisicalFace);
+            _dbContext.SaveChanges();
+        }
+
+        public void UpdatePhisicalFace(PhisicalFace phisicalFace)
+        {
+            _dbContext.Update(phisicalFace);
+            _dbContext.SaveChanges();
+        }
+        
+        public void RemovePhisicalFace(PhisicalFace phisicalFace) 
+        {
+            _dbContext.Remove(phisicalFace);
             _dbContext.SaveChanges();
         }
     }

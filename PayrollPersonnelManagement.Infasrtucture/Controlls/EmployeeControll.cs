@@ -20,10 +20,22 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
             return employees;
         }
 
-        public void  SaveEmployeeList(Employee employee)
+        public void  AddEmployee(Employee employee)
         {
-            //_dbContext.Employees.Add(employee);
-            //return employees;
+            _dbContext.Employees.Add(employee);
+            _dbContext.SaveChanges();
+        }
+
+        public void UpdateEmployee(Employee employee)
+        {
+            _dbContext.Update(employee);
+            _dbContext.SaveChanges();
+        }
+
+        public void RemoveEmploee(Employee employee)
+        {
+            _dbContext.Remove(employee);
+            _dbContext.SaveChanges();
         }
     }
 }
