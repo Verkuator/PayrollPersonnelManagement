@@ -38,11 +38,11 @@ namespace PayrollPersonnelManagement.View
             this.BasePage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.BaseDataGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BaseDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
@@ -108,21 +108,21 @@ namespace PayrollPersonnelManagement.View
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(665, 30);
             // 
-            // gridControl1
+            // BaseDataGrid
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 193);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.ribbon;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(665, 226);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.BaseDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BaseDataGrid.Location = new System.Drawing.Point(0, 193);
+            this.BaseDataGrid.MainView = this.gridView1;
+            this.BaseDataGrid.MenuManager = this.ribbon;
+            this.BaseDataGrid.Name = "BaseDataGrid";
+            this.BaseDataGrid.Size = new System.Drawing.Size(665, 226);
+            this.BaseDataGrid.TabIndex = 2;
+            this.BaseDataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.BaseDataGrid;
             this.gridView1.Name = "gridView1";
             // 
             // popupMenu1
@@ -135,14 +135,15 @@ namespace PayrollPersonnelManagement.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 449);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.BaseDataGrid);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.Name = "BaseForm";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
+            this.Load += new System.EventHandler(this.BaseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BaseDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
@@ -159,7 +160,7 @@ namespace PayrollPersonnelManagement.View
         private DevExpress.XtraBars.BarButtonItem Add;
         private DevExpress.XtraBars.BarButtonItem Delete;
         private DevExpress.XtraBars.BarButtonItem Edit;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl BaseDataGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
     }

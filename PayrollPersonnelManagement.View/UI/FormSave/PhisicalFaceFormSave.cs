@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraEditors;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PayrollPersonnelManagement.View.UI.Modules
+namespace PayrollPersonnelManagement.View.UI.FormSave
 {
-    public partial class ucOneAccrual : DevExpress.DXperience.Demos.TutorialControlBase //DevExpress.XtraEditors.XtraUserControl
+    public partial class PhisicalFaceFormSave : Form
     {
-        public ucOneAccrual()
+        public PhisicalFaceFormSave()
         {
             InitializeComponent();
         }

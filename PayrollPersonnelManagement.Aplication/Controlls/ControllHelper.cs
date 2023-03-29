@@ -24,6 +24,12 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
             OneAccrualControll = new OneAccrualControll(dbContext);
             PostControll = new PostControll(dbContext);
             SubdivisionControll = new SubdivisionControll(dbContext);
+        }
+
+        public IController<T> Get<T>() 
+        {
+            var res = this.Get<T>();
+            return res;
         }        
 
     }

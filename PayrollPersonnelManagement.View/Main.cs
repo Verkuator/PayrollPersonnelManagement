@@ -1,4 +1,7 @@
-﻿using PayrollPersonnelManagement.View;
+﻿using PayrollPersonnelManagement.Common;
+using PayrollPersonnelManagement.Infasrtucture.Controll;
+using PayrollPersonnelManagement.Infasrtucture.Controlls;
+using PayrollPersonnelManagement.View;
 using System;
 using System.Threading;
 using System.Windows.Forms;
@@ -20,9 +23,12 @@ namespace PayrollPersonnelManagement.View
 
         private void OpenMainForm()
         {
-            var f = new BaseForm() { MdiParent = this };
-            f.Show();
         }
 
+        private void PhisicalFaceTab_Click(object sender, EventArgs e)
+        {
+            //var f = new BaseForm() { MdiParent = this };
+            //f.Show();
+        }
     }
 }
