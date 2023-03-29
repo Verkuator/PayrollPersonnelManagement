@@ -12,5 +12,6 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         ICollection<T> Get();
         T Save(T obj);
         void Delete(T obj);
+        void OpenForm();
     }
 }

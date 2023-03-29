@@ -16,22 +16,18 @@ namespace PayrollPersonnelManagement.View
     {
         public string TabName { get; set; }
         private bool UseTab { get; set; }
-        private object Controller { get; set; }
-        public BaseForm(object controller)
+        public BaseForm()
         {
             InitializeComponent();
             ControlBox = false;
             UseTab = true;
-            Controller = controller;
         }
 
         public bool IsUseTab()
         {
             return UseTab;
-        }
+        }       
 
-        private void BaseForm_Load(object sender, EventArgs e)
-        {
-        }
+        
     }
 }

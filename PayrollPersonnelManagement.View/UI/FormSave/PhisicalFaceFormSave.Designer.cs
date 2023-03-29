@@ -105,6 +105,7 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             this.CancelSimpleButton.Size = new System.Drawing.Size(179, 38);
             this.CancelSimpleButton.TabIndex = 1;
             this.CancelSimpleButton.Text = "Отмена";
+            this.CancelSimpleButton.Click += new System.EventHandler(this.CancelSimpleButton_Click);
             // 
             // SaveSimpleButton
             // 
@@ -114,6 +115,7 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             this.SaveSimpleButton.Size = new System.Drawing.Size(173, 38);
             this.SaveSimpleButton.TabIndex = 0;
             this.SaveSimpleButton.Text = "Сохранить";
+            this.SaveSimpleButton.Click += new System.EventHandler(this.SaveSimpleButton_Click);
             // 
             // stackPanel2
             // 

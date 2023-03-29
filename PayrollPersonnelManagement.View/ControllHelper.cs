@@ -1,15 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using PayrollPersonnelManagement.context;
+﻿using PayrollPersonnelManagement.context;
 using PayrollPersonnelManagement.Infasrtucture.Controlls;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PayrollPersonnelManagement.View.UI.FormSave;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Controll
 {
-    public class ControllHelper
+    public static class ControllHelper
     {
         public static PhisicalFaceControll PhisicalFaceControll { get; set; }
         public static EmployeeControll EmployeeControll { get; set; }
@@ -17,20 +12,14 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
         public static PostControll PostControll { get; set; }
         public static SubdivisionControll SubdivisionControll { get; set; }
 
-        public ControllHelper (PayrollPersonnelManagementContext dbContext)
+        public static void Initialize(PayrollPersonnelManagementContext dbContext)
         {
-            PhisicalFaceControll = new PhisicalFaceControll(dbContext);
+            PhisicalFaceControll = new PhisicalFaceControll(dbContext, new PhisicalFaceFormSave());
             EmployeeControll = new EmployeeControll(dbContext);
             OneAccrualControll = new OneAccrualControll(dbContext);
             PostControll = new PostControll(dbContext);
             SubdivisionControll = new SubdivisionControll(dbContext);
-        }
-
-        public IController<T> Get<T>() 
-        {
-            var res = this.Get<T>();
-            return res;
-        }        
+        }       
 
     }
 }

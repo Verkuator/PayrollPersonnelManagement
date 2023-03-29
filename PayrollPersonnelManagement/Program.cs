@@ -4,6 +4,7 @@ using System;
 using System.Windows.Forms;
 using PayrollPersonnelManagement.context;
 using PayrollPersonnelManagement.View.UI.FormSave;
+using PayrollPersonnelManagement.Infasrtucture.Controll;
 
 namespace PayrollPersonnelManagement
 {
@@ -16,8 +17,9 @@ namespace PayrollPersonnelManagement
         static void Main()
         {
             SQLiteCreateDb.CreateSQLite();
-            Application.EnableVisualStyles();
+            Application.EnableVisualStyles();            
             Application.SetCompatibleTextRenderingDefault(false);
+            ControllHelper.Initialize(new PayrollPersonnelManagementContext());
             Application.Run(new Main());
         }
     }

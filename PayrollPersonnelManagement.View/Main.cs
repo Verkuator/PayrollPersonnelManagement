@@ -27,8 +27,8 @@ namespace PayrollPersonnelManagement.View
 
         private void PhisicalFaceTab_Click(object sender, EventArgs e)
         {
-            //var f = new BaseForm() { MdiParent = this };
-            //f.Show();
+            var f = new BaseFormAdapter<PhisicalFace>(ControllHelper.PhisicalFaceControll) { MdiParent = this };
+            f.Show();
         }
     }
 }

@@ -104,6 +104,7 @@
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -112,13 +113,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controlls\ControllHelper.cs" />
     <Compile Include="Controlls\EmployeeControll.cs" />
+    <Compile Include="Controlls\FormAdapter.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Controlls\IController.cs" />
     <Compile Include="Controlls\OneAccrualControll.cs" />
     <Compile Include="Controlls\PhisicalFaceControll.cs" />
     <Compile Include="Controlls\PostControll.cs" />
-    <Compile Include="Controlls\SetController.cs" />
     <Compile Include="Controlls\SubdivisionControll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -131,6 +133,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

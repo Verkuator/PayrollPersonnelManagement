@@ -71,6 +71,7 @@ namespace PayrollPersonnelManagement.View
             this.Add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Add.ImageOptions.Image")));
             this.Add.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Add.ImageOptions.LargeImage")));
             this.Add.Name = "Add";
+            
             // 
             // Delete
             // 
@@ -79,6 +80,7 @@ namespace PayrollPersonnelManagement.View
             this.Delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Delete.ImageOptions.Image")));
             this.Delete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Delete.ImageOptions.LargeImage")));
             this.Delete.Name = "Delete";
+            
             // 
             // Edit
             // 
@@ -87,6 +89,7 @@ namespace PayrollPersonnelManagement.View
             this.Edit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Edit.ImageOptions.Image")));
             this.Edit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Edit.ImageOptions.LargeImage")));
             this.Edit.Name = "Edit";
+            
             // 
             // BasePage
             // 
@@ -141,7 +144,7 @@ namespace PayrollPersonnelManagement.View
             this.Name = "BaseForm";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            this.Load += new System.EventHandler(this.BaseForm_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BaseDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -153,15 +156,15 @@ namespace PayrollPersonnelManagement.View
 
         #endregion
 
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
-        private DevExpress.XtraBars.Ribbon.RibbonPage BasePage;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        private DevExpress.XtraBars.BarButtonItem Add;
-        private DevExpress.XtraBars.BarButtonItem Delete;
-        private DevExpress.XtraBars.BarButtonItem Edit;
-        private DevExpress.XtraGrid.GridControl BaseDataGrid;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        public DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
+        public DevExpress.XtraBars.Ribbon.RibbonPage BasePage;
+        public DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        public DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
+        public DevExpress.XtraBars.BarButtonItem Add;
+        public DevExpress.XtraBars.BarButtonItem Delete;
+        public DevExpress.XtraBars.BarButtonItem Edit;
+        public DevExpress.XtraGrid.GridControl BaseDataGrid;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        public DevExpress.XtraBars.PopupMenu popupMenu1;
     }
 }
