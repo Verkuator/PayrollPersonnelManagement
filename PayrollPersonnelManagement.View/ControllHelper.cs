@@ -16,8 +16,8 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
         {
             PhisicalFaceControll = new PhisicalFaceControll(dbContext, new PhisicalFaceFormSave());
             //EmployeeControll = new EmployeeControll(dbContext);
-            //OneAccrualControll = new OneAccrualControll(dbContext);
-            //PostControll = new PostControll(dbContext);
+            OneAccrualControll = new OneAccrualControll(dbContext, new OneAccrualFormSave());
+            PostControll = new PostControll(dbContext, new PostFormSave());
             //SubdivisionControll = new SubdivisionControll(dbContext);
         }       
 

@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.UI.FormSave
 {
-    public partial class PhisicalFaceFormSave : FormAdapter
+    public partial class PostFormSave : FormAdapter
     {
-        public PhisicalFaceFormSave()
+        public PostFormSave()
         {
             InitializeComponent();
         }
@@ -31,26 +31,6 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
         }
 
         public override void MapForm(object obj)
-        {
-
-        }
-
-        private void stackPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void stackPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void stackPanel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelControl2_Paint(object sender, PaintEventArgs e)
         {
 
         }

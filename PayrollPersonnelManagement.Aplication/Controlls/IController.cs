@@ -16,11 +16,13 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         public abstract FormAdapter FormAdapter { get; set; }
         protected abstract DbSet<T> DbSet { get; set; }
         protected abstract PayrollPersonnelManagementContext DbContext { get; set; }
+
         public virtual ICollection<T> Get()
         {
             var obj = DbSet.ToList();
             return obj;
         }
+
         public virtual T Save(T obj)
         {
             if (obj.Id == 0)
@@ -34,11 +36,13 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
             DbContext.SaveChanges();
             return obj;
         }
+
         public virtual void Delete(T obj)
         {
             DbSet.Remove(obj);
             DbContext.SaveChanges();
         }
+
         public virtual void OpenForm()
         {
             FormAdapter.ShowDialog();

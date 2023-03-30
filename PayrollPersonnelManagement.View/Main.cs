@@ -30,5 +30,17 @@ namespace PayrollPersonnelManagement.View
             var f = new BaseFormAdapter<PhisicalFace>(ControllHelper.PhisicalFaceControll) { MdiParent = this };
             f.Show();
         }
+
+        private void PostTab_Click(object sender, EventArgs e)
+        {
+            var f = new BaseFormAdapter<Post>(ControllHelper.PostControll) { MdiParent = this };
+            f.Show();
+        }
+
+        private void accordionControlElement1_Click(object sender, EventArgs e)
+        {
+            var f = new BaseFormAdapter<OneAccrual>(ControllHelper.OneAccrualControll) { MdiParent = this };
+            f.Show();
+        }
     }
 }

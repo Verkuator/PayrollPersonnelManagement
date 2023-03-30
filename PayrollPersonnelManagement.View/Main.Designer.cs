@@ -30,9 +30,11 @@ namespace PayrollPersonnelManagement.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accScales = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.PhisicalFaceTab = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.PostTab = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
@@ -41,6 +43,7 @@ namespace PayrollPersonnelManagement.View
             this.barMdiChildrenListItem2 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonControl2 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -54,17 +57,19 @@ namespace PayrollPersonnelManagement.View
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accScales});
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.RootDisplayMode = DevExpress.XtraBars.Navigation.AccordionControlRootDisplayMode.Footer;
-            this.accordionControl1.Size = new System.Drawing.Size(312, 638);
+            this.accordionControl1.Size = new System.Drawing.Size(535, 997);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
             // accScales
             // 
             this.accScales.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.PhisicalFaceTab});
+            this.PhisicalFaceTab,
+            this.PostTab,
+            this.accordionControlElement1});
             this.accScales.Expanded = true;
             this.accScales.Hint = "Весы";
             this.accScales.ImageOptions.ImageUri.Uri = "business%20objects/bo_department";
@@ -79,12 +84,20 @@ namespace PayrollPersonnelManagement.View
             this.PhisicalFaceTab.Text = "Физ. лицо";
             this.PhisicalFaceTab.Click += new System.EventHandler(this.PhisicalFaceTab_Click);
             // 
+            // PostTab
+            // 
+            this.PostTab.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("PostTab.ImageOptions.Image")));
+            this.PostTab.Name = "PostTab";
+            this.PostTab.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.PostTab.Text = "Element1";
+            this.PostTab.Click += new System.EventHandler(this.PostTab_Click);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1013, 0);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1737, 0);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -131,33 +144,41 @@ namespace PayrollPersonnelManagement.View
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barMdiChildrenListItem2);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(312, 605);
-            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(535, 943);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(701, 33);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1202, 54);
             // 
             // ribbonControl2
             // 
-            this.ribbonControl2.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
+            this.ribbonControl2.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(60, 58, 60, 58);
             this.ribbonControl2.ExpandCollapseItem.Id = 0;
             this.ribbonControl2.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl2.ExpandCollapseItem,
             this.ribbonControl2.SearchEditItem});
-            this.ribbonControl2.Location = new System.Drawing.Point(312, 0);
-            this.ribbonControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl2.Location = new System.Drawing.Point(535, 0);
+            this.ribbonControl2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ribbonControl2.MaxItemId = 1;
             this.ribbonControl2.Name = "ribbonControl2";
-            this.ribbonControl2.OptionsMenuMinWidth = 385;
+            this.ribbonControl2.OptionsMenuMinWidth = 660;
             this.ribbonControl2.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl2.Size = new System.Drawing.Size(701, 31);
+            this.ribbonControl2.Size = new System.Drawing.Size(1202, 50);
             this.ribbonControl2.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            // 
+            // accordionControlElement1
+            // 
+            this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement1.Text = "Element1";
+            this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 638);
+            this.ClientSize = new System.Drawing.Size(1737, 997);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl2);
             this.Controls.Add(this.accordionControl1);
@@ -165,7 +186,7 @@ namespace PayrollPersonnelManagement.View
             this.IconOptions.ImageUri.Uri = "dashboards/weightedpies";
             this.IconOptions.ShowIcon = false;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MinimumSize = new System.Drawing.Size(870, 550);
             this.Name = "Main";
             this.Text = "Клиент для взвешивания сырых покрышек";
@@ -192,5 +213,7 @@ namespace PayrollPersonnelManagement.View
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem2;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement PostTab;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
     }
 }

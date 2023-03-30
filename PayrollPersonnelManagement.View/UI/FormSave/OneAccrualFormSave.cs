@@ -1,6 +1,5 @@
-﻿using PayrollPersonnelManagement.Aplication.Controlls;
-using PayrollPersonnelManagement.Common;
-using PayrollPersonnelManagement.Infasrtucture.Controll;
+﻿using DevExpress.XtraEditors;
+using PayrollPersonnelManagement.Aplication.Controlls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +12,9 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.UI.FormSave
 {
-    public partial class PhisicalFaceFormSave : FormAdapter
+    public partial class OneAccrualFormSave : FormAdapter
     {
-        public PhisicalFaceFormSave()
+        public OneAccrualFormSave()
         {
             InitializeComponent();
         }
@@ -31,26 +30,6 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
         }
 
         public override void MapForm(object obj)
-        {
-
-        }
-
-        private void stackPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void stackPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void stackPanel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelControl2_Paint(object sender, PaintEventArgs e)
         {
 
         }
