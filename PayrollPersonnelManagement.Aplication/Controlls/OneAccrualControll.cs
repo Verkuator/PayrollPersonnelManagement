@@ -1,4 +1,6 @@
-﻿using PayrollPersonnelManagement.Common;
+﻿using Microsoft.EntityFrameworkCore;
+using PayrollPersonnelManagement.Aplication.Controlls;
+using PayrollPersonnelManagement.Common;
 using PayrollPersonnelManagement.context;
 using System;
 using System.Collections.Generic;
@@ -8,37 +10,20 @@ using System.Threading.Tasks;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 {
-    public class OneAccrualControll
+    public class OneAccrualControll: IController<OneAccrual>
     {
-        private readonly PayrollPersonnelManagementContext _dbContext;
 
-        public OneAccrualControll(PayrollPersonnelManagementContext dbContext)
+        public override string Name { get; set; }
+        public override FormAdapter FormAdapter { get; set; }
+        protected override DbSet<OneAccrual> DbSet { get; set; }
+        protected override PayrollPersonnelManagementContext DbContext { get; set; }
+        
+        public OneAccrualControll(PayrollPersonnelManagementContext dbContext, FormAdapter form)
         {
-            _dbContext = dbContext;
+            DbContext = dbContext;
+            FormAdapter = form;
+            DbSet = dbContext.OneAccrual;
         }
 
-        public List<OneAccrual> GetOneAccrualsList()
-        {
-            var accrualList = _dbContext.OneAccrual.ToList();
-            return accrualList;
-        }
-
-        public void AddOneAccrual(OneAccrual oneAccrual)
-        {
-            _dbContext.Add(oneAccrual);
-            _dbContext.SaveChanges();
-        }
-
-        public void UpdateOneAccrual(OneAccrual oneAccrual)
-        {
-            _dbContext.Update(oneAccrual);
-            _dbContext.SaveChanges();
-        }
-
-        public void RemoveOneAccrual(OneAccrual oneAccrual)
-        {
-            _dbContext.Remove(oneAccrual);
-            _dbContext.SaveChanges();
-        }
     }
 }

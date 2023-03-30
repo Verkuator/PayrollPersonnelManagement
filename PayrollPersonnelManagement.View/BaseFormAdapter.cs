@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars;
 using PayrollPersonnelManagement.Infasrtucture.Controlls;
+using PayrollPersonnelManagement.Infasrtucture.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PayrollPersonnelManagement.View
 {
-    public class BaseFormAdapter<T> : BaseForm where T : class
+    public class BaseFormAdapter<T> : BaseForm where T : class, IModel
     {
         private IController<T> Controller { get; set; }
         public BaseFormAdapter(IController<T> controller) :base()

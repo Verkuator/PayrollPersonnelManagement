@@ -1,41 +1,25 @@
-﻿using PayrollPersonnelManagement.Common;
+﻿using Microsoft.EntityFrameworkCore;
+using PayrollPersonnelManagement.Aplication.Controlls;
+using PayrollPersonnelManagement.Common;
 using PayrollPersonnelManagement.context;
+using PayrollPersonnelManagement.Infasrtucture.Controlls;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Controll
 {
-    public class EmployeeControll
+    public class EmployeeControll: IController<Employee>
     {
-        private readonly PayrollPersonnelManagementContext _dbContext;
-
-        public EmployeeControll(PayrollPersonnelManagementContext dbContext)
+        public override string Name { get; set; }
+        public override FormAdapter FormAdapter { get; set; }
+        protected override DbSet<Employee> DbSet { get; set; }
+        protected override PayrollPersonnelManagementContext DbContext { get; set; }
+        
+        public EmployeeControll(PayrollPersonnelManagementContext dbContext, FormAdapter form)
         {
-            _dbContext = dbContext;
-        }
-
-        public List<Employee> GetEmployeeList()
-        {
-            var employees = _dbContext.Employees.ToList();
-            return employees;
-        }
-
-        public void  AddEmployee(Employee employee)
-        {
-            _dbContext.Employees.Add(employee);
-            _dbContext.SaveChanges();
-        }
-
-        public void UpdateEmployee(Employee employee)
-        {
-            _dbContext.Update(employee);
-            _dbContext.SaveChanges();
-        }
-
-        public void RemoveEmploee(Employee employee)
-        {
-            _dbContext.Remove(employee);
-            _dbContext.SaveChanges();
+            DbContext = dbContext;
+            FormAdapter = form;
+            DbSet = dbContext.Employees;
         }
     }
 }

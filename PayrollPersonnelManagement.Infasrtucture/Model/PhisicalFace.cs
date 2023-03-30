@@ -1,9 +1,10 @@
-﻿using System;
+﻿using PayrollPersonnelManagement.Infasrtucture.Model;
+using System;
 using System.Collections.Generic;
 
 namespace PayrollPersonnelManagement.Common
 {
-    public class PhisicalFace
+    public class PhisicalFace: IModel
     {
         public int Id { get; set; }
         public string Surname { get; set; }

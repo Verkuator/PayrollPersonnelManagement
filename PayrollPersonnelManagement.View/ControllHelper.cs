@@ -15,10 +15,10 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
         public static void Initialize(PayrollPersonnelManagementContext dbContext)
         {
             PhisicalFaceControll = new PhisicalFaceControll(dbContext, new PhisicalFaceFormSave());
-            EmployeeControll = new EmployeeControll(dbContext);
-            OneAccrualControll = new OneAccrualControll(dbContext);
-            PostControll = new PostControll(dbContext);
-            SubdivisionControll = new SubdivisionControll(dbContext);
+            //EmployeeControll = new EmployeeControll(dbContext);
+            //OneAccrualControll = new OneAccrualControll(dbContext);
+            //PostControll = new PostControll(dbContext);
+            //SubdivisionControll = new SubdivisionControll(dbContext);
         }       
 
     }

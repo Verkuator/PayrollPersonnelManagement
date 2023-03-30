@@ -1,4 +1,6 @@
-﻿using PayrollPersonnelManagement.Common;
+﻿using Microsoft.EntityFrameworkCore;
+using PayrollPersonnelManagement.Aplication.Controlls;
+using PayrollPersonnelManagement.Common;
 using PayrollPersonnelManagement.context;
 using System;
 using System.Collections.Generic;
@@ -8,37 +10,19 @@ using System.Threading.Tasks;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 {
-    public class SubdivisionControll
+    public class SubdivisionControll : IController<Subdivision>
     {
-        private readonly PayrollPersonnelManagementContext _dbContext;
+        public override string Name { get; set; }
+        public override FormAdapter FormAdapter { get; set; }
+        protected override DbSet<Subdivision> DbSet { get; set; }
+        protected override PayrollPersonnelManagementContext DbContext { get; set; }
 
-        public SubdivisionControll(PayrollPersonnelManagementContext dbContext)
+        public SubdivisionControll(PayrollPersonnelManagementContext dbContext, FormAdapter form)
         {
-            _dbContext = dbContext;
-        }
+            DbContext = dbContext;
+            FormAdapter = form;
+            DbSet = dbContext.Subdivisions;
 
-        public List<Subdivision> GetSubdivisionsList()
-        {
-            var subdivisions = _dbContext.Subdivisions.ToList();
-            return subdivisions;
-        }
-
-        public void AddSubdivision(Subdivision subdivision)
-        {
-            _dbContext.Add(subdivision);
-            _dbContext.SaveChanges();
-        }
-
-        public void UpdateSubdivision(Subdivision subdivision)
-        {
-            _dbContext.Update(subdivision);
-            _dbContext.SaveChanges();
-        }
-
-        public void RemoveSubdivision(Subdivision subdivision)
-        {
-            _dbContext.Remove(subdivision);
-            _dbContext.SaveChanges();
         }
     }
 }

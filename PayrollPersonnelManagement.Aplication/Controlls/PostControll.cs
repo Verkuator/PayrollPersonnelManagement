@@ -1,4 +1,6 @@
-﻿using PayrollPersonnelManagement.Common;
+﻿using Microsoft.EntityFrameworkCore;
+using PayrollPersonnelManagement.Aplication.Controlls;
+using PayrollPersonnelManagement.Common;
 using PayrollPersonnelManagement.context;
 using System;
 using System.Collections.Generic;
@@ -8,37 +10,18 @@ using System.Threading.Tasks;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 {
-    public class PostControll
+    public class PostControll : IController<Post>
     {
-        private readonly PayrollPersonnelManagementContext _dbContext;
-
-        public PostControll(PayrollPersonnelManagementContext dbContext)
+        public override string Name { get; set; }
+        public override FormAdapter FormAdapter { get; set; }
+        protected override DbSet<Post> DbSet { get; set ; }
+        protected override PayrollPersonnelManagementContext DbContext { get; set; }
+        
+        public PostControll(PayrollPersonnelManagementContext dbContext, FormAdapter form)
         {
-            _dbContext = dbContext;
-        }
-
-        public List<Post> GetPostsList()
-        {
-            var postsList = _dbContext.Posts.ToList();
-            return postsList;
-        }
-
-        public void AddPost(Post post)
-        {
-            _dbContext.Add(post);
-            _dbContext.SaveChanges();
-        }
-
-        public void UpdatePost(Post post)
-        {
-            _dbContext.Update(post);
-            _dbContext.SaveChanges();
-        }
-
-        public void RemovePost(Post post)
-        {
-            _dbContext.Remove(post);
-            _dbContext.SaveChanges();
+            DbContext = dbContext;
+            FormAdapter = form;
+            DbSet = dbContext.Posts;
         }
     }
 }

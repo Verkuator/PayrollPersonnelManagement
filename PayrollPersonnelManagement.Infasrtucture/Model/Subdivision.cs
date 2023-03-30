@@ -1,9 +1,10 @@
 ﻿
+using PayrollPersonnelManagement.Infasrtucture.Model;
 using System.Collections.Generic;
 
 namespace PayrollPersonnelManagement.Common
 {
-    public class Subdivision
+    public class Subdivision : IModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
