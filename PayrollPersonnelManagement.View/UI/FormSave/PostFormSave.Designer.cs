@@ -30,7 +30,6 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
@@ -39,6 +38,7 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -62,22 +62,13 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(588, 240);
+            this.layoutControl1.Size = new System.Drawing.Size(588, 267);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(296, 184);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(280, 44);
-            this.simpleButton2.StyleController = this.layoutControl1;
-            this.simpleButton2.TabIndex = 7;
-            this.simpleButton2.Text = "Отмена";
-            // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(12, 184);
+            this.simpleButton1.Location = new System.Drawing.Point(12, 211);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(280, 44);
             this.simpleButton1.StyleController = this.layoutControl1;
@@ -113,12 +104,12 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.emptySpaceItem1,
             this.layoutControlItem3,
             this.layoutControlItem2,
-            this.layoutControlItem4});
+            this.layoutControlItem4,
+            this.emptySpaceItem1});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(588, 240);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(588, 267);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -133,9 +124,9 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(284, 88);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 88);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(284, 84);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(568, 111);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -151,16 +142,25 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             // 
             this.layoutControlItem2.ContentVertAlignment = DevExpress.Utils.VertAlignment.Bottom;
             this.layoutControlItem2.Control = this.simpleButton1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 88);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 199);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(284, 132);
+            this.layoutControlItem2.Size = new System.Drawing.Size(284, 48);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(296, 211);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(280, 44);
+            this.simpleButton2.StyleController = this.layoutControl1;
+            this.simpleButton2.TabIndex = 7;
+            this.simpleButton2.Text = "Отмена";
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.simpleButton2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(284, 172);
+            this.layoutControlItem4.Location = new System.Drawing.Point(284, 199);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(284, 48);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -168,7 +168,7 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             // 
             // PostFormSave
             // 
-            this.ClientSize = new System.Drawing.Size(588, 240);
+            this.ClientSize = new System.Drawing.Size(588, 267);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PostFormSave";
@@ -212,9 +212,9 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.SpinEdit spinEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
 }

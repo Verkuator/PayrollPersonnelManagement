@@ -30,6 +30,7 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.checkedComboBoxEdit1 = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
@@ -42,11 +43,11 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.checkedComboBoxEdit1 = new DevExpress.XtraEditors.CheckedComboBoxEdit();
-            this.EmployeeComboBox = new DevExpress.XtraLayout.LayoutControlItem();
             this.Сотрудник = new DevExpress.XtraLayout.LayoutControlItem();
+            this.EmployeeComboBox = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkedComboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
@@ -58,9 +59,8 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedComboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Сотрудник)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -78,6 +78,16 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             this.layoutControl1.Size = new System.Drawing.Size(610, 324);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // checkedComboBoxEdit1
+            // 
+            this.checkedComboBoxEdit1.Location = new System.Drawing.Point(197, 144);
+            this.checkedComboBoxEdit1.Name = "checkedComboBoxEdit1";
+            this.checkedComboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.checkedComboBoxEdit1.Size = new System.Drawing.Size(401, 40);
+            this.checkedComboBoxEdit1.StyleController = this.layoutControl1;
+            this.checkedComboBoxEdit1.TabIndex = 8;
             // 
             // simpleButton2
             // 
@@ -212,15 +222,13 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // checkedComboBoxEdit1
+            // Сотрудник
             // 
-            this.checkedComboBoxEdit1.Location = new System.Drawing.Point(197, 144);
-            this.checkedComboBoxEdit1.Name = "checkedComboBoxEdit1";
-            this.checkedComboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.checkedComboBoxEdit1.Size = new System.Drawing.Size(401, 40);
-            this.checkedComboBoxEdit1.StyleController = this.layoutControl1;
-            this.checkedComboBoxEdit1.TabIndex = 8;
+            this.Сотрудник.Control = this.checkedComboBoxEdit1;
+            this.Сотрудник.Location = new System.Drawing.Point(0, 132);
+            this.Сотрудник.Name = "Сотрудник";
+            this.Сотрудник.Size = new System.Drawing.Size(590, 44);
+            this.Сотрудник.TextSize = new System.Drawing.Size(173, 25);
             // 
             // EmployeeComboBox
             // 
@@ -231,14 +239,6 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             this.EmployeeComboBox.Text = "Сотрудник";
             this.EmployeeComboBox.TextSize = new System.Drawing.Size(173, 25);
             // 
-            // Сотрудник
-            // 
-            this.Сотрудник.Control = this.checkedComboBoxEdit1;
-            this.Сотрудник.Location = new System.Drawing.Point(0, 132);
-            this.Сотрудник.Name = "Сотрудник";
-            this.Сотрудник.Size = new System.Drawing.Size(590, 44);
-            this.Сотрудник.TextSize = new System.Drawing.Size(173, 25);
-            // 
             // OneAccrualFormSave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -248,9 +248,9 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "OneAccrualFormSave";
-            this.Text = "OneAccrualFormSave";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.checkedComboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
@@ -262,9 +262,8 @@ namespace PayrollPersonnelManagement.View.UI.FormSave
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedComboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Сотрудник)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeComboBox)).EndInit();
             this.ResumeLayout(false);
 
         }
