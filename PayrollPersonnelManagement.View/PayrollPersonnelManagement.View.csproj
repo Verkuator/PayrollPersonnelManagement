@@ -121,6 +121,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI\FormSave\EmploeeFormSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormSave\EmploeeFormSave.Designer.cs">
+      <DependentUpon>EmploeeFormSave.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FormSave\OneAccrualFormSave.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     <Compile Include="UI\FormSave\PhisicalFaceFormSave.Designer.cs">
       <DependentUpon>PhisicalFaceFormSave.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FormSave\SubdivisionFormSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormSave\SubdivisionFormSave.Designer.cs">
+      <DependentUpon>SubdivisionFormSave.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BaseForm.resx">
@@ -152,6 +164,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormSave\EmploeeFormSave.resx">
+      <DependentUpon>EmploeeFormSave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FormSave\OneAccrualFormSave.resx">
       <DependentUpon>OneAccrualFormSave.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormSave\PhisicalFaceFormSave.resx">
       <DependentUpon>PhisicalFaceFormSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormSave\SubdivisionFormSave.resx">
+      <DependentUpon>SubdivisionFormSave.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

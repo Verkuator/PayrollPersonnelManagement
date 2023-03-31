@@ -3,9 +3,9 @@ using System;
 
 namespace PayrollPersonnelManagement.View.UI.FormSave
 {
-    public partial class PostFormSave : FormAdapter
+    public partial class SubdivisionFormSave : FormAdapter
     {
-        public PostFormSave()
+        public SubdivisionFormSave()
         {
             InitializeComponent();
         }

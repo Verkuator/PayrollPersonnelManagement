@@ -37,9 +37,21 @@ namespace PayrollPersonnelManagement.View
             f.Show();
         }
 
-        private void accordionControlElement1_Click(object sender, EventArgs e)
+        private void OneAccrualTab_Click(object sender, EventArgs e)
         {
             var f = new BaseFormAdapter<OneAccrual>(ControllHelper.OneAccrualControll) { MdiParent = this };
+            f.Show();
+        }
+
+        private void SubdivisionTab_Click(object sender, EventArgs e)
+        {
+            var f = new BaseFormAdapter<Subdivision>(ControllHelper.SubdivisionControll) { MdiParent = this };
+            f.Show();
+        }
+
+        private void EmployeeTab_Click(object sender, EventArgs e)
+        {
+            var f = new BaseFormAdapter<Employee>(ControllHelper.EmployeeControll) { MdiParent = this };
             f.Show();
         }
     }
