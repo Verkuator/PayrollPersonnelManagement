@@ -2,15 +2,12 @@
 using PayrollPersonnelManagement.Aplication.Controlls;
 using PayrollPersonnelManagement.context;
 using PayrollPersonnelManagement.Infasrtucture.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 {
-    public abstract class IController<T> where T: class, IModel
+    public abstract class IController<T> where T : class, IModel
     {
         public abstract string Name { get; set; }
         public abstract FormAdapter FormAdapter { get; set; }

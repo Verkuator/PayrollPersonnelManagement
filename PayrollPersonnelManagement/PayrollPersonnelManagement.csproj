@@ -116,6 +116,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Collection">
+      <Version>7.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
       <Version>3.1.32</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -141,6 +144,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PayrollPersonnelManagement.Aplication\PayrollPersonnelManagement.Aplication.csproj">
+      <Project>{e83eb9cf-ed74-49c3-a1e2-866a56c03605}</Project>
+      <Name>PayrollPersonnelManagement.Aplication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PayrollPersonnelManagement.Infasrtucture\PayrollPersonnelManagement.Infasrtucture.csproj">
       <Project>{b8bc2433-b4ae-4c7c-9dc6-562249585db9}</Project>
       <Name>PayrollPersonnelManagement.Infasrtucture</Name>

@@ -1,7 +1,7 @@
 ﻿using PayrollPersonnelManagement.Aplication.Controlls;
 using System;
 
-namespace PayrollPersonnelManagement.View.UI.FormSave
+namespace PayrollPersonnelManagement.View.FormSave
 {
     public partial class PostFormSave : FormAdapter
     {

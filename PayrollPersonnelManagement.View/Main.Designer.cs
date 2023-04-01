@@ -59,10 +59,10 @@ namespace PayrollPersonnelManagement.View
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accScales});
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.RootDisplayMode = DevExpress.XtraBars.Navigation.AccordionControlRootDisplayMode.Footer;
-            this.accordionControl1.Size = new System.Drawing.Size(467, 997);
+            this.accordionControl1.Size = new System.Drawing.Size(272, 638);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -90,7 +90,7 @@ namespace PayrollPersonnelManagement.View
             // 
             // PostTab
             // 
-            this.PostTab.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("PostTab.ImageOptions.Image")));
+            this.PostTab.ImageOptions.ImageUri.Uri = "business%20objects/bo_position_v92";
             this.PostTab.Name = "PostTab";
             this.PostTab.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.PostTab.Text = "Должности";
@@ -98,7 +98,7 @@ namespace PayrollPersonnelManagement.View
             // 
             // OneAccrualTab
             // 
-            this.OneAccrualTab.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("OneAccrualTab.ImageOptions.Image")));
+            this.OneAccrualTab.ImageOptions.ImageUri.Uri = "outlook%20inspired/employeequickwelcome";
             this.OneAccrualTab.Name = "OneAccrualTab";
             this.OneAccrualTab.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.OneAccrualTab.Text = "Сделки";
@@ -106,7 +106,7 @@ namespace PayrollPersonnelManagement.View
             // 
             // EmployeeTab
             // 
-            this.EmployeeTab.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("EmployeeTab.ImageOptions.Image")));
+            this.EmployeeTab.ImageOptions.ImageUri.Uri = "business%20objects/bo_lead";
             this.EmployeeTab.Name = "EmployeeTab";
             this.EmployeeTab.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.EmployeeTab.Text = "Сотрудники";
@@ -114,7 +114,7 @@ namespace PayrollPersonnelManagement.View
             // 
             // SubdivisionTab
             // 
-            this.SubdivisionTab.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("SubdivisionTab.ImageOptions.Image")));
+            this.SubdivisionTab.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("SubdivisionTab.ImageOptions.SvgImage")));
             this.SubdivisionTab.Name = "SubdivisionTab";
             this.SubdivisionTab.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.SubdivisionTab.Text = "Отделы";
@@ -123,9 +123,9 @@ namespace PayrollPersonnelManagement.View
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1737, 0);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1013, 0);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -172,33 +172,33 @@ namespace PayrollPersonnelManagement.View
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barMdiChildrenListItem2);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(467, 943);
-            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(272, 605);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1270, 54);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(741, 33);
             // 
             // ribbonControl2
             // 
-            this.ribbonControl2.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(60, 58, 60, 58);
+            this.ribbonControl2.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
             this.ribbonControl2.ExpandCollapseItem.Id = 0;
             this.ribbonControl2.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl2.ExpandCollapseItem,
             this.ribbonControl2.SearchEditItem});
-            this.ribbonControl2.Location = new System.Drawing.Point(467, 0);
-            this.ribbonControl2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ribbonControl2.Location = new System.Drawing.Point(272, 0);
+            this.ribbonControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl2.MaxItemId = 1;
             this.ribbonControl2.Name = "ribbonControl2";
-            this.ribbonControl2.OptionsMenuMinWidth = 660;
+            this.ribbonControl2.OptionsMenuMinWidth = 385;
             this.ribbonControl2.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl2.Size = new System.Drawing.Size(1270, 50);
+            this.ribbonControl2.Size = new System.Drawing.Size(741, 31);
             this.ribbonControl2.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1737, 997);
+            this.ClientSize = new System.Drawing.Size(1013, 638);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl2);
             this.Controls.Add(this.accordionControl1);
@@ -206,7 +206,7 @@ namespace PayrollPersonnelManagement.View
             this.IconOptions.ImageUri.Uri = "dashboards/weightedpies";
             this.IconOptions.ShowIcon = false;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(870, 550);
             this.Name = "Main";
             this.Text = "Учёт";

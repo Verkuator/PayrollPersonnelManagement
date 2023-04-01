@@ -1,5 +1,5 @@
 ﻿
-namespace PayrollPersonnelManagement.View.UI.FormSave
+namespace PayrollPersonnelManagement.View.FormSave
 {
     partial class OneAccrualFormSave
     {

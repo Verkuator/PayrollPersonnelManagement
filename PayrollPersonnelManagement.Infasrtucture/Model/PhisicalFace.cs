@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace PayrollPersonnelManagement.Common
 {
-    public class PhisicalFace: IModel
+    public class PhisicalFace : IModel
     {
         public int Id { get; set; }
         public string Surname { get; set; }

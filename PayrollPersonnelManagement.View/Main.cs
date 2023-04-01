@@ -1,9 +1,8 @@
 ﻿using PayrollPersonnelManagement.Common;
 using PayrollPersonnelManagement.Infasrtucture.Controll;
 using PayrollPersonnelManagement.Infasrtucture.Controlls;
-using PayrollPersonnelManagement.View;
+using PayrollPersonnelManagement.Infasrtucture.Model;
 using System;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View
@@ -27,32 +26,51 @@ namespace PayrollPersonnelManagement.View
 
         private void PhisicalFaceTab_Click(object sender, EventArgs e)
         {
-            var f = new BaseFormAdapter<PhisicalFace>(ControllHelper.PhisicalFaceControll) { MdiParent = this };
-            f.Show();
+            OpenTab(ControllHelper.PhisicalFaceControll);
         }
 
         private void PostTab_Click(object sender, EventArgs e)
         {
-            var f = new BaseFormAdapter<Post>(ControllHelper.PostControll) { MdiParent = this };
-            f.Show();
+            OpenTab(ControllHelper.PostControll);
         }
 
         private void OneAccrualTab_Click(object sender, EventArgs e)
         {
-            var f = new BaseFormAdapter<OneAccrual>(ControllHelper.OneAccrualControll) { MdiParent = this };
-            f.Show();
+            OpenTab(ControllHelper.OneAccrualControll);
         }
 
         private void SubdivisionTab_Click(object sender, EventArgs e)
         {
-            var f = new BaseFormAdapter<Subdivision>(ControllHelper.SubdivisionControll) { MdiParent = this };
-            f.Show();
+            OpenTab(ControllHelper.SubdivisionControll);
         }
 
         private void EmployeeTab_Click(object sender, EventArgs e)
         {
-            var f = new BaseFormAdapter<Employee>(ControllHelper.EmployeeControll) { MdiParent = this };
-            f.Show();
+            OpenTab(ControllHelper.EmployeeControll);
+        }
+
+        private void OpenTab<T>(IController<T> controller) where T : class, IModel
+        {
+            if(!ThisOpenTab(controller.Name))
+            {
+                var f = new BaseFormAdapter<T>(controller) { MdiParent = this };
+                f.Show();
+            }
+        }
+
+        private bool ThisOpenTab(string name)
+        {
+            bool found = false;
+            foreach (var frm in this.MdiChildren)
+            {
+                if (frm.Name == name)
+                {
+                    found = true;
+                    frm.Select();
+                    break;
+                }
+            }
+            return found;
         }
     }
 }

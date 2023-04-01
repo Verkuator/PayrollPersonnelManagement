@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PayrollPersonnelManagement.Common
 {
-    public class Post: IModel
+    public class Post : IModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

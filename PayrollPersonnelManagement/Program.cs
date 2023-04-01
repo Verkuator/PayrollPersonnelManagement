@@ -1,10 +1,10 @@
-﻿using PayrollPersonnelManagement.CreateSQLite;
+﻿using PayrollPersonnelManagement.Aplication.AutotMapper;
+using PayrollPersonnelManagement.context;
+using PayrollPersonnelManagement.CreateSQLite;
+using PayrollPersonnelManagement.Infasrtucture.Controll;
 using PayrollPersonnelManagement.View;
 using System;
 using System.Windows.Forms;
-using PayrollPersonnelManagement.context;
-using PayrollPersonnelManagement.View.UI.FormSave;
-using PayrollPersonnelManagement.Infasrtucture.Controll;
 
 namespace PayrollPersonnelManagement
 {
@@ -17,9 +17,9 @@ namespace PayrollPersonnelManagement
         static void Main()
         {
             SQLiteCreateDb.CreateSQLite();
-            Application.EnableVisualStyles();            
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            ControllHelper.Initialize(new PayrollPersonnelManagementContext());
+            ControllHelper.Initialize(new PayrollPersonnelManagementContext(), MappConfiguration.GetMapper());
             Application.Run(new Main());
         }
     }
