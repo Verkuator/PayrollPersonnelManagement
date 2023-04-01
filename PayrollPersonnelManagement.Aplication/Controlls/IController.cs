@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using PayrollPersonnelManagement.Aplication.Controlls;
 using PayrollPersonnelManagement.context;
 using PayrollPersonnelManagement.Infasrtucture.Model;
@@ -7,20 +8,23 @@ using System.Linq;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 {
-    public abstract class IController<T> where T : class, IModel
+    public abstract class IController<M, D> 
+        where M : class, IModel
+        where D : class
     {
         public abstract string Name { get; set; }
         public abstract FormAdapter FormAdapter { get; set; }
-        protected abstract DbSet<T> DbSet { get; set; }
+        protected abstract DbSet<M> DbSet { get; set; }
         protected abstract PayrollPersonnelManagementContext DbContext { get; set; }
+        protected abstract IMapper Mapper { get; set; }
 
-        public virtual ICollection<T> Get()
+        public virtual ICollection<M> Get()
         {
             var obj = DbSet.ToList();
             return obj;
         }
 
-        public virtual T Save(T obj)
+        public virtual M Save(M obj)
         {
             if (obj.Id == 0)
             {
@@ -34,7 +38,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
             return obj;
         }
 
-        public virtual void Delete(T obj)
+        public virtual void Delete(M obj)
         {
             DbSet.Remove(obj);
             DbContext.SaveChanges();
@@ -43,6 +47,30 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         public virtual void OpenForm()
         {
             FormAdapter.ShowDialog();
+        }
+
+        public virtual M MapToModel(D obj)
+        {
+            var res = Mapper.Map<M>(obj);
+            return res;
+        }
+
+        public virtual D MapToDto(M obj)
+        {
+            var res = Mapper.Map<D>(obj);
+            return res;
+        }
+
+        public virtual ICollection<M> MapToModel(ICollection<D> obj)
+        {
+            var res = Mapper.Map<ICollection<M>>(obj);
+            return res;
+        }
+
+        public virtual ICollection<D> MapToDto(ICollection<M> obj)
+        {
+            var res = Mapper.Map<ICollection<D>>(obj);
+            return res;
         }
     }
 }

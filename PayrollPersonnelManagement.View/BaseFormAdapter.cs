@@ -5,11 +5,13 @@ using System;
 
 namespace PayrollPersonnelManagement.View
 {
-    public class BaseFormAdapter<T> : BaseForm where T : class, IModel
+    public class BaseFormAdapter<M, D> : BaseForm 
+        where M : class, IModel
+        where D : class
     {
         
-        private IController<T> Controller { get; set; }
-        public BaseFormAdapter(IController<T> controller) : base()
+        private IController<M, D> Controller { get; set; }
+        public BaseFormAdapter(IController<M, D> controller) : base()
         {
             Name = controller.Name;
             Controller = controller;
@@ -26,7 +28,9 @@ namespace PayrollPersonnelManagement.View
 
         private void BaseForm_Load(object sender, EventArgs e)
         {
-            BaseDataGrid.DataSource = Controller.Get();
+            var model = Controller.Get();
+            var dto = Controller.MapToDto(model);
+            BaseDataGrid.DataSource = dto;
         }
 
         private void Edit_ItemClick(object sender, ItemClickEventArgs e)
