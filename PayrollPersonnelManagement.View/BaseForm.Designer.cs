@@ -71,7 +71,6 @@ namespace PayrollPersonnelManagement.View
             this.Add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Add.ImageOptions.Image")));
             this.Add.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Add.ImageOptions.LargeImage")));
             this.Add.Name = "Add";
-            
             // 
             // Delete
             // 
@@ -80,7 +79,6 @@ namespace PayrollPersonnelManagement.View
             this.Delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Delete.ImageOptions.Image")));
             this.Delete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Delete.ImageOptions.LargeImage")));
             this.Delete.Name = "Delete";
-            
             // 
             // Edit
             // 
@@ -89,7 +87,6 @@ namespace PayrollPersonnelManagement.View
             this.Edit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Edit.ImageOptions.Image")));
             this.Edit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Edit.ImageOptions.LargeImage")));
             this.Edit.Name = "Edit";
-            
             // 
             // BasePage
             // 
@@ -144,7 +141,6 @@ namespace PayrollPersonnelManagement.View
             this.Name = "BaseForm";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BaseDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

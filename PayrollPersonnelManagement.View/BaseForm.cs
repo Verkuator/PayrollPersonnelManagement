@@ -2,20 +2,22 @@
 {
     public partial class BaseForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public string TabName { get; set; }
-        private bool UseTab { get; set; }
+        public string FormMenuCaption
+        {
+            get
+            {
+                return this.BasePage.Text;
+            }
+            set
+            {
+                this.BasePage.Text = value;
+                this.Text = value;
+            }
+        }
         public BaseForm()
         {
             InitializeComponent();
             ControlBox = false;
-            UseTab = true;
         }
-
-        public bool IsUseTab()
-        {
-            return UseTab;
-        }
-
-
     }
 }

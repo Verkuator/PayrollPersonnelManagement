@@ -14,6 +14,7 @@ namespace PayrollPersonnelManagement.View
         public BaseFormAdapter(IController<M, D> controller) : base()
         {
             Name = controller.Name;
+            FormMenuCaption = controller.Name;
             Controller = controller;
             Edit.ItemClick += new ItemClickEventHandler(Edit_ItemClick);
             Delete.ItemClick += new ItemClickEventHandler(Delete_ItemClick);
