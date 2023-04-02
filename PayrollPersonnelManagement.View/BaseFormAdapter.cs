@@ -2,6 +2,7 @@
 using PayrollPersonnelManagement.Infasrtucture.Controlls;
 using PayrollPersonnelManagement.Infasrtucture.Model;
 using System;
+using AutoMapper;
 
 namespace PayrollPersonnelManagement.View
 {

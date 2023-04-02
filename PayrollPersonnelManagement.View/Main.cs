@@ -49,11 +49,13 @@ namespace PayrollPersonnelManagement.View
             OpenTab(ControllHelper.EmployeeControll);
         }
 
-        private void OpenTab<T>(IController<T> controller) where T : class, IModel
+        private void OpenTab<T, D>(IController<T, D> controller) 
+            where T : class, IModel 
+            where D : class
         {
             if(!ThisOpenTab(controller.Name))
             {
-                var f = new BaseFormAdapter<T>(controller) { MdiParent = this };
+                var f = new BaseFormAdapter<T, D>(controller) { MdiParent = this };
                 f.Show();
             }
         }

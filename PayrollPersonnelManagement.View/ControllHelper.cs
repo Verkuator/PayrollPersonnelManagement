@@ -15,7 +15,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
 
         public static void Initialize(PayrollPersonnelManagementContext dbContext, IMapper mapper)
         {
-            PhisicalFaceControll = new PhisicalFaceControll(dbContext, new PhisicalFaceFormSave());
+            PhisicalFaceControll = new PhisicalFaceControll(dbContext, new PhisicalFaceFormSave(), mapper);
             EmployeeControll = new EmployeeControll(dbContext, new EmploeeFormSave());
             OneAccrualControll = new OneAccrualControll(dbContext, new OneAccrualFormSave());
             PostControll = new PostControll(dbContext, new PostFormSave());
