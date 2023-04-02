@@ -15,12 +15,12 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
         public override IMapper Mapper { get; set; }
 
-        public SubdivisionControll(PayrollPersonnelManagementContext dbContext, FormAdapter form)
+        public SubdivisionControll(PayrollPersonnelManagementContext dbContext, FormAdapter form, IMapper mapper)
         {
             DbContext = dbContext;
             FormAdapter = form;
             DbSet = dbContext.Subdivisions;
-
+            Mapper = mapper;
         }
     }
 }

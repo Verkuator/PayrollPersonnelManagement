@@ -18,11 +18,12 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
         public override IMapper Mapper { get; set; }
 
-        public OneAccrualControll(PayrollPersonnelManagementContext dbContext, FormAdapter form)
+        public OneAccrualControll(PayrollPersonnelManagementContext dbContext, FormAdapter form, IMapper mapper)
         {
             DbContext = dbContext;
             FormAdapter = form;
             DbSet = dbContext.OneAccrual;
+            Mapper = mapper;
         }
 
         public override List<OneAccrual> Get()

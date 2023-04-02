@@ -16,10 +16,10 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
         public static void Initialize(PayrollPersonnelManagementContext dbContext, IMapper mapper)
         {
             PhisicalFaceControll = new PhisicalFaceControll(dbContext, new PhisicalFaceFormSave(), mapper);
-            EmployeeControll = new EmployeeControll(dbContext, new EmploeeFormSave());
-            OneAccrualControll = new OneAccrualControll(dbContext, new OneAccrualFormSave());
-            PostControll = new PostControll(dbContext, new PostFormSave());
-            SubdivisionControll = new SubdivisionControll(dbContext, new SubdivisionFormSave());
+            EmployeeControll = new EmployeeControll(dbContext, new EmploeeFormSave(), mapper);
+            OneAccrualControll = new OneAccrualControll(dbContext, new OneAccrualFormSave(), mapper);
+            PostControll = new PostControll(dbContext, new PostFormSave(), mapper);
+            SubdivisionControll = new SubdivisionControll(dbContext, new SubdivisionFormSave(), mapper);
         }
 
     }

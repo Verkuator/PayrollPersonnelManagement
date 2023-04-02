@@ -15,11 +15,12 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
         public override IMapper Mapper { get; set; }
 
-        public PostControll(PayrollPersonnelManagementContext dbContext, FormAdapter form)
+        public PostControll(PayrollPersonnelManagementContext dbContext, FormAdapter form, IMapper mapper)
         {
             DbContext = dbContext;
             FormAdapter = form;
             DbSet = dbContext.Posts;
+            Mapper = mapper;
         }
     }
 }
