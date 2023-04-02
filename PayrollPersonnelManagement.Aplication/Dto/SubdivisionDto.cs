@@ -9,7 +9,8 @@ namespace PayrollPersonnelManagement.Aplication.Dto
 {
     public class SubdivisionDto
     {
-        public virtual int Id { get; set; }
+        [Browsable(false)]
+        public int Id { get; set; }
         [DisplayName("Название")]
         public string Name { get; set; }
         [DisplayName("Надбавка")]

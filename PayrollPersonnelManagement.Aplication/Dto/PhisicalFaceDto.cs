@@ -9,8 +9,8 @@ namespace PayrollPersonnelManagement.Aplication.Dto
 {
     public class PhisicalFaceDto
     {
-        
-        public virtual int Id { get; set; }
+        [Browsable(false)]
+        public int Id { get; set; }
         [DisplayName("Фамилия")]
         public string Surname { get; set; }
         [DisplayName("Имя")]

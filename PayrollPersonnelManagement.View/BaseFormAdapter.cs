@@ -3,12 +3,15 @@ using PayrollPersonnelManagement.Infasrtucture.Controlls;
 using PayrollPersonnelManagement.Infasrtucture.Model;
 using System;
 using AutoMapper;
+using System.Collections.Generic;
+using PayrollPersonnelManagement.Aplication.Dto;
+using PayrollPersonnelManagement.Common;
 
 namespace PayrollPersonnelManagement.View
 {
     public class BaseFormAdapter<M, D> : BaseForm 
-        where M : class, IModel
-        where D : class
+        where M : class, IModel, new()
+        where D : class, new()
     {
         
         private IController<M, D> Controller { get; set; }
@@ -31,8 +34,16 @@ namespace PayrollPersonnelManagement.View
         private void BaseForm_Load(object sender, EventArgs e)
         {
             var model = Controller.Get();
-            var dto = Controller.MapToDto(model);
-            BaseDataGrid.DataSource = dto;
+            if(model.Count == 0)
+            {
+                BaseDataGrid.DataSource = new D();
+            }
+            else
+            {
+                var dto = Controller.MapToDto(model);
+                BaseDataGrid.DataSource = dto;
+            }
+            
         }
 
         private void Edit_ItemClick(object sender, ItemClickEventArgs e)

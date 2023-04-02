@@ -16,9 +16,9 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         public abstract FormAdapter FormAdapter { get; set; }
         protected abstract DbSet<M> DbSet { get; set; }
         protected abstract PayrollPersonnelManagementContext DbContext { get; set; }
-        protected abstract IMapper Mapper { get; set; }
+        public abstract IMapper Mapper { get; set; }
 
-        public virtual ICollection<M> Get()
+        public virtual List<M> Get()
         {
             var obj = DbSet.ToList();
             return obj;

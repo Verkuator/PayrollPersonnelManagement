@@ -14,7 +14,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
         public override FormAdapter FormAdapter { get; set; }
         protected override DbSet<PhisicalFace> DbSet { get; set; }
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
-        protected override IMapper Mapper { get; set; }
+        public override IMapper Mapper { get; set; }
 
         public PhisicalFaceControll(PayrollPersonnelManagementContext dbContext, FormAdapter form, IMapper mapper)
         {

@@ -10,14 +10,17 @@ namespace PayrollPersonnelManagement.Aplication.Dto
 {
     public class OneAccrualDto
     {
-        public virtual int Id { get; set; }
+        [Browsable(false)]
+        public int Id { get; set; }
         [DisplayName("Дата")]
         public DateTime InDate { get; set; }
         [DisplayName("Часов в месяц")]
         public decimal HoursMonth { get; set; }
         [DisplayName("Сумма")]
         public decimal Sum { get; set; }
+        [Browsable(false)]
         public int EmployeeId { get; set; }
-        public Employee Employee { get; set; }
+        [DisplayName("Сотрудник")]
+        public string Employee { get; set; }
     }
 }

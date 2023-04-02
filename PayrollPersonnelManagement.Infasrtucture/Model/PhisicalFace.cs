@@ -12,5 +12,11 @@ namespace PayrollPersonnelManagement.Common
         public string Patronymic { get; set; }
         public DateTime DateBirth { get; set; }
         public ICollection<Employee> Employee { get; set; }
+
+        public override string ToString()
+        {
+            string Fio = Surname + " " + Name + " " + Patronymic;
+            return Fio;
+        }
     }
 }

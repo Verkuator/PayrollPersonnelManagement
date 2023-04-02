@@ -50,8 +50,8 @@ namespace PayrollPersonnelManagement.View
         }
 
         private void OpenTab<T, D>(IController<T, D> controller) 
-            where T : class, IModel 
-            where D : class
+            where T : class, IModel , new()
+            where D : class, new()
         {
             if(!ThisOpenTab(controller.Name))
             {

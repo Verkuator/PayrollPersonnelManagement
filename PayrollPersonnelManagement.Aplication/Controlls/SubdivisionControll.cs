@@ -13,7 +13,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         public override FormAdapter FormAdapter { get; set; }
         protected override DbSet<Subdivision> DbSet { get; set; }
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
-        protected override IMapper Mapper { get; set; }
+        public override IMapper Mapper { get; set; }
 
         public SubdivisionControll(PayrollPersonnelManagementContext dbContext, FormAdapter form)
         {

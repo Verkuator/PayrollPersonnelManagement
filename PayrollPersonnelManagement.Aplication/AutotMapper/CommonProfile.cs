@@ -9,7 +9,7 @@ namespace PayrollPersonnelManagement.Aplication.AutotMapper
         public CommonProfile()
         {
             CreateMap(typeof(Task<>), typeof(Task<>));
-            CreateMap(typeof(ICollection<>), typeof(ICollection<>));
+            CreateMap(typeof(List<>), typeof(List<>));
         }
     }
 }
