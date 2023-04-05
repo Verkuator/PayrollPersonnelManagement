@@ -19,5 +19,7 @@
             InitializeComponent();
             ControlBox = false;
         }
+
+        
     }
 }

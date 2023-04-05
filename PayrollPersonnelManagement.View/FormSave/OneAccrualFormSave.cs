@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.FormSave
 {
-    public partial class OneAccrualFormSave : Form
+    public partial class OneAccrualFormSave : FormAdapter<OneAccrualDto>
     {
         public OneAccrualControll ModelActions { get; set; }
         public OneAccrualFormSave(OneAccrualControll modelActions)

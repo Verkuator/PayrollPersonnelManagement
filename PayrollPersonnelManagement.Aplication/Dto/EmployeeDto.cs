@@ -25,5 +25,11 @@ namespace PayrollPersonnelManagement.Aplication.Dto
         public int PostId { get; set; }
         [DisplayName("Должность")]
         public string Post { get; set; }
+
+        public override string ToString()
+        {
+            string res = Fio + " " + Subdivision + " " + Post;
+            return res;
+        }
     }
 }

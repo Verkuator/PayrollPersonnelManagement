@@ -30,64 +30,77 @@ namespace PayrollPersonnelManagement.View.FormSave
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.PhisicalFaceEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.PhisicalFaceControllItem = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.PhisicalFaceComboBox = new DevExpress.XtraLayout.LayoutControlItem();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.PostComboBox = new DevExpress.XtraLayout.LayoutControlItem();
-            this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.SubdivisionComboBox = new DevExpress.XtraLayout.LayoutControlItem();
+            this.PostEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.PostControllItem = new DevExpress.XtraLayout.LayoutControlItem();
+            this.SubdivisionEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.SubdivisionControllItem = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhisicalFaceEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhisicalFaceControllItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PhisicalFaceComboBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PostComboBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SubdivisionComboBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PostEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PostControllItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubdivisionEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubdivisionControllItem)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.comboBoxEdit3);
-            this.layoutControl1.Controls.Add(this.comboBoxEdit2);
-            this.layoutControl1.Controls.Add(this.comboBoxEdit1);
+            this.layoutControl1.Controls.Add(this.PhisicalFaceEdit);
             this.layoutControl1.Controls.Add(this.simpleButton2);
             this.layoutControl1.Controls.Add(this.simpleButton1);
+            this.layoutControl1.Controls.Add(this.PostEdit);
+            this.layoutControl1.Controls.Add(this.SubdivisionEdit);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(706, 0, 1300, 800);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(610, 373);
+            this.layoutControl1.Size = new System.Drawing.Size(407, 239);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // PhisicalFaceEdit
+            // 
+            this.PhisicalFaceEdit.Location = new System.Drawing.Point(90, 12);
+            this.PhisicalFaceEdit.Name = "PhisicalFaceEdit";
+            this.PhisicalFaceEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.PhisicalFaceEdit.Size = new System.Drawing.Size(305, 22);
+            this.PhisicalFaceEdit.StyleController = this.layoutControl1;
+            this.PhisicalFaceEdit.TabIndex = 11;
+            // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(307, 317);
+            this.simpleButton2.Location = new System.Drawing.Point(205, 200);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(291, 44);
+            this.simpleButton2.Size = new System.Drawing.Size(190, 27);
             this.simpleButton2.StyleController = this.layoutControl1;
             this.simpleButton2.TabIndex = 6;
             this.simpleButton2.Text = "Отменить";
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(12, 317);
+            this.simpleButton1.Location = new System.Drawing.Point(12, 200);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(291, 44);
+            this.simpleButton1.Size = new System.Drawing.Size(189, 27);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "Добавить";
@@ -100,39 +113,48 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.emptySpaceItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
-            this.PhisicalFaceComboBox,
-            this.PostComboBox,
-            this.SubdivisionComboBox});
+            this.PhisicalFaceControllItem,
+            this.PostControllItem,
+            this.SubdivisionControllItem});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(610, 373);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(407, 239);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(295, 132);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(193, 78);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(295, 173);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(194, 110);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.ContentVertAlignment = DevExpress.Utils.VertAlignment.Bottom;
             this.layoutControlItem2.Control = this.simpleButton1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 132);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 78);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(295, 221);
+            this.layoutControlItem2.Size = new System.Drawing.Size(193, 141);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.simpleButton2;
-            this.layoutControlItem3.Location = new System.Drawing.Point(295, 305);
+            this.layoutControlItem3.Location = new System.Drawing.Point(193, 188);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(295, 48);
+            this.layoutControlItem3.Size = new System.Drawing.Size(194, 31);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
+            // 
+            // PhisicalFaceControllItem
+            // 
+            this.PhisicalFaceControllItem.Control = this.PhisicalFaceEdit;
+            this.PhisicalFaceControllItem.Location = new System.Drawing.Point(0, 0);
+            this.PhisicalFaceControllItem.Name = "PhisicalFaceControllItem";
+            this.PhisicalFaceControllItem.Size = new System.Drawing.Size(387, 26);
+            this.PhisicalFaceControllItem.Text = "Физ. лицо";
+            this.PhisicalFaceControllItem.TextSize = new System.Drawing.Size(66, 16);
             // 
             // layoutControlGroup2
             // 
@@ -142,85 +164,72 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.layoutControlGroup2.Size = new System.Drawing.Size(590, 35);
             this.layoutControlGroup2.Tag = "LayoutRootGroupForRestore";
             // 
-            // comboBoxEdit1
+            // PostEdit
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(130, 12);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.PostEdit.Location = new System.Drawing.Point(90, 38);
+            this.PostEdit.Name = "PostEdit";
+            this.PostEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(468, 40);
-            this.comboBoxEdit1.StyleController = this.layoutControl1;
-            this.comboBoxEdit1.TabIndex = 8;
+            this.PostEdit.Size = new System.Drawing.Size(305, 22);
+            this.PostEdit.StyleController = this.layoutControl1;
+            this.PostEdit.TabIndex = 11;
             // 
-            // PhisicalFaceComboBox
+            // PostControllItem
             // 
-            this.PhisicalFaceComboBox.Control = this.comboBoxEdit1;
-            this.PhisicalFaceComboBox.Location = new System.Drawing.Point(0, 0);
-            this.PhisicalFaceComboBox.Name = "PhisicalFaceComboBox";
-            this.PhisicalFaceComboBox.Size = new System.Drawing.Size(590, 44);
-            this.PhisicalFaceComboBox.Text = "Физ. лицо";
-            this.PhisicalFaceComboBox.TextSize = new System.Drawing.Size(106, 25);
+            this.PostControllItem.Control = this.PostEdit;
+            this.PostControllItem.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.PostControllItem.CustomizationFormText = "Должность";
+            this.PostControllItem.Location = new System.Drawing.Point(0, 26);
+            this.PostControllItem.Name = "PostControllItem";
+            this.PostControllItem.Size = new System.Drawing.Size(387, 26);
+            this.PostControllItem.Text = "Должность";
+            this.PostControllItem.TextSize = new System.Drawing.Size(66, 16);
             // 
-            // comboBoxEdit2
+            // SubdivisionEdit
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(130, 100);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.SubdivisionEdit.Location = new System.Drawing.Point(90, 64);
+            this.SubdivisionEdit.Name = "SubdivisionEdit";
+            this.SubdivisionEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(468, 40);
-            this.comboBoxEdit2.StyleController = this.layoutControl1;
-            this.comboBoxEdit2.TabIndex = 9;
+            this.SubdivisionEdit.Size = new System.Drawing.Size(305, 22);
+            this.SubdivisionEdit.StyleController = this.layoutControl1;
+            this.SubdivisionEdit.TabIndex = 11;
             // 
-            // PostComboBox
+            // SubdivisionControllItem
             // 
-            this.PostComboBox.Control = this.comboBoxEdit2;
-            this.PostComboBox.Location = new System.Drawing.Point(0, 88);
-            this.PostComboBox.Name = "PostComboBox";
-            this.PostComboBox.Size = new System.Drawing.Size(590, 44);
-            this.PostComboBox.Text = "Должность";
-            this.PostComboBox.TextSize = new System.Drawing.Size(106, 25);
-            // 
-            // comboBoxEdit3
-            // 
-            this.comboBoxEdit3.Location = new System.Drawing.Point(130, 56);
-            this.comboBoxEdit3.Name = "comboBoxEdit3";
-            this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit3.Size = new System.Drawing.Size(468, 40);
-            this.comboBoxEdit3.StyleController = this.layoutControl1;
-            this.comboBoxEdit3.TabIndex = 10;
-            // 
-            // SubdivisionComboBox
-            // 
-            this.SubdivisionComboBox.Control = this.comboBoxEdit3;
-            this.SubdivisionComboBox.Location = new System.Drawing.Point(0, 44);
-            this.SubdivisionComboBox.Name = "SubdivisionComboBox";
-            this.SubdivisionComboBox.Size = new System.Drawing.Size(590, 44);
-            this.SubdivisionComboBox.Text = "Отдел";
-            this.SubdivisionComboBox.TextSize = new System.Drawing.Size(106, 25);
+            this.SubdivisionControllItem.Control = this.SubdivisionEdit;
+            this.SubdivisionControllItem.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.SubdivisionControllItem.CustomizationFormText = "Отдел";
+            this.SubdivisionControllItem.Location = new System.Drawing.Point(0, 52);
+            this.SubdivisionControllItem.Name = "SubdivisionControllItem";
+            this.SubdivisionControllItem.Size = new System.Drawing.Size(387, 26);
+            this.SubdivisionControllItem.Text = "Отдел";
+            this.SubdivisionControllItem.TextSize = new System.Drawing.Size(66, 16);
             // 
             // EmploeeFormSave
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 373);
+            this.ClientSize = new System.Drawing.Size(407, 239);
             this.Controls.Add(this.layoutControl1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EmploeeFormSave";
+            this.Load += new System.EventHandler(this.EmploeeFormSave_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PhisicalFaceEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhisicalFaceControllItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PhisicalFaceComboBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PostComboBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SubdivisionComboBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PostEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PostControllItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubdivisionEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubdivisionControllItem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,11 +244,11 @@ namespace PayrollPersonnelManagement.View.FormSave
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private DevExpress.XtraLayout.LayoutControlItem PhisicalFaceComboBox;
-        private DevExpress.XtraLayout.LayoutControlItem PostComboBox;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit3;
-        private DevExpress.XtraLayout.LayoutControlItem SubdivisionComboBox;
+        private DevExpress.XtraEditors.LookUpEdit PhisicalFaceEdit;
+        private DevExpress.XtraLayout.LayoutControlItem PhisicalFaceControllItem;
+        private DevExpress.XtraEditors.LookUpEdit PostEdit;
+        private DevExpress.XtraEditors.LookUpEdit SubdivisionEdit;
+        private DevExpress.XtraLayout.LayoutControlItem PostControllItem;
+        private DevExpress.XtraLayout.LayoutControlItem SubdivisionControllItem;
     }
 }

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.FormSave
 {
-    public partial class SubdivisionFormSave : Form
+    public partial class SubdivisionFormSave : FormAdapter<SubdivisionDto>
     {
         public SubdivisionControll ModelActions { get; set; }
         public SubdivisionFormSave(SubdivisionControll modelActions)

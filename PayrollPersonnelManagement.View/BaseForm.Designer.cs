@@ -39,11 +39,11 @@ namespace PayrollPersonnelManagement.View
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.BaseDataGrid = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.BaseGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BaseDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BaseGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,18 +112,18 @@ namespace PayrollPersonnelManagement.View
             // 
             this.BaseDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BaseDataGrid.Location = new System.Drawing.Point(0, 193);
-            this.BaseDataGrid.MainView = this.gridView1;
+            this.BaseDataGrid.MainView = this.BaseGridView;
             this.BaseDataGrid.MenuManager = this.ribbon;
             this.BaseDataGrid.Name = "BaseDataGrid";
             this.BaseDataGrid.Size = new System.Drawing.Size(665, 226);
             this.BaseDataGrid.TabIndex = 2;
             this.BaseDataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.BaseGridView});
             // 
-            // gridView1
+            // BaseGridView
             // 
-            this.gridView1.GridControl = this.BaseDataGrid;
-            this.gridView1.Name = "gridView1";
+            this.BaseGridView.GridControl = this.BaseDataGrid;
+            this.BaseGridView.Name = "BaseGridView";            
             // 
             // popupMenu1
             // 
@@ -143,7 +143,7 @@ namespace PayrollPersonnelManagement.View
             this.StatusBar = this.ribbonStatusBar;
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BaseDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BaseGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,7 +160,7 @@ namespace PayrollPersonnelManagement.View
         public DevExpress.XtraBars.BarButtonItem Delete;
         public DevExpress.XtraBars.BarButtonItem Edit;
         public DevExpress.XtraGrid.GridControl BaseDataGrid;
-        public DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        public DevExpress.XtraGrid.Views.Grid.GridView BaseGridView;
         public DevExpress.XtraBars.PopupMenu popupMenu1;
     }
 }

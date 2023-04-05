@@ -192,6 +192,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ControllHelper.cs" />
+    <Compile Include="FormSave\FormAdapter.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

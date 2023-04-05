@@ -15,5 +15,11 @@ namespace PayrollPersonnelManagement.Aplication.Dto
         public string Name { get; set; }
         [DisplayName("Надбавка")]
         public decimal Allowance { get; set; }
+
+        public override string ToString()
+        {
+            string res = Name + " " + Allowance;
+            return res;
+        }
     }
 }

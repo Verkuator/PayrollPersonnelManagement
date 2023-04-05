@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.FormSave
 {
-    public partial class PhisicalFaceFormSave : Form
+    public partial class PhisicalFaceFormSave : FormAdapter<PhisicalFaceDto>
     {
         public PhisicalFaceControll ModelActions { get; set; }
         public PhisicalFaceFormSave(PhisicalFaceControll modelActions)

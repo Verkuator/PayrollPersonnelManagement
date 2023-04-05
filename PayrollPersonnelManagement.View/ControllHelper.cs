@@ -20,19 +20,19 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
         public static SubdivisionFormSave SubdivisionFormSave { get; set; }
 
         public static void Initialize(PayrollPersonnelManagementContext dbContext, IMapper mapper)
-        {
+        {      
+            EmployeeControll = new EmployeeControll(dbContext, dbContext.Employees, mapper);
+            PhisicalFaceControll = new PhisicalFaceControll(dbContext, dbContext.PhisicalFaces, mapper);
+            OneAccrualControll = new OneAccrualControll(dbContext, dbContext.OneAccrual, mapper);
+            PostControll = new PostControll(dbContext, dbContext.Posts, mapper);
+            SubdivisionControll = new SubdivisionControll(dbContext, dbContext.Subdivisions, mapper);
+
             EmploeeFormSave = new EmploeeFormSave(EmployeeControll);
             PhisicalFaceFormSave = new PhisicalFaceFormSave(PhisicalFaceControll);
             OneAccrualFormSave = new OneAccrualFormSave(OneAccrualControll);
             PostFormSave = new PostFormSave(PostControll);
             SubdivisionFormSave = new SubdivisionFormSave(SubdivisionControll);
 
-            EmployeeControll = new EmployeeControll(dbContext, dbContext.Employees, mapper);
-            PhisicalFaceControll = new PhisicalFaceControll(dbContext, dbContext.PhisicalFaces, mapper);
-            OneAccrualControll = new OneAccrualControll(dbContext, dbContext.OneAccrual, mapper);
-            PostControll = new PostControll(dbContext, dbContext.Posts, mapper);
-            SubdivisionControll = new SubdivisionControll(dbContext, dbContext.Subdivisions, mapper);            
-            
         }
 
     }

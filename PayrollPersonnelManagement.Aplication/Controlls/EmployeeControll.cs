@@ -4,6 +4,8 @@ using PayrollPersonnelManagement.Aplication.Dto;
 using PayrollPersonnelManagement.Common;
 using PayrollPersonnelManagement.context;
 using PayrollPersonnelManagement.Infasrtucture.Controlls;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Controll
 {
@@ -18,6 +20,24 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
             : base(dbContext, dbSet, mapper)
         {
 
+        }
+
+        public ICollection<PhisicalFaceDto> GetPhisicalFaceDtos()
+        {
+            var res = DbContext.PhisicalFaces.AsNoTracking().ToList();
+            return Mapper.Map<ICollection<PhisicalFaceDto>>(res);
+        }
+
+        public ICollection<PostDto> GetPostsDtos()
+        {
+            var res = DbContext.Posts.AsNoTracking().ToArray();
+            return Mapper.Map<ICollection<PostDto>>(res);
+        }
+
+        public ICollection<SubdivisionDto> GetSubdivisionsDtos()
+        {
+            var res = DbContext.Subdivisions.AsNoTracking().ToArray();
+            return Mapper.Map<ICollection<SubdivisionDto>>(res);
         }
     }
 }

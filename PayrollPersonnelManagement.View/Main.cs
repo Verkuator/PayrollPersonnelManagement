@@ -2,6 +2,7 @@
 using PayrollPersonnelManagement.Infasrtucture.Controll;
 using PayrollPersonnelManagement.Infasrtucture.Controlls;
 using PayrollPersonnelManagement.Infasrtucture.Model;
+using PayrollPersonnelManagement.View.FormSave;
 using System;
 using System.Windows.Forms;
 
@@ -49,7 +50,7 @@ namespace PayrollPersonnelManagement.View
             OpenTab(ControllHelper.EmployeeControll, ControllHelper.EmploeeFormSave);
         }
 
-        private void OpenTab<T, D>(ModelActions<T, D> controller, Form form) 
+        private void OpenTab<T, D>(ModelActions<T, D> controller, FormAdapter<D> form) 
             where T : class, IModel , new()
             where D : class, new()
         {

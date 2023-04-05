@@ -19,5 +19,11 @@ namespace PayrollPersonnelManagement.Aplication.Dto
         public string Patronymic { get; set; }
         [DisplayName("Дата рождения")]
         public DateTime DateBirth { get; set; }
+
+        public override string ToString()
+        {
+            string res = Surname + " " + Name + " " + Patronymic;
+            return res;
+        }
     }
 }

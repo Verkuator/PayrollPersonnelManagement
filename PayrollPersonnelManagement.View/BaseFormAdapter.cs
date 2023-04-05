@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using PayrollPersonnelManagement.Aplication.Dto;
 using PayrollPersonnelManagement.Common;
 using System.Windows.Forms;
+using PayrollPersonnelManagement.View.FormSave;
+using System.Linq;
 
 namespace PayrollPersonnelManagement.View
 {
@@ -16,8 +18,8 @@ namespace PayrollPersonnelManagement.View
     {
         
         private ModelActions<M, D> ModelActions { get; set; }
-        private Form _form;
-        public BaseFormAdapter(ModelActions<M, D> modelActions, Form form) : base()
+        private FormAdapter<D> _form;
+        public BaseFormAdapter(ModelActions<M, D> modelActions, FormAdapter<D> form) : base()
         {
             Name = modelActions.Name;
             FormMenuCaption = modelActions.Name;
@@ -25,7 +27,8 @@ namespace PayrollPersonnelManagement.View
             Edit.ItemClick += new ItemClickEventHandler(Edit_ItemClick);
             Delete.ItemClick += new ItemClickEventHandler(Delete_ItemClick);
             Add.ItemClick += new ItemClickEventHandler(Add_ItemClick);
-            Load += new EventHandler(this.BaseForm_Load);
+            Load += new EventHandler(BaseForm_Load);
+            BaseGridView.DoubleClick += new EventHandler(BaseGridView_DoubleClick);
             _form = form;
         }
 
@@ -51,7 +54,24 @@ namespace PayrollPersonnelManagement.View
 
         private void Edit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            _form.ShowDialog();
+            SelectItem();
+        }      
+
+        private void BaseGridView_DoubleClick(object sender, System.EventArgs e)
+        {
+            SelectItem();
+        }
+
+        private void SelectItem()
+        {
+            var rows = BaseGridView.GetSelectedRows();
+            int? row = rows.FirstOrDefault();
+            if (row != null)
+            {
+                D rowBase = (D)BaseGridView.GetRow((int)row);
+                _form.SetDto(rowBase);
+                _form.ShowDialog();
+            }
         }
 
         private void Delete_ItemClick(object sender, ItemClickEventArgs e)

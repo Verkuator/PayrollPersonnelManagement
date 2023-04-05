@@ -15,5 +15,11 @@ namespace PayrollPersonnelManagement.Aplication.Dto
         public string Name { get; set; }
         [DisplayName("Зарплата")]
         public decimal Salary { get; set; }
+
+        public override string ToString()
+        {
+            string res = Name + " " + Salary;
+            return res;
+        }
     }
 }

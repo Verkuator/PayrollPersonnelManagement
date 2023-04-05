@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.FormSave
 {
-    public partial class PostFormSave : Form
+    public partial class PostFormSave : FormAdapter<PostDto>
     {
         public PostControll ModelActions { get; set; }
         public PostFormSave(PostControll modelActions)

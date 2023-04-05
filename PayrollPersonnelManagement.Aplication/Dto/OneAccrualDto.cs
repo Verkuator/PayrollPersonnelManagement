@@ -22,5 +22,6 @@ namespace PayrollPersonnelManagement.Aplication.Dto
         public int EmployeeId { get; set; }
         [DisplayName("Сотрудник")]
         public string Employee { get; set; }
+
     }
 }
