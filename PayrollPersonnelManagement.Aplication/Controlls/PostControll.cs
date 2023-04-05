@@ -9,7 +9,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
     public class PostControll : ModelActions<Post, PostDto>
     {
         public override string Name { get; set; } = "Должности";
-        protected override DbSet<Post> DbSet { get; set; }
+        public override DbSet<Post> DbSet { get; set; }
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
         public override IMapper Mapper { get; set; }
 

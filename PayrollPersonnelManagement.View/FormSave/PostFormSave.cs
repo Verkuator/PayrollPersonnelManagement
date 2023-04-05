@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.FormSave
 {
-    public partial class PostFormSave : FormAdapter<PostDto>
+    public partial class PostFormSave : FormAdapter<PostDto>, IFormSave<Post>
     {
         public PostControll ModelActions { get; set; }
         public PostFormSave(PostControll modelActions)
@@ -25,5 +25,14 @@ namespace PayrollPersonnelManagement.View.FormSave
             Close();
         }
 
+        public void DtoMapToForm()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Post FormMapToModel()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

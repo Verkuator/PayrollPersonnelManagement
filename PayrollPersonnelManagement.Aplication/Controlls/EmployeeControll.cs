@@ -12,7 +12,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
     public class EmployeeControll : ModelActions<Employee, EmployeeDto>
     {
         public override string Name { get; set; } = "Сотрудники";
-        protected override DbSet<Employee> DbSet { get; set; }
+        public override DbSet<Employee> DbSet { get; set; }
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
         public override IMapper Mapper { get; set; }
 
@@ -20,6 +20,17 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
             : base(dbContext, dbSet, mapper)
         {
 
+        }
+
+        public override List<Employee> Get()
+        {
+            var res = DbSet
+                .AsNoTracking()
+                .Include(c => c.OneAccrual)
+                .Include(c => c.PhisicalFace)
+                .Include(c => c.Subdivision)
+                .ToList();
+            return res;
         }
 
         public ICollection<PhisicalFaceDto> GetPhisicalFaceDtos()

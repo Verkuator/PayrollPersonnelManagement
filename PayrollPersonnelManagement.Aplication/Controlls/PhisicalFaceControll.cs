@@ -10,7 +10,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
     public class PhisicalFaceControll : ModelActions<PhisicalFace, PhisicalFaceDto>
     {
         public override string Name { get; set; } = "Физ. лица";
-        protected override DbSet<PhisicalFace> DbSet { get; set; }
+        public override DbSet<PhisicalFace> DbSet { get; set; }
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
         public override IMapper Mapper { get; set; }
 

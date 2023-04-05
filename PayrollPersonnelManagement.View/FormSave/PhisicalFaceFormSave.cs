@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.FormSave
 {
-    public partial class PhisicalFaceFormSave : FormAdapter<PhisicalFaceDto>
+    public partial class PhisicalFaceFormSave : FormAdapter<PhisicalFaceDto>, IFormSave<PhisicalFace>
     {
         public PhisicalFaceControll ModelActions { get; set; }
         public PhisicalFaceFormSave(PhisicalFaceControll modelActions)
@@ -26,25 +26,14 @@ namespace PayrollPersonnelManagement.View.FormSave
             Close();
         }
 
-
-        private void stackPanel3_Paint(object sender, PaintEventArgs e)
+        public void DtoMapToForm()
         {
-
+            throw new NotImplementedException();
         }
 
-        private void stackPanel4_Paint(object sender, PaintEventArgs e)
+        public PhisicalFace FormMapToModel()
         {
-
-        }
-
-        private void stackPanel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelControl2_Paint(object sender, PaintEventArgs e)
-        {
-
+            throw new NotImplementedException();
         }
     }
 }

@@ -9,6 +9,7 @@ using PayrollPersonnelManagement.Common;
 using System.Windows.Forms;
 using PayrollPersonnelManagement.View.FormSave;
 using System.Linq;
+using DevExpress.XtraExport.Helpers;
 
 namespace PayrollPersonnelManagement.View
 {
@@ -54,28 +55,45 @@ namespace PayrollPersonnelManagement.View
 
         private void Edit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            SelectItem();
+            var rowBase = SelectItem();
+            if (rowBase != null)
+            {
+                _form.SetDto(rowBase);                
+            }
+            _form.ShowDialog();
         }      
 
         private void BaseGridView_DoubleClick(object sender, System.EventArgs e)
         {
-            SelectItem();
+            var rowBase = SelectItem();
+            if(rowBase != null)
+            {
+                _form.SetDto(rowBase);
+                _form.ShowDialog();
+            }            
+            
         }
 
-        private void SelectItem()
+        private D SelectItem()
         {
             var rows = BaseGridView.GetSelectedRows();
             int? row = rows.FirstOrDefault();
+            D rowBase = null;
             if (row != null)
             {
-                D rowBase = (D)BaseGridView.GetRow((int)row);
-                _form.SetDto(rowBase);
-                _form.ShowDialog();
+                rowBase = (D)BaseGridView.GetRow((int)row);                
             }
+            return rowBase;
         }
 
         private void Delete_ItemClick(object sender, ItemClickEventArgs e)
         {
+            var rowBase = SelectItem();
+            if (rowBase != null)
+            {
+                var model = ModelActions.MapToModel(rowBase);
+                ModelActions.Delete(model);
+            }
 
         }
 

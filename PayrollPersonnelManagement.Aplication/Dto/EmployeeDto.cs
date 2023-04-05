@@ -15,14 +15,20 @@ namespace PayrollPersonnelManagement.Aplication.Dto
         [Browsable(false)]
         public int PhisicalFaceId { get; set; }
         [Browsable(false)]
+        public PhisicalFaceDto PhisicalFaceDto { get; set; }
+        [Browsable(false)]
         [DisplayName("ФИО")]
         public string Fio { get; set; }
         [Browsable(false)]
         public int SubdivisionId { get; set; }
+        [Browsable(false)]
+        public SubdivisionDto SubdivisionDto { get; set; }
         [DisplayName("Отдел")]
         public string Subdivision { get; set; }
         [Browsable(false)]
         public int PostId { get; set; }
+        [Browsable(false)]
+        public PostDto PostDto { get; set; }
         [DisplayName("Должность")]
         public string Post { get; set; }
 

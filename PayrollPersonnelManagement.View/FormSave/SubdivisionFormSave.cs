@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.FormSave
 {
-    public partial class SubdivisionFormSave : FormAdapter<SubdivisionDto>
+    public partial class SubdivisionFormSave : FormAdapter<SubdivisionDto>, IFormSave<Subdivision>
     {
         public SubdivisionControll ModelActions { get; set; }
         public SubdivisionFormSave(SubdivisionControll modelActions)
@@ -25,5 +25,14 @@ namespace PayrollPersonnelManagement.View.FormSave
 
         }
 
+        public void DtoMapToForm()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Subdivision FormMapToModel()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

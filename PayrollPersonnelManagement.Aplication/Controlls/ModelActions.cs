@@ -12,7 +12,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         where D : class
     {
         public abstract string Name { get; set; }
-        protected abstract DbSet<M> DbSet { get; set; }
+        public abstract DbSet<M> DbSet { get; set; }
         protected abstract PayrollPersonnelManagementContext DbContext { get; set; }
         public abstract IMapper Mapper { get; set; }
 

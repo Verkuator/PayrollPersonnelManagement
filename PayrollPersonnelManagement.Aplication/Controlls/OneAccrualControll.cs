@@ -12,7 +12,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
     {
 
         public override string Name { get; set; } = "Сделки";
-        protected override DbSet<OneAccrual> DbSet { get; set; }
+        public override DbSet<OneAccrual> DbSet { get; set; }
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
         public override IMapper Mapper { get; set; }
 

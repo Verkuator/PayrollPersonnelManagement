@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.FormSave
 {
-    public partial class OneAccrualFormSave : FormAdapter<OneAccrualDto>
+    public partial class OneAccrualFormSave : FormAdapter<OneAccrualDto>, IFormSave<OneAccrual>
     {
         public OneAccrualControll ModelActions { get; set; }
         public OneAccrualFormSave(OneAccrualControll modelActions)
@@ -25,5 +25,14 @@ namespace PayrollPersonnelManagement.View.FormSave
             Close();
         }
 
+        public void DtoMapToForm()
+        {
+            throw new NotImplementedException();
+        }
+
+        public OneAccrual FormMapToModel()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
