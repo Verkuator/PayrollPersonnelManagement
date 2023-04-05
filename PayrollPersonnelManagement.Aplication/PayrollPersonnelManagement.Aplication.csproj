@@ -126,10 +126,7 @@
     <Compile Include="AutotMapper\EmployeeProfile.cs" />
     <Compile Include="AutotMapper\MappConfiguration.cs" />
     <Compile Include="Controlls\EmployeeControll.cs" />
-    <Compile Include="Controlls\FormAdapter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Controlls\IController.cs" />
+    <Compile Include="Controlls\ModelActions.cs" />
     <Compile Include="Controlls\OneAccrualControll.cs" />
     <Compile Include="Controlls\PhisicalFaceControll.cs" />
     <Compile Include="Controlls\PostControll.cs" />

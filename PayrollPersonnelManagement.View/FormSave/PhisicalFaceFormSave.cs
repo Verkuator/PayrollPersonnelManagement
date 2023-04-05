@@ -1,13 +1,18 @@
-﻿using PayrollPersonnelManagement.Aplication.Controlls;
+﻿using PayrollPersonnelManagement.Aplication.Dto;
+using PayrollPersonnelManagement.Common;
+using PayrollPersonnelManagement.Infasrtucture.Controll;
+using PayrollPersonnelManagement.Infasrtucture.Controlls;
 using System;
 using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.FormSave
 {
-    public partial class PhisicalFaceFormSave : FormAdapter
+    public partial class PhisicalFaceFormSave : Form
     {
-        public PhisicalFaceFormSave()
+        public PhisicalFaceControll ModelActions { get; set; }
+        public PhisicalFaceFormSave(PhisicalFaceControll modelActions)
         {
+            ModelActions = modelActions;
             InitializeComponent();
         }
 
@@ -21,10 +26,6 @@ namespace PayrollPersonnelManagement.View.FormSave
             Close();
         }
 
-        public override void MapForm(object obj)
-        {
-
-        }
 
         private void stackPanel3_Paint(object sender, PaintEventArgs e)
         {

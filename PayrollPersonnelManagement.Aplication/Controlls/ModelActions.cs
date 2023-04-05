@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using PayrollPersonnelManagement.Aplication.Controlls;
 using PayrollPersonnelManagement.context;
 using PayrollPersonnelManagement.Infasrtucture.Model;
 using System.Collections.Generic;
@@ -8,15 +7,21 @@ using System.Linq;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 {
-    public abstract class IController<M, D> 
+    public abstract class ModelActions<M, D> 
         where M : class, IModel
         where D : class
     {
         public abstract string Name { get; set; }
-        public abstract FormAdapter FormAdapter { get; set; }
         protected abstract DbSet<M> DbSet { get; set; }
         protected abstract PayrollPersonnelManagementContext DbContext { get; set; }
         public abstract IMapper Mapper { get; set; }
+
+        public ModelActions(PayrollPersonnelManagementContext dbContext, DbSet<M> dbSet, IMapper mapper)
+        {
+            DbContext = dbContext;
+            DbSet = dbSet;
+            Mapper = mapper;
+        }
 
         public virtual List<M> Get()
         {
@@ -42,11 +47,6 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         {
             DbSet.Remove(obj);
             DbContext.SaveChanges();
-        }
-
-        public virtual void OpenForm()
-        {
-            FormAdapter.ShowDialog();
         }
 
         public virtual M MapToModel(D obj)

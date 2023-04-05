@@ -1,26 +1,23 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using PayrollPersonnelManagement.Aplication.Controlls;
 using PayrollPersonnelManagement.Aplication.Dto;
 using PayrollPersonnelManagement.Common;
 using PayrollPersonnelManagement.context;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 {
-    public class SubdivisionControll : IController<Subdivision, SubdivisionDto>
+    public class SubdivisionControll : ModelActions<Subdivision, SubdivisionDto>
     {
         public override string Name { get; set; } = "Отделы";
-        public override FormAdapter FormAdapter { get; set; }
         protected override DbSet<Subdivision> DbSet { get; set; }
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
         public override IMapper Mapper { get; set; }
 
-        public SubdivisionControll(PayrollPersonnelManagementContext dbContext, FormAdapter form, IMapper mapper)
+        public SubdivisionControll(PayrollPersonnelManagementContext dbContext,
+            DbSet<Subdivision> dbSet,
+            IMapper mapper)
+            : base(dbContext, dbSet, mapper)
         {
-            DbContext = dbContext;
-            FormAdapter = form;
-            DbSet = dbContext.Subdivisions;
-            Mapper = mapper;
         }
     }
 }

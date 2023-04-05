@@ -1,12 +1,17 @@
-﻿using PayrollPersonnelManagement.Aplication.Controlls;
+﻿using PayrollPersonnelManagement.Aplication.Dto;
+using PayrollPersonnelManagement.Common;
+using PayrollPersonnelManagement.Infasrtucture.Controlls;
 using System;
+using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.FormSave
 {
-    public partial class SubdivisionFormSave : FormAdapter
+    public partial class SubdivisionFormSave : Form
     {
-        public SubdivisionFormSave()
+        public SubdivisionControll ModelActions { get; set; }
+        public SubdivisionFormSave(SubdivisionControll modelActions)
         {
+            ModelActions = modelActions;
             InitializeComponent();
         }
 
@@ -17,12 +22,8 @@ namespace PayrollPersonnelManagement.View.FormSave
 
         public void CancelSimpleButton_Click(object sender, EventArgs e)
         {
-            Close();
-        }
-
-        public override void MapForm(object obj)
-        {
 
         }
+
     }
 }

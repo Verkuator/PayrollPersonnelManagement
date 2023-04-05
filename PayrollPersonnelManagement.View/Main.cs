@@ -26,36 +26,36 @@ namespace PayrollPersonnelManagement.View
 
         private void PhisicalFaceTab_Click(object sender, EventArgs e)
         {
-            OpenTab(ControllHelper.PhisicalFaceControll);
+            OpenTab(ControllHelper.PhisicalFaceControll, ControllHelper.PhisicalFaceFormSave);
         }
 
         private void PostTab_Click(object sender, EventArgs e)
         {
-            OpenTab(ControllHelper.PostControll);
+            OpenTab(ControllHelper.PostControll, ControllHelper.PostFormSave);
         }
 
         private void OneAccrualTab_Click(object sender, EventArgs e)
         {
-            OpenTab(ControllHelper.OneAccrualControll);
+            OpenTab(ControllHelper.OneAccrualControll, ControllHelper.OneAccrualFormSave);
         }
 
         private void SubdivisionTab_Click(object sender, EventArgs e)
         {
-            OpenTab(ControllHelper.SubdivisionControll);
+            OpenTab(ControllHelper.SubdivisionControll, ControllHelper.SubdivisionFormSave);
         }
 
         private void EmployeeTab_Click(object sender, EventArgs e)
         {
-            OpenTab(ControllHelper.EmployeeControll);
+            OpenTab(ControllHelper.EmployeeControll, ControllHelper.EmploeeFormSave);
         }
 
-        private void OpenTab<T, D>(IController<T, D> controller) 
+        private void OpenTab<T, D>(ModelActions<T, D> controller, Form form) 
             where T : class, IModel , new()
             where D : class, new()
         {
             if(!ThisOpenTab(controller.Name))
             {
-                var f = new BaseFormAdapter<T, D>(controller) { MdiParent = this };
+                var f = new BaseFormAdapter<T, D>(controller, form) { MdiParent = this };
                 f.Show();
             }
         }

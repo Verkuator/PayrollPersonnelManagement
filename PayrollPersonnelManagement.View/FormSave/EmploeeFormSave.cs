@@ -1,12 +1,18 @@
-﻿using PayrollPersonnelManagement.Aplication.Controlls;
+﻿using PayrollPersonnelManagement.Aplication.Dto;
+using PayrollPersonnelManagement.Common;
+using PayrollPersonnelManagement.Infasrtucture.Controll;
+using PayrollPersonnelManagement.Infasrtucture.Controlls;
 using System;
+using System.Windows.Forms;
 
 namespace PayrollPersonnelManagement.View.FormSave
 {
-    public partial class EmploeeFormSave : FormAdapter
+    public partial class EmploeeFormSave : Form
     {
-        public EmploeeFormSave()
+        public EmployeeControll ModelActions { get; set; }
+        public EmploeeFormSave(EmployeeControll modelActions)
         {
+            ModelActions = modelActions;
             InitializeComponent();
         }
 
@@ -20,9 +26,5 @@ namespace PayrollPersonnelManagement.View.FormSave
             Close();
         }
 
-        public override void MapForm(object obj)
-        {
-
-        }
     }
 }
