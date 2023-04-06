@@ -18,7 +18,9 @@ namespace PayrollPersonnelManagement.View.FormSave
 
         public void SaveSimpleButton_Click(object sender, EventArgs e)
         {
-            //ControllHelper.PhisicalFaceControll.Save(new PhisicalFace());
+            var model = FormMapToModel();
+            ModelActions.Save(model);
+            Close();
         }
 
         public void CancelSimpleButton_Click(object sender, EventArgs e)
@@ -28,12 +30,40 @@ namespace PayrollPersonnelManagement.View.FormSave
 
         public void DtoMapToForm()
         {
-            throw new NotImplementedException();
+            if (Dto != null)
+            {
+                SurnameTextEd.EditValue = Dto.Surname;
+                NameTextEd.EditValue = Dto.Name;
+                PatronymicTextEd.EditValue = Dto.Patronymic;
+                DateBirthDateEdit.EditValue = Dto.DateBirth;
+            }
         }
 
         public PhisicalFace FormMapToModel()
         {
-            throw new NotImplementedException();
+           var res = new PhisicalFace();
+           if (Dto != null)
+           {
+                res.Id = Dto.Id;
+           }
+            res.Surname = SurnameTextEd.Text;
+            res.Name = NameTextEd.Text;
+            res.Patronymic = PatronymicTextEd.Text;
+            res.DateBirth = DateBirthDateEdit.DateTime;
+            return res;
+        }
+
+        private void PhisicalFaceFormSave_Load(object sender, EventArgs e)
+        {
+            DtoMapToForm();
+        }
+
+        public void NewAdd()
+        {
+            SurnameTextEd.EditValue = null;
+            NameTextEd.EditValue = null;
+            PatronymicTextEd.EditValue = null;
+            DateBirthDateEdit.EditValue = null;
         }
     }
 }

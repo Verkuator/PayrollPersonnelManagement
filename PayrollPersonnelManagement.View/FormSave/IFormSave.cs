@@ -12,5 +12,7 @@ namespace PayrollPersonnelManagement.View.FormSave
     {
         M FormMapToModel();
         void DtoMapToForm();
+
+        void NewAdd();
     }
 }

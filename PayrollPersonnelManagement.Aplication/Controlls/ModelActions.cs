@@ -25,7 +25,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 
         public virtual List<M> Get()
         {
-            var obj = DbSet.ToList();
+            var obj = DbSet.AsNoTracking().ToList();
             return obj;
         }
 

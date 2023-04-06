@@ -99,7 +99,6 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(588, 66);
             this.panelControl2.TabIndex = 0;
-            this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
             // CancelSimpleButton
             // 
@@ -161,7 +160,6 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.stackPanel3.Name = "stackPanel3";
             this.stackPanel3.Size = new System.Drawing.Size(588, 73);
             this.stackPanel3.TabIndex = 5;
-            this.stackPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.stackPanel3_Paint);
             // 
             // labelControl2
             // 
@@ -190,7 +188,6 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.stackPanel4.Name = "stackPanel4";
             this.stackPanel4.Size = new System.Drawing.Size(588, 73);
             this.stackPanel4.TabIndex = 6;
-            this.stackPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.stackPanel4_Paint);
             // 
             // labelControl3
             // 
@@ -220,7 +217,6 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.stackPanel5.Name = "stackPanel5";
             this.stackPanel5.Size = new System.Drawing.Size(588, 73);
             this.stackPanel5.TabIndex = 7;
-            this.stackPanel5.Paint += new System.Windows.Forms.PaintEventHandler(this.stackPanel5_Paint);
             // 
             // labelControl4
             // 
@@ -262,6 +258,7 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Физ. лицо";
+            this.Load += new System.EventHandler(this.PhisicalFaceFormSave_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel1)).EndInit();

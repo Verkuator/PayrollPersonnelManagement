@@ -21,12 +21,11 @@ namespace PayrollPersonnelManagement.View.FormSave
             InitializeComponent();
         }
 
-
-
         public void SaveSimpleButton_Click(object sender, EventArgs e)
         {
             var model = FormMapToModel();
             ModelActions.Save(model);
+            Close();
         }
 
         public void CancelSimpleButton_Click(object sender, EventArgs e)
@@ -67,6 +66,13 @@ namespace PayrollPersonnelManagement.View.FormSave
                 PostEdit.EditValue = Dto.PostDto;
                 SubdivisionEdit.EditValue = Dto.SubdivisionDto;
             }
+        }
+
+        public void NewAdd()
+        {
+            PhisicalFaceEdit.EditValue = null;
+            PostEdit.EditValue = null;
+            SubdivisionEdit.EditValue = null;
         }
     }
 }

@@ -35,22 +35,15 @@ namespace PayrollPersonnelManagement.View
 
         private void Add_ItemClick(object sender, ItemClickEventArgs e)
         {
+            _form.Dto = null;
+            ((IFormSave<M>)_form).NewAdd();
             _form.ShowDialog();
+            RefreshForm();
         }
 
         private void BaseForm_Load(object sender, EventArgs e)
         {
-            var model = ModelActions.Get();
-            if(model.Count == 0)
-            {
-                BaseDataGrid.DataSource = new D();
-            }
-            else
-            {
-                var dto = ModelActions.MapToDto(model);
-                BaseDataGrid.DataSource = dto;
-            }
-            
+            RefreshForm();
         }
 
         private void Edit_ItemClick(object sender, ItemClickEventArgs e)
@@ -58,9 +51,10 @@ namespace PayrollPersonnelManagement.View
             var rowBase = SelectItem();
             if (rowBase != null)
             {
-                _form.SetDto(rowBase);                
+                _form.SetDto(rowBase);   
             }
             _form.ShowDialog();
+            RefreshForm();
         }      
 
         private void BaseGridView_DoubleClick(object sender, System.EventArgs e)
@@ -93,8 +87,23 @@ namespace PayrollPersonnelManagement.View
             {
                 var model = ModelActions.MapToModel(rowBase);
                 ModelActions.Delete(model);
+                RefreshForm();
             }
 
+        }
+
+        private void RefreshForm()
+        {
+            var model = ModelActions.Get();
+            if (model.Count == 0)
+            {
+                BaseDataGrid.DataSource = new D();
+            }
+            else
+            {
+                var dto = ModelActions.MapToDto(model);
+                BaseDataGrid.DataSource = dto;
+            }
         }
 
     }

@@ -34,5 +34,10 @@ namespace PayrollPersonnelManagement.View.FormSave
         {
             throw new NotImplementedException();
         }
+
+        public void NewAdd()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
