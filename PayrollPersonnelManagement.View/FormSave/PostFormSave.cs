@@ -15,11 +15,6 @@ namespace PayrollPersonnelManagement.View.FormSave
             InitializeComponent();
         }
 
-        public void SaveSimpleButton_Click(object sender, EventArgs e)
-        {
-            //ControllHelper.PhisicalFaceControll.Save(new PhisicalFace());
-        }
-
         public void CancelSimpleButton_Click(object sender, EventArgs e)
         {
             Close();
@@ -27,17 +22,41 @@ namespace PayrollPersonnelManagement.View.FormSave
 
         public void DtoMapToForm()
         {
-            throw new NotImplementedException();
+            if (Dto != null)
+            {
+                NameEdit.EditValue = Dto.Name;
+                SalaryEdit.EditValue = Dto.Salary;
+            }
         }
 
         public Post FormMapToModel()
         {
-            throw new NotImplementedException();
+            var res = new Post();
+            if (Dto != null)
+            {
+                res.Id = Dto.Id;
+            }
+            res.Name = NameEdit.Text;
+            res.Salary = SalaryEdit.Value;
+            return res;
         }
 
         public void NewAdd()
         {
-            throw new NotImplementedException();
+            NameEdit.EditValue = null;
+            SalaryEdit.EditValue = null;
+        }
+
+        private void PostFormSave_Load(object sender, EventArgs e)
+        {
+            DtoMapToForm();
+        }
+
+        private void SaveSimpleButton_Click(object sender, EventArgs e)
+        {
+            var model = FormMapToModel();
+            ModelActions.Save(model);
+            Close();
         }
     }
 }

@@ -17,7 +17,9 @@ namespace PayrollPersonnelManagement.View.FormSave
 
         public void SaveSimpleButton_Click(object sender, EventArgs e)
         {
-            //ControllHelper.PhisicalFaceControll.Save(new PhisicalFace());
+            var model = FormMapToModel();
+            ModelActions.Save(model);
+            Close();
         }
 
         public void CancelSimpleButton_Click(object sender, EventArgs e)
@@ -27,17 +29,43 @@ namespace PayrollPersonnelManagement.View.FormSave
 
         public void DtoMapToForm()
         {
-            throw new NotImplementedException();
+            if (Dto != null)
+            {
+                dateEdit1.EditValue = Dto.InDate;
+                HoursEdit.EditValue = Dto.HoursMonth;
+                SumEdit.EditValue = Dto.Sum;
+                EmployeeEdit.EditValue = Dto.Employee;
+            }
         }
 
         public OneAccrual FormMapToModel()
         {
-            throw new NotImplementedException();
+            var res = new OneAccrual();
+            if (Dto != null)
+            {
+                res.Id = Dto.Id;
+                res.InDate = Dto.InDate;
+                res.HoursMonth = Dto.HoursMonth;
+                res.Sum = Dto.Sum;
+            }
+            res.EmployeeId = ((EmployeeDto)EmployeeEdit.EditValue).Id;
+            return res;
         }
 
         public void NewAdd()
         {
-            throw new NotImplementedException();
+            dateEdit1.EditValue = null;
+            HoursEdit.EditValue = null;
+            SumEdit.EditValue = null;
+            EmployeeEdit.EditValue = null;
+        }
+
+        private void OneAccrualFormSave_Load(object sender, EventArgs e)
+        {
+            var employees = ModelActions.GetEmployeeDtos();
+
+            EmployeeEdit.Properties.DataSource = employees;
+            DtoMapToForm();
         }
     }
 }

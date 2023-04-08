@@ -26,6 +26,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         public override List<OneAccrual> Get()
         {
             var res = DbContext.OneAccrual
+                .AsNoTracking()
                 .Include(c => c.Employee)
                 .ThenInclude(c => c.PhisicalFace)
                 .ToList();
@@ -33,5 +34,10 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
             return res;
         }
 
+        public ICollection<EmployeeDto> GetEmployeeDtos()
+        {
+            var res = DbContext.Employees.AsNoTracking().ToList();
+            return Mapper.Map<ICollection<EmployeeDto>>(res);
+        }
     }
 }
