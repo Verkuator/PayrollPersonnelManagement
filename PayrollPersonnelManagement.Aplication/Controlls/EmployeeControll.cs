@@ -32,10 +32,18 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
         {
             var res = DbSet
                 .AsNoTracking()
-                .Include(c => c.OneAccrual)
                 .Include(c => c.PhisicalFace)
                 .Include(c => c.Subdivision)
+                .Include(c => c.Post)
                 .ToList();
+
+            res.ForEach(c =>
+            {
+                c.PhisicalFace.Employee = null;
+                c.Subdivision.Employee = null;
+                c.Post.Employee = null;
+            });
+
             return res;
         }
 

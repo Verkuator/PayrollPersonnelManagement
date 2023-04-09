@@ -16,6 +16,13 @@ namespace PayrollPersonnelManagement.Aplication.AutotMapper
                 .ReverseMap()
                 .ForMember(c => c.Employee, c => c.Ignore());
 
+            CreateMap<Employee, EmployeeDto>()
+                .ForMember(c => c.SubdivisionName, c => c.MapFrom(b => b.Subdivision.ToString()))
+                .ForMember(c => c.PostName, c => c.MapFrom(b => b.Post.ToString()))
+                .ForMember(c => c.Fio, c => c.MapFrom(b => b.PhisicalFace.ToString()))
+                .ReverseMap()
+                .ForMember(c => c.OneAccrual, c => c.Ignore());
+
             CreateMap<Post, PostDto>().ReverseMap()
                 .ForMember(c => c.Employee, c => c.Ignore());
 

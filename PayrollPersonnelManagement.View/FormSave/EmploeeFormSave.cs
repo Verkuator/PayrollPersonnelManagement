@@ -62,9 +62,9 @@ namespace PayrollPersonnelManagement.View.FormSave
         {
             if(Dto != null)
             {
-                PhisicalFaceEdit.EditValue = Dto.PhisicalFaceDto;
-                PostEdit.EditValue = Dto.PostDto;
-                SubdivisionEdit.EditValue = Dto.SubdivisionDto;
+                PhisicalFaceEdit.EditValue = Dto.PhisicalFace;
+                PostEdit.EditValue = Dto.Post;
+                SubdivisionEdit.EditValue = Dto.Subdivision;
             }
         }
 
