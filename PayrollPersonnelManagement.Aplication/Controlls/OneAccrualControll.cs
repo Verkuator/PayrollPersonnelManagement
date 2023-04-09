@@ -36,7 +36,11 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 
         public ICollection<EmployeeDto> GetEmployeeDtos()
         {
-            var res = DbContext.Employees.AsNoTracking().ToList();
+            var res = DbContext.Employees
+                .Include(c => c.PhisicalFace)
+                .Include(c => c.Subdivision)
+                .Include(c => c.Post)
+                .AsNoTracking().ToList();
             return Mapper.Map<ICollection<EmployeeDto>>(res);
         }
 

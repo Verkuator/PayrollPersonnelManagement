@@ -34,7 +34,7 @@ namespace PayrollPersonnelManagement.View.FormSave
         }
 
         private void EmploeeFormSave_Load(object sender, EventArgs e)
-        {
+        {          
             var phisicals = ModelActions.GetPhisicalFaceDtos();
             var posts = ModelActions.GetPostsDtos();
             var subdivisions = ModelActions.GetSubdivisionsDtos();
@@ -62,9 +62,19 @@ namespace PayrollPersonnelManagement.View.FormSave
         {
             if(Dto != null)
             {
-                PhisicalFaceEdit.EditValue = Dto.PhisicalFace;
-                PostEdit.EditValue = Dto.Post;
-                SubdivisionEdit.EditValue = Dto.Subdivision;
+                PhisicalFaceEdit.EditValue = ((ICollection<PhisicalFaceDto>)PhisicalFaceEdit.Properties.DataSource).Select((elem, index) => new { elem, index })
+                        .First(p => p.elem.Id == Dto.PhisicalFaceId)
+                        .elem;
+                PostEdit.EditValue = ((ICollection<PostDto>)PostEdit.Properties.DataSource).Select((elem, index) => new { elem, index })
+                        .First(p => p.elem.Id == Dto.PostId)
+                        .elem;
+                SubdivisionEdit.EditValue = ((ICollection<SubdivisionDto>)SubdivisionEdit.Properties.DataSource).Select((elem, index) => new { elem, index })
+                        .First(p => p.elem.Id == Dto.SubdivisionId)
+                        .elem;
+
+                PhisicalFaceEdit.RefreshEditValue();
+                PostEdit.RefreshEditValue();
+                SubdivisionEdit.RefreshEditValue();
             }
         }
 
