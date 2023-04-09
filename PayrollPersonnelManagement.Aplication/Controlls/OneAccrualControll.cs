@@ -25,6 +25,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 
         public override List<OneAccrual> Get()
         {
+            NewDbContext();
             var res = DbContext.OneAccrual
                 .AsNoTracking()
                 .Include(c => c.Employee)

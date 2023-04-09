@@ -30,6 +30,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
 
         public override List<Employee> Get()
         {
+            NewDbContext();
             var res = DbSet
                 .AsNoTracking()
                 .Include(c => c.PhisicalFace)

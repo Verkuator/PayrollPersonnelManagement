@@ -98,6 +98,8 @@ namespace PayrollPersonnelManagement.View
             if (model.Count == 0)
             {
                 BaseDataGrid.DataSource = new D();
+                var dto = ModelActions.MapToDto(model);
+                BaseDataGrid.DataSource = dto;
             }
             else
             {
