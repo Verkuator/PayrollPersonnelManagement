@@ -19,5 +19,11 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
             : base(dbContext, dbSet, mapper)
         {
         }
+
+        public override void NewDbContext()
+        {
+            base.NewDbContext();
+            DbSet = DbContext.Subdivisions;
+        }
     }
 }

@@ -39,5 +39,12 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
             var res = DbContext.Employees.AsNoTracking().ToList();
             return Mapper.Map<ICollection<EmployeeDto>>(res);
         }
+
+        public override void NewDbContext()
+        {
+            base.NewDbContext();
+            DbSet = DbContext.OneAccrual;
+        }
+
     }
 }

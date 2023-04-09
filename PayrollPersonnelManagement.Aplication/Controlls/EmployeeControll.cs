@@ -22,6 +22,12 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
 
         }
 
+        public override void NewDbContext()
+        {
+            base.NewDbContext();
+            DbSet = DbContext.Employees;
+        }
+
         public override List<Employee> Get()
         {
             var res = DbSet

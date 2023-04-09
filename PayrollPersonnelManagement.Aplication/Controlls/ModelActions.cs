@@ -8,13 +8,19 @@ using System.Linq;
 namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 {
     public abstract class ModelActions<M, D> 
-        where M : class, IModel
+        where M : class, IModel, new()
         where D : class
     {
         public abstract string Name { get; set; }
         public abstract DbSet<M> DbSet { get; set; }
         protected abstract PayrollPersonnelManagementContext DbContext { get; set; }
         public abstract IMapper Mapper { get; set; }
+
+        public virtual void NewDbContext()
+        {
+            DbContext.Dispose();
+            DbContext = new PayrollPersonnelManagementContext();
+        }
 
         public ModelActions(PayrollPersonnelManagementContext dbContext, DbSet<M> dbSet, IMapper mapper)
         {
@@ -40,6 +46,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
                 DbSet.Update(obj);
             }
             DbContext.SaveChanges();
+            NewDbContext();
             return obj;
         }
 
@@ -47,6 +54,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         {
             DbSet.Remove(obj);
             DbContext.SaveChanges();
+            NewDbContext();
         }
 
         public virtual M MapToModel(D obj)

@@ -20,5 +20,12 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
             : base(dbContext, dbSet, mapper)
         {
         }
+
+        public override void NewDbContext()
+        {
+            base.NewDbContext();
+            DbSet = DbContext.PhisicalFaces;
+        }
+
     }
 }
