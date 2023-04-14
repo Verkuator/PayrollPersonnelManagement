@@ -29,272 +29,266 @@ namespace PayrollPersonnelManagement.View.FormSave
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.stackPanel1 = new DevExpress.Utils.Layout.StackPanel();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.CancelSimpleButton = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.SaveSimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.stackPanel2 = new DevExpress.Utils.Layout.StackPanel();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.SurnameTextEd = new DevExpress.XtraEditors.TextEdit();
-            this.stackPanel3 = new DevExpress.Utils.Layout.StackPanel();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.NameTextEd = new DevExpress.XtraEditors.TextEdit();
-            this.stackPanel4 = new DevExpress.Utils.Layout.StackPanel();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.stackPanel5 = new DevExpress.Utils.Layout.StackPanel();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.DateBirthDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.PatronymicTextEd = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stackPanel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stackPanel2)).BeginInit();
-            this.stackPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SurnameTextEd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stackPanel3)).BeginInit();
-            this.stackPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NameTextEd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stackPanel4)).BeginInit();
-            this.stackPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stackPanel5)).BeginInit();
-            this.stackPanel5.SuspendLayout();
+            this.NameTextEd = new DevExpress.XtraEditors.TextEdit();
+            this.SurnameTextEd = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DateBirthDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateBirthDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PatronymicTextEd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameTextEd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SurnameTextEd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.stackPanel1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(370, 239);
-            this.panelControl1.TabIndex = 0;
-            // 
-            // stackPanel1
-            // 
-            this.stackPanel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.stackPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stackPanel1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.stackPanel1.LayoutDirection = DevExpress.Utils.Layout.StackPanelLayoutDirection.TopDown;
-            this.stackPanel1.Location = new System.Drawing.Point(2, 2);
-            this.stackPanel1.Name = "stackPanel1";
-            this.stackPanel1.Size = new System.Drawing.Size(366, 235);
-            this.stackPanel1.TabIndex = 0;
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelControl2.Controls.Add(this.CancelSimpleButton);
-            this.panelControl2.Controls.Add(this.SaveSimpleButton);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 190);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(370, 42);
-            this.panelControl2.TabIndex = 0;
             // 
             // CancelSimpleButton
             // 
-            this.CancelSimpleButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CancelSimpleButton.Location = new System.Drawing.Point(189, 2);
+            this.CancelSimpleButton.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.CancelSimpleButton.Appearance.Options.UseFont = true;
+            this.CancelSimpleButton.Location = new System.Drawing.Point(511, 333);
+            this.CancelSimpleButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CancelSimpleButton.Name = "CancelSimpleButton";
-            this.CancelSimpleButton.Size = new System.Drawing.Size(179, 38);
+            this.CancelSimpleButton.Size = new System.Drawing.Size(495, 54);
+            this.CancelSimpleButton.StyleController = this.layoutControl1;
             this.CancelSimpleButton.TabIndex = 1;
             this.CancelSimpleButton.Text = "Отмена";
             this.CancelSimpleButton.Click += new System.EventHandler(this.CancelSimpleButton_Click);
             // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.CancelSimpleButton);
+            this.layoutControl1.Controls.Add(this.SaveSimpleButton);
+            this.layoutControl1.Controls.Add(this.DateBirthDateEdit);
+            this.layoutControl1.Controls.Add(this.PatronymicTextEd);
+            this.layoutControl1.Controls.Add(this.NameTextEd);
+            this.layoutControl1.Controls.Add(this.SurnameTextEd);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.layoutControlGroup1;
+            this.layoutControl1.Size = new System.Drawing.Size(1018, 399);
+            this.layoutControl1.TabIndex = 8;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
             // SaveSimpleButton
             // 
-            this.SaveSimpleButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SaveSimpleButton.Location = new System.Drawing.Point(2, 2);
+            this.SaveSimpleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SaveSimpleButton.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.SaveSimpleButton.Appearance.Options.UseFont = true;
+            this.SaveSimpleButton.Location = new System.Drawing.Point(12, 333);
+            this.SaveSimpleButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SaveSimpleButton.Name = "SaveSimpleButton";
-            this.SaveSimpleButton.Size = new System.Drawing.Size(173, 38);
+            this.SaveSimpleButton.Size = new System.Drawing.Size(495, 54);
+            this.SaveSimpleButton.StyleController = this.layoutControl1;
             this.SaveSimpleButton.TabIndex = 0;
             this.SaveSimpleButton.Text = "Сохранить";
             this.SaveSimpleButton.Click += new System.EventHandler(this.SaveSimpleButton_Click);
             // 
-            // stackPanel2
-            // 
-            this.stackPanel2.Controls.Add(this.labelControl1);
-            this.stackPanel2.Controls.Add(this.SurnameTextEd);
-            this.stackPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stackPanel2.Location = new System.Drawing.Point(0, 0);
-            this.stackPanel2.Name = "stackPanel2";
-            this.stackPanel2.Size = new System.Drawing.Size(370, 49);
-            this.stackPanel2.TabIndex = 4;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(50, 16);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(53, 16);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Фамилия";
-            // 
-            // SurnameTextEd
-            // 
-            this.SurnameTextEd.Location = new System.Drawing.Point(109, 13);
-            this.SurnameTextEd.Name = "SurnameTextEd";
-            this.SurnameTextEd.Size = new System.Drawing.Size(219, 22);
-            this.SurnameTextEd.TabIndex = 1;
-            // 
-            // stackPanel3
-            // 
-            this.stackPanel3.Controls.Add(this.labelControl2);
-            this.stackPanel3.Controls.Add(this.NameTextEd);
-            this.stackPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stackPanel3.Location = new System.Drawing.Point(0, 49);
-            this.stackPanel3.Name = "stackPanel3";
-            this.stackPanel3.Size = new System.Drawing.Size(370, 47);
-            this.stackPanel3.TabIndex = 5;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(80, 15);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(80, 3, 3, 3);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(23, 16);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Имя";
-            // 
-            // NameTextEd
-            // 
-            this.NameTextEd.Location = new System.Drawing.Point(109, 12);
-            this.NameTextEd.Name = "NameTextEd";
-            this.NameTextEd.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.NameTextEd.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
-            this.NameTextEd.Properties.MaskSettings.Set("mask", "\\p{L}+");
-            this.NameTextEd.Size = new System.Drawing.Size(216, 22);
-            this.NameTextEd.TabIndex = 3;
-            // 
-            // stackPanel4
-            // 
-            this.stackPanel4.Controls.Add(this.labelControl3);
-            this.stackPanel4.Controls.Add(this.PatronymicTextEd);
-            this.stackPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stackPanel4.Location = new System.Drawing.Point(0, 96);
-            this.stackPanel4.Name = "stackPanel4";
-            this.stackPanel4.Size = new System.Drawing.Size(370, 47);
-            this.stackPanel4.TabIndex = 6;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(48, 15);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(48, 3, 3, 3);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(55, 16);
-            this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "Отчество";
-            // 
-            // stackPanel5
-            // 
-            this.stackPanel5.Controls.Add(this.labelControl4);
-            this.stackPanel5.Controls.Add(this.DateBirthDateEdit);
-            this.stackPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stackPanel5.Location = new System.Drawing.Point(0, 143);
-            this.stackPanel5.Name = "stackPanel5";
-            this.stackPanel5.Size = new System.Drawing.Size(370, 47);
-            this.stackPanel5.TabIndex = 7;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(10, 15);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(92, 16);
-            this.labelControl4.TabIndex = 2;
-            this.labelControl4.Text = "Дата рождения";
-            // 
             // DateBirthDateEdit
             // 
             this.DateBirthDateEdit.EditValue = null;
-            this.DateBirthDateEdit.Location = new System.Drawing.Point(108, 12);
+            this.DateBirthDateEdit.Location = new System.Drawing.Point(285, 204);
+            this.DateBirthDateEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DateBirthDateEdit.Name = "DateBirthDateEdit";
+            this.DateBirthDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.DateBirthDateEdit.Properties.Appearance.Options.UseFont = true;
             this.DateBirthDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateBirthDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateBirthDateEdit.Size = new System.Drawing.Size(217, 22);
+            this.DateBirthDateEdit.Size = new System.Drawing.Size(721, 60);
+            this.DateBirthDateEdit.StyleController = this.layoutControl1;
             this.DateBirthDateEdit.TabIndex = 3;
             // 
             // PatronymicTextEd
             // 
             this.PatronymicTextEd.EditValue = "";
-            this.PatronymicTextEd.Location = new System.Drawing.Point(109, 12);
+            this.PatronymicTextEd.Location = new System.Drawing.Point(285, 140);
+            this.PatronymicTextEd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PatronymicTextEd.Name = "PatronymicTextEd";
-            this.PatronymicTextEd.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.PatronymicTextEd.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
-            this.PatronymicTextEd.Properties.MaskSettings.Set("mask", "\\p{L}+");
-            this.PatronymicTextEd.Size = new System.Drawing.Size(216, 22);
+            this.PatronymicTextEd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.PatronymicTextEd.Properties.Appearance.Options.UseFont = true;
+            this.PatronymicTextEd.Size = new System.Drawing.Size(721, 60);
+            this.PatronymicTextEd.StyleController = this.layoutControl1;
             this.PatronymicTextEd.TabIndex = 3;
+            // 
+            // NameTextEd
+            // 
+            this.NameTextEd.Location = new System.Drawing.Point(285, 76);
+            this.NameTextEd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.NameTextEd.Name = "NameTextEd";
+            this.NameTextEd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.NameTextEd.Properties.Appearance.Options.UseFont = true;
+            this.NameTextEd.Size = new System.Drawing.Size(721, 60);
+            this.NameTextEd.StyleController = this.layoutControl1;
+            this.NameTextEd.TabIndex = 3;
+            // 
+            // SurnameTextEd
+            // 
+            this.SurnameTextEd.Location = new System.Drawing.Point(285, 12);
+            this.SurnameTextEd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SurnameTextEd.Name = "SurnameTextEd";
+            this.SurnameTextEd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.SurnameTextEd.Properties.Appearance.Options.UseFont = true;
+            this.SurnameTextEd.Size = new System.Drawing.Size(721, 60);
+            this.SurnameTextEd.StyleController = this.layoutControl1;
+            this.SurnameTextEd.TabIndex = 1;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.emptySpaceItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem5,
+            this.layoutControlItem6});
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1018, 399);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem1.Control = this.SurnameTextEd;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(998, 64);
+            this.layoutControlItem1.Text = "Фамилия";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(261, 45);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(499, 256);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(499, 65);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem2.Control = this.NameTextEd;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 64);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(998, 64);
+            this.layoutControlItem2.Text = "Имя";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(261, 45);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem3.Control = this.PatronymicTextEd;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 128);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(998, 64);
+            this.layoutControlItem3.Text = "Отчество";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(261, 45);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem4.Control = this.DateBirthDateEdit;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 192);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(998, 64);
+            this.layoutControlItem4.Text = "Дата рождения";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(261, 45);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.ContentVertAlignment = DevExpress.Utils.VertAlignment.Bottom;
+            this.layoutControlItem5.Control = this.SaveSimpleButton;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 256);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(499, 123);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.CancelSimpleButton;
+            this.layoutControlItem6.Location = new System.Drawing.Point(499, 321);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(499, 58);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // PhisicalFaceFormSave
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(370, 239);
-            this.Controls.Add(this.panelControl2);
-            this.Controls.Add(this.stackPanel5);
-            this.Controls.Add(this.stackPanel4);
-            this.Controls.Add(this.stackPanel3);
-            this.Controls.Add(this.stackPanel2);
-            this.Controls.Add(this.panelControl1);
+            this.ClientSize = new System.Drawing.Size(1018, 399);
+            this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PhisicalFaceFormSave";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Физ. лицо";
             this.Load += new System.EventHandler(this.PhisicalFaceFormSave_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.stackPanel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.stackPanel2)).EndInit();
-            this.stackPanel2.ResumeLayout(false);
-            this.stackPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SurnameTextEd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stackPanel3)).EndInit();
-            this.stackPanel3.ResumeLayout(false);
-            this.stackPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NameTextEd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stackPanel4)).EndInit();
-            this.stackPanel4.ResumeLayout(false);
-            this.stackPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stackPanel5)).EndInit();
-            this.stackPanel5.ResumeLayout(false);
-            this.stackPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DateBirthDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateBirthDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PatronymicTextEd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameTextEd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SurnameTextEd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.Utils.Layout.StackPanel stackPanel1;
-        private DevExpress.Utils.Layout.StackPanel stackPanel2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit SurnameTextEd;
-        private DevExpress.Utils.Layout.StackPanel stackPanel3;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit NameTextEd;
-        private DevExpress.Utils.Layout.StackPanel stackPanel4;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.Utils.Layout.StackPanel stackPanel5;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.DateEdit DateBirthDateEdit;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton CancelSimpleButton;
         private DevExpress.XtraEditors.SimpleButton SaveSimpleButton;
         private DevExpress.XtraEditors.TextEdit PatronymicTextEd;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }

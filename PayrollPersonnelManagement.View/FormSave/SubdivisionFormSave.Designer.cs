@@ -60,10 +60,9 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.layoutControl1.Controls.Add(this.NameEdit);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(407, 226);
+            this.layoutControl1.Size = new System.Drawing.Size(1018, 362);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -74,9 +73,10 @@ namespace PayrollPersonnelManagement.View.FormSave
             0,
             0,
             0});
-            this.SalaryEdit.Location = new System.Drawing.Point(110, 38);
-            this.SalaryEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.SalaryEdit.Location = new System.Drawing.Point(284, 85);
             this.SalaryEdit.Name = "SalaryEdit";
+            this.SalaryEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.SalaryEdit.Properties.Appearance.Options.UseFont = true;
             this.SalaryEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.SalaryEdit.Properties.MaskSettings.Set("mask", "f");
@@ -85,16 +85,17 @@ namespace PayrollPersonnelManagement.View.FormSave
             0,
             0,
             0});
-            this.SalaryEdit.Size = new System.Drawing.Size(285, 24);
+            this.SalaryEdit.Size = new System.Drawing.Size(716, 60);
             this.SalaryEdit.StyleController = this.layoutControl1;
             this.SalaryEdit.TabIndex = 8;
             // 
             // CancelSimpleButton2
             // 
-            this.CancelSimpleButton2.Location = new System.Drawing.Point(205, 187);
-            this.CancelSimpleButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.CancelSimpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.CancelSimpleButton2.Appearance.Options.UseFont = true;
+            this.CancelSimpleButton2.Location = new System.Drawing.Point(510, 289);
             this.CancelSimpleButton2.Name = "CancelSimpleButton2";
-            this.CancelSimpleButton2.Size = new System.Drawing.Size(190, 27);
+            this.CancelSimpleButton2.Size = new System.Drawing.Size(490, 54);
             this.CancelSimpleButton2.StyleController = this.layoutControl1;
             this.CancelSimpleButton2.TabIndex = 7;
             this.CancelSimpleButton2.Text = "Отмена";
@@ -102,10 +103,11 @@ namespace PayrollPersonnelManagement.View.FormSave
             // 
             // SaveSimpleButton1
             // 
-            this.SaveSimpleButton1.Location = new System.Drawing.Point(12, 187);
-            this.SaveSimpleButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.SaveSimpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.SaveSimpleButton1.Appearance.Options.UseFont = true;
+            this.SaveSimpleButton1.Location = new System.Drawing.Point(18, 289);
             this.SaveSimpleButton1.Name = "SaveSimpleButton1";
-            this.SaveSimpleButton1.Size = new System.Drawing.Size(189, 27);
+            this.SaveSimpleButton1.Size = new System.Drawing.Size(486, 54);
             this.SaveSimpleButton1.StyleController = this.layoutControl1;
             this.SaveSimpleButton1.TabIndex = 6;
             this.SaveSimpleButton1.Text = "Сохранить";
@@ -113,13 +115,11 @@ namespace PayrollPersonnelManagement.View.FormSave
             // 
             // NameEdit
             // 
-            this.NameEdit.Location = new System.Drawing.Point(110, 12);
-            this.NameEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.NameEdit.Location = new System.Drawing.Point(284, 19);
             this.NameEdit.Name = "NameEdit";
-            this.NameEdit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.NameEdit.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
-            this.NameEdit.Properties.MaskSettings.Set("mask", "\\p{L}+");
-            this.NameEdit.Size = new System.Drawing.Size(285, 22);
+            this.NameEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.NameEdit.Properties.Appearance.Options.UseFont = true;
+            this.NameEdit.Size = new System.Drawing.Size(716, 60);
             this.NameEdit.StyleController = this.layoutControl1;
             this.NameEdit.TabIndex = 4;
             // 
@@ -134,62 +134,65 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.layoutControlItem4,
             this.SalaryLine});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(407, 226);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1018, 362);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
+            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem1.Control = this.NameEdit;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(387, 26);
+            this.layoutControlItem1.Size = new System.Drawing.Size(988, 66);
             this.layoutControlItem1.Text = "Наименование";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(86, 16);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(248, 45);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(193, 54);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(492, 132);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(194, 121);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(496, 138);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.ContentVertAlignment = DevExpress.Utils.VertAlignment.Bottom;
             this.layoutControlItem3.Control = this.SaveSimpleButton1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 54);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 132);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(193, 152);
+            this.layoutControlItem3.Size = new System.Drawing.Size(492, 198);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.CancelSimpleButton2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(193, 175);
+            this.layoutControlItem4.Location = new System.Drawing.Point(492, 270);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(194, 31);
+            this.layoutControlItem4.Size = new System.Drawing.Size(496, 60);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // SalaryLine
             // 
+            this.SalaryLine.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.SalaryLine.AppearanceItemCaption.Options.UseFont = true;
             this.SalaryLine.Control = this.SalaryEdit;
-            this.SalaryLine.Location = new System.Drawing.Point(0, 26);
+            this.SalaryLine.Location = new System.Drawing.Point(0, 66);
             this.SalaryLine.Name = "SalaryLine";
-            this.SalaryLine.Size = new System.Drawing.Size(387, 28);
+            this.SalaryLine.Size = new System.Drawing.Size(988, 66);
             this.SalaryLine.Text = "Надбавка";
-            this.SalaryLine.TextSize = new System.Drawing.Size(86, 16);
+            this.SalaryLine.TextSize = new System.Drawing.Size(248, 45);
             // 
             // SubdivisionFormSave
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 226);
+            this.ClientSize = new System.Drawing.Size(1018, 362);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SubdivisionFormSave";
             this.Load += new System.EventHandler(this.SubdivisionFormSave_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
