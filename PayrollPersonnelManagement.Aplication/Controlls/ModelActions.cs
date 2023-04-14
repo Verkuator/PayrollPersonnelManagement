@@ -32,7 +32,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
         public virtual List<M> Get()
         {
             NewDbContext();
-            var obj = DbSet.AsNoTracking().ToList();
+            var obj = DbSet.AsNoTracking().Where(c => !c.IsDelete).ToList();
             return obj;
         }
 
@@ -53,7 +53,8 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 
         public virtual void Delete(M obj)
         {
-            DbSet.Remove(obj);
+            obj.IsDelete = true;
+            DbSet.Update(obj);
             DbContext.SaveChanges();
             NewDbContext();
         }

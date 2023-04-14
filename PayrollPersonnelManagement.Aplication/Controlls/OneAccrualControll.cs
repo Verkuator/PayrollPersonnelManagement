@@ -30,6 +30,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
                 .AsNoTracking()
                 .Include(c => c.Employee)
                 .ThenInclude(c => c.PhisicalFace)
+                .Where(c => !c.IsDelete)
                 .ToList();
 
             return res;
@@ -41,6 +42,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
                 .Include(c => c.PhisicalFace)
                 .Include(c => c.Subdivision)
                 .Include(c => c.Post)
+                .Where(c => !c.IsDelete)
                 .AsNoTracking().ToList();
             return Mapper.Map<ICollection<EmployeeDto>>(res);
         }

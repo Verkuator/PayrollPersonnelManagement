@@ -36,6 +36,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
                 .Include(c => c.PhisicalFace)
                 .Include(c => c.Subdivision)
                 .Include(c => c.Post)
+                .Where(c => !c.IsDelete)
                 .ToList();
 
             res.ForEach(c =>
@@ -50,32 +51,20 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
 
         public ICollection<PhisicalFaceDto> GetPhisicalFaceDtos()
         {
-            var res = DbContext.PhisicalFaces.AsNoTracking().ToList();
+            var res = DbContext.PhisicalFaces.AsNoTracking().Where(c => !c.IsDelete).ToList();
             return Mapper.Map<ICollection<PhisicalFaceDto>>(res);
         }
 
         public ICollection<PostDto> GetPostsDtos()
         {
-            var res = DbContext.Posts.AsNoTracking().ToArray();
+            var res = DbContext.Posts.AsNoTracking().Where(c => !c.IsDelete).ToArray();
             return Mapper.Map<ICollection<PostDto>>(res);
         }
 
         public ICollection<SubdivisionDto> GetSubdivisionsDtos()
         {
-            var res = DbContext.Subdivisions.AsNoTracking().ToArray();
+            var res = DbContext.Subdivisions.AsNoTracking().Where(c => !c.IsDelete).ToArray();
             return Mapper.Map<ICollection<SubdivisionDto>>(res);
-        }
-
-        public override void Delete(Employee obj)
-        {
-            obj.OneAccrual = null;
-            obj.PhisicalFace = null;
-            obj.Post = null;
-            obj.Subdivision = null;
-
-            DbSet.Remove(obj);
-            DbContext.SaveChanges();
-            NewDbContext();
-        }
+        }        
     }
 }
