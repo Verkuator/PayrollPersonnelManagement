@@ -12,6 +12,7 @@ namespace PayrollPersonnelManagement.Common
         public Subdivision Subdivision { get; set; }
         public int PostId { get; set; }
         public Post Post { get; set; }
+        public bool IsDelete { get; set; }
         public ICollection<OneAccrual> OneAccrual { get; set; }
     }
 }

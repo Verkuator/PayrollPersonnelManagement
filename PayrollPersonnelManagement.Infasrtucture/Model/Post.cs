@@ -9,7 +9,7 @@ namespace PayrollPersonnelManagement.Common
         public string Name { get; set; }
         public decimal Salary { get; set; }
         public ICollection<Employee> Employee { get; set; }
-
+        public bool IsDelete { get; set; }
         public override string ToString()
         {
             string res = Name + " " + Salary;

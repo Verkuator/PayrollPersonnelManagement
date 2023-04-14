@@ -65,5 +65,17 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controll
             var res = DbContext.Subdivisions.AsNoTracking().ToArray();
             return Mapper.Map<ICollection<SubdivisionDto>>(res);
         }
+
+        public override void Delete(Employee obj)
+        {
+            obj.OneAccrual = null;
+            obj.PhisicalFace = null;
+            obj.Post = null;
+            obj.Subdivision = null;
+
+            DbSet.Remove(obj);
+            DbContext.SaveChanges();
+            NewDbContext();
+        }
     }
 }
