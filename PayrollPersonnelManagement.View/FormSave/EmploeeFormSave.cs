@@ -23,9 +23,13 @@ namespace PayrollPersonnelManagement.View.FormSave
 
         public void SaveSimpleButton_Click(object sender, EventArgs e)
         {
-            var model = FormMapToModel();
-            ModelActions.Save(model);
-            Close();
+            if (PhisicalFaceEdit.EditValue != null & PostEdit.EditValue != null & SubdivisionEdit.EditValue != null)
+            {
+                var model = FormMapToModel();
+                ModelActions.Save(model);
+                Close();
+            }
+                    
         }
 
         public void CancelSimpleButton_Click(object sender, EventArgs e)
