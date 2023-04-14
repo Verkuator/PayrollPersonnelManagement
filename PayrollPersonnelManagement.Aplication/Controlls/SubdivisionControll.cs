@@ -8,7 +8,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
 {
     public class SubdivisionControll : ModelActions<Subdivision, SubdivisionDto>
     {
-        public override string Name { get; set; } = "Отделы";
+        public override string Name { get; set; } = "Подразделения";
         public override DbSet<Subdivision> DbSet { get; set; }
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
         public override IMapper Mapper { get; set; }

@@ -11,7 +11,7 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
     public class OneAccrualControll : ModelActions<OneAccrual, OneAccrualDto>
     {
 
-        public override string Name { get; set; } = "Сделки";
+        public override string Name { get; set; } = "Разовые начисления";
         public override DbSet<OneAccrual> DbSet { get; set; }
         protected override PayrollPersonnelManagementContext DbContext { get; set; }
         public override IMapper Mapper { get; set; }
@@ -30,6 +30,10 @@ namespace PayrollPersonnelManagement.Infasrtucture.Controlls
                 .AsNoTracking()
                 .Include(c => c.Employee)
                 .ThenInclude(c => c.PhisicalFace)
+                .Include(c => c.Employee)
+                .ThenInclude(c => c.Post)
+                .Include(c => c.Employee)
+                .ThenInclude(c => c.Subdivision)
                 .Where(c => !c.IsDelete)
                 .ToList();
 

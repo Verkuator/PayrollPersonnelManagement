@@ -64,7 +64,8 @@ namespace PayrollPersonnelManagement.View
             {
                 _form.SetDto(rowBase);
                 _form.ShowDialog();
-            }            
+                RefreshForm();
+            }
             
         }
 

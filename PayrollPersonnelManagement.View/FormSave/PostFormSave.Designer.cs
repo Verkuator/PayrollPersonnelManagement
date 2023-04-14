@@ -110,9 +110,6 @@ namespace PayrollPersonnelManagement.View.FormSave
             // 
             this.NameEdit.Location = new System.Drawing.Point(110, 12);
             this.NameEdit.Name = "NameEdit";
-            this.NameEdit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.NameEdit.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
-            this.NameEdit.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.NameEdit.Size = new System.Drawing.Size(466, 22);
             this.NameEdit.StyleController = this.layoutControl1;
             this.NameEdit.TabIndex = 4;

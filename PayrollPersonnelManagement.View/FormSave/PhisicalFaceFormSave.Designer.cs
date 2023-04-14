@@ -42,10 +42,10 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.NameTextEd = new DevExpress.XtraEditors.TextEdit();
             this.stackPanel4 = new DevExpress.Utils.Layout.StackPanel();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.PatronymicTextEd = new DevExpress.XtraEditors.TextEdit();
             this.stackPanel5 = new DevExpress.Utils.Layout.StackPanel();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.DateBirthDateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.PatronymicTextEd = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel1)).BeginInit();
@@ -59,11 +59,11 @@ namespace PayrollPersonnelManagement.View.FormSave
             ((System.ComponentModel.ISupportInitialize)(this.NameTextEd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel4)).BeginInit();
             this.stackPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PatronymicTextEd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel5)).BeginInit();
             this.stackPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DateBirthDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateBirthDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PatronymicTextEd.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -140,9 +140,6 @@ namespace PayrollPersonnelManagement.View.FormSave
             // 
             this.SurnameTextEd.Location = new System.Drawing.Point(109, 13);
             this.SurnameTextEd.Name = "SurnameTextEd";
-            this.SurnameTextEd.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.SurnameTextEd.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
-            this.SurnameTextEd.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.SurnameTextEd.Size = new System.Drawing.Size(219, 22);
             this.SurnameTextEd.TabIndex = 1;
             // 
@@ -194,17 +191,6 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "Отчество";
             // 
-            // PatronymicTextEd
-            // 
-            this.PatronymicTextEd.EditValue = "";
-            this.PatronymicTextEd.Location = new System.Drawing.Point(109, 12);
-            this.PatronymicTextEd.Name = "PatronymicTextEd";
-            this.PatronymicTextEd.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.PatronymicTextEd.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
-            this.PatronymicTextEd.Properties.MaskSettings.Set("mask", "\\p{L}+");
-            this.PatronymicTextEd.Size = new System.Drawing.Size(216, 22);
-            this.PatronymicTextEd.TabIndex = 3;
-            // 
             // stackPanel5
             // 
             this.stackPanel5.Controls.Add(this.labelControl4);
@@ -235,6 +221,17 @@ namespace PayrollPersonnelManagement.View.FormSave
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateBirthDateEdit.Size = new System.Drawing.Size(217, 22);
             this.DateBirthDateEdit.TabIndex = 3;
+            // 
+            // PatronymicTextEd
+            // 
+            this.PatronymicTextEd.EditValue = "";
+            this.PatronymicTextEd.Location = new System.Drawing.Point(109, 12);
+            this.PatronymicTextEd.Name = "PatronymicTextEd";
+            this.PatronymicTextEd.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.PatronymicTextEd.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
+            this.PatronymicTextEd.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.PatronymicTextEd.Size = new System.Drawing.Size(216, 22);
+            this.PatronymicTextEd.TabIndex = 3;
             // 
             // PhisicalFaceFormSave
             // 
@@ -270,12 +267,12 @@ namespace PayrollPersonnelManagement.View.FormSave
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel4)).EndInit();
             this.stackPanel4.ResumeLayout(false);
             this.stackPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PatronymicTextEd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stackPanel5)).EndInit();
             this.stackPanel5.ResumeLayout(false);
             this.stackPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DateBirthDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateBirthDateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PatronymicTextEd.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,12 +289,12 @@ namespace PayrollPersonnelManagement.View.FormSave
         private DevExpress.XtraEditors.TextEdit NameTextEd;
         private DevExpress.Utils.Layout.StackPanel stackPanel4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit PatronymicTextEd;
         private DevExpress.Utils.Layout.StackPanel stackPanel5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.DateEdit DateBirthDateEdit;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton CancelSimpleButton;
         private DevExpress.XtraEditors.SimpleButton SaveSimpleButton;
+        private DevExpress.XtraEditors.TextEdit PatronymicTextEd;
     }
 }
