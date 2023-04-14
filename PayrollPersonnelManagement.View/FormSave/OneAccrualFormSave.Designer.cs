@@ -118,6 +118,11 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.HoursEdit.Name = "HoursEdit";
             this.HoursEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.HoursEdit.Properties.MaxValue = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.HoursEdit.Size = new System.Drawing.Size(401, 40);
             this.HoursEdit.StyleController = this.layoutControl1;
             this.HoursEdit.TabIndex = 5;
@@ -146,6 +151,12 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.SumEdit.Name = "SumEdit";
             this.SumEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.SumEdit.Properties.MaskSettings.Set("mask", "n");
+            this.SumEdit.Properties.MaxValue = new decimal(new int[] {
+            1215752191,
+            23,
+            0,
+            0});
             this.SumEdit.Size = new System.Drawing.Size(401, 40);
             this.SumEdit.StyleController = this.layoutControl1;
             this.SumEdit.TabIndex = 5;

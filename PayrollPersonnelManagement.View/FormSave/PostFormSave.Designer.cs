@@ -97,6 +97,11 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.SalaryEdit.Name = "SalaryEdit";
             this.SalaryEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.SalaryEdit.Properties.MaxValue = new decimal(new int[] {
+            1569325055,
+            23283064,
+            0,
+            0});
             this.SalaryEdit.Size = new System.Drawing.Size(348, 40);
             this.SalaryEdit.StyleController = this.layoutControl1;
             this.SalaryEdit.TabIndex = 5;
@@ -105,6 +110,9 @@ namespace PayrollPersonnelManagement.View.FormSave
             // 
             this.NameEdit.Location = new System.Drawing.Point(228, 12);
             this.NameEdit.Name = "NameEdit";
+            this.NameEdit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.NameEdit.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
+            this.NameEdit.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.NameEdit.Size = new System.Drawing.Size(348, 40);
             this.NameEdit.StyleController = this.layoutControl1;
             this.NameEdit.TabIndex = 4;

@@ -19,9 +19,15 @@ namespace PayrollPersonnelManagement.View.FormSave
 
         public void SaveSimpleButton_Click(object sender, EventArgs e)
         {
-            var model = FormMapToModel();
-            ModelActions.Save(model);
-            Close();
+            if (dateEdit1.EditValue != null &&
+                HoursEdit.EditValue != null &&
+                SumEdit.EditValue != null &&
+                EmployeeEdit.EditValue != null)
+            {
+                var model = FormMapToModel();
+                ModelActions.Save(model);
+                Close();
+            }
         }
 
         public void CancelSimpleButton_Click(object sender, EventArgs e)

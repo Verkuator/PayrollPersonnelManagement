@@ -147,6 +147,9 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.SurnameTextEd.Location = new System.Drawing.Point(170, 18);
             this.SurnameTextEd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SurnameTextEd.Name = "SurnameTextEd";
+            this.SurnameTextEd.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.SurnameTextEd.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
+            this.SurnameTextEd.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.SurnameTextEd.Size = new System.Drawing.Size(328, 40);
             this.SurnameTextEd.TabIndex = 1;
             // 
@@ -175,6 +178,9 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.NameTextEd.Location = new System.Drawing.Point(166, 16);
             this.NameTextEd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NameTextEd.Name = "NameTextEd";
+            this.NameTextEd.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.NameTextEd.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
+            this.NameTextEd.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.NameTextEd.Size = new System.Drawing.Size(324, 40);
             this.NameTextEd.TabIndex = 3;
             // 
@@ -204,6 +210,9 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.PatronymicTextEd.Location = new System.Drawing.Point(169, 16);
             this.PatronymicTextEd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PatronymicTextEd.Name = "PatronymicTextEd";
+            this.PatronymicTextEd.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.PatronymicTextEd.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
+            this.PatronymicTextEd.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.PatronymicTextEd.Size = new System.Drawing.Size(324, 40);
             this.PatronymicTextEd.TabIndex = 3;
             // 

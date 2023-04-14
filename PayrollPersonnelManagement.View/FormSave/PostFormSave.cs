@@ -11,8 +11,8 @@ namespace PayrollPersonnelManagement.View.FormSave
         public PostControll ModelActions { get; set; }
         public PostFormSave(PostControll modelActions)
         {
-            ModelActions = modelActions;
-            InitializeComponent();
+                ModelActions = modelActions;
+                InitializeComponent();
         }
 
         public void CancelSimpleButton_Click(object sender, EventArgs e)
@@ -54,9 +54,13 @@ namespace PayrollPersonnelManagement.View.FormSave
 
         private void SaveSimpleButton_Click(object sender, EventArgs e)
         {
-            var model = FormMapToModel();
-            ModelActions.Save(model);
-            Close();
+            if (NameEdit.EditValue != null & SalaryEdit.EditValue != null)
+            {
+                var model = FormMapToModel();
+                ModelActions.Save(model);
+                Close();
+            }
+            
         }
     }
 }
