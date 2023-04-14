@@ -1,4 +1,6 @@
 ﻿
+using DevExpress.XtraGrid.Views.Grid;
+
 namespace PayrollPersonnelManagement.View
 {
     partial class BaseForm
@@ -123,7 +125,10 @@ namespace PayrollPersonnelManagement.View
             // BaseGridView
             // 
             this.BaseGridView.GridControl = this.BaseDataGrid;
-            this.BaseGridView.Name = "BaseGridView";            
+            this.BaseGridView.Name = "BaseGridView";
+            this.BaseGridView.OptionsSelection.MultiSelect = false;
+            this.BaseGridView.OptionsSelection.MultiSelectMode = GridMultiSelectMode.RowSelect;
+            this.BaseGridView.OptionsBehavior.Editable = false;
             // 
             // popupMenu1
             // 

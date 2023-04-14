@@ -75,5 +75,10 @@ namespace PayrollPersonnelManagement.View
             }
             return found;
         }
+
+        private void OneAccrualTab_Click_1(object sender, EventArgs e)
+        {
+            OpenTab(ControllHelper.OneAccrualControll, ControllHelper.OneAccrualFormSave);
+        }
     }
 }

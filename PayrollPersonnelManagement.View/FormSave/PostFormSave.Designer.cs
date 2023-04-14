@@ -68,9 +68,9 @@ namespace PayrollPersonnelManagement.View.FormSave
             // 
             // CancelSimpleButton2
             // 
-            this.CancelSimpleButton2.Location = new System.Drawing.Point(296, 211);
+            this.CancelSimpleButton2.Location = new System.Drawing.Point(296, 228);
             this.CancelSimpleButton2.Name = "CancelSimpleButton2";
-            this.CancelSimpleButton2.Size = new System.Drawing.Size(280, 44);
+            this.CancelSimpleButton2.Size = new System.Drawing.Size(280, 27);
             this.CancelSimpleButton2.StyleController = this.layoutControl1;
             this.CancelSimpleButton2.TabIndex = 7;
             this.CancelSimpleButton2.Text = "Отмена";
@@ -78,12 +78,12 @@ namespace PayrollPersonnelManagement.View.FormSave
             // 
             // SaveSimpleButton1
             // 
-            this.SaveSimpleButton1.Location = new System.Drawing.Point(12, 211);
+            this.SaveSimpleButton1.Location = new System.Drawing.Point(12, 228);
             this.SaveSimpleButton1.Name = "SaveSimpleButton1";
-            this.SaveSimpleButton1.Size = new System.Drawing.Size(280, 44);
+            this.SaveSimpleButton1.Size = new System.Drawing.Size(280, 27);
             this.SaveSimpleButton1.StyleController = this.layoutControl1;
             this.SaveSimpleButton1.TabIndex = 6;
-            this.SaveSimpleButton1.Text = "Добавить";
+            this.SaveSimpleButton1.Text = "Сохранить";
             this.SaveSimpleButton1.Click += new System.EventHandler(this.SaveSimpleButton_Click);
             // 
             // SalaryEdit
@@ -93,7 +93,7 @@ namespace PayrollPersonnelManagement.View.FormSave
             0,
             0,
             0});
-            this.SalaryEdit.Location = new System.Drawing.Point(228, 56);
+            this.SalaryEdit.Location = new System.Drawing.Point(148, 38);
             this.SalaryEdit.Name = "SalaryEdit";
             this.SalaryEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -102,18 +102,18 @@ namespace PayrollPersonnelManagement.View.FormSave
             23283064,
             0,
             0});
-            this.SalaryEdit.Size = new System.Drawing.Size(348, 40);
+            this.SalaryEdit.Size = new System.Drawing.Size(428, 24);
             this.SalaryEdit.StyleController = this.layoutControl1;
             this.SalaryEdit.TabIndex = 5;
             // 
             // NameEdit
             // 
-            this.NameEdit.Location = new System.Drawing.Point(228, 12);
+            this.NameEdit.Location = new System.Drawing.Point(148, 12);
             this.NameEdit.Name = "NameEdit";
             this.NameEdit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.NameEdit.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
             this.NameEdit.Properties.MaskSettings.Set("mask", "\\p{L}+");
-            this.NameEdit.Size = new System.Drawing.Size(348, 40);
+            this.NameEdit.Size = new System.Drawing.Size(428, 22);
             this.NameEdit.StyleController = this.layoutControl1;
             this.NameEdit.TabIndex = 4;
             // 
@@ -136,44 +136,44 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.layoutControlItem1.Control = this.NameEdit;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(568, 44);
+            this.layoutControlItem1.Size = new System.Drawing.Size(568, 26);
             this.layoutControlItem1.Text = "Название должности";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(204, 25);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(124, 16);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.SalaryEdit;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 44);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(568, 44);
+            this.layoutControlItem3.Size = new System.Drawing.Size(568, 28);
             this.layoutControlItem3.Text = "Зарплата";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(204, 25);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(124, 16);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.ContentVertAlignment = DevExpress.Utils.VertAlignment.Bottom;
             this.layoutControlItem2.Control = this.SaveSimpleButton1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 199);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 216);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(284, 48);
+            this.layoutControlItem2.Size = new System.Drawing.Size(284, 31);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.CancelSimpleButton2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(284, 199);
+            this.layoutControlItem4.Location = new System.Drawing.Point(284, 216);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(284, 48);
+            this.layoutControlItem4.Size = new System.Drawing.Size(284, 31);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 88);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 54);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(568, 111);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(568, 162);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // PostFormSave

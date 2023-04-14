@@ -71,27 +71,30 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.layoutControl1.Controls.Add(this.SumEdit);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(610, 324);
+            this.layoutControl1.Size = new System.Drawing.Size(407, 207);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // EmployeeEdit
             // 
-            this.EmployeeEdit.Location = new System.Drawing.Point(197, 144);
+            this.EmployeeEdit.Location = new System.Drawing.Point(122, 83);
+            this.EmployeeEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EmployeeEdit.Name = "EmployeeEdit";
             this.EmployeeEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.EmployeeEdit.Size = new System.Drawing.Size(401, 40);
+            this.EmployeeEdit.Size = new System.Drawing.Size(277, 22);
             this.EmployeeEdit.StyleController = this.layoutControl1;
             this.EmployeeEdit.TabIndex = 9;
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(307, 268);
+            this.simpleButton2.Location = new System.Drawing.Point(204, 173);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(291, 44);
+            this.simpleButton2.Size = new System.Drawing.Size(195, 27);
             this.simpleButton2.StyleController = this.layoutControl1;
             this.simpleButton2.TabIndex = 7;
             this.simpleButton2.Text = "Отмена";
@@ -99,12 +102,13 @@ namespace PayrollPersonnelManagement.View.FormSave
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(12, 268);
+            this.simpleButton1.Location = new System.Drawing.Point(8, 173);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(291, 44);
+            this.simpleButton1.Size = new System.Drawing.Size(194, 27);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "Добавить";
+            this.simpleButton1.Text = "Сохранить";
             this.simpleButton1.Click += new System.EventHandler(this.SaveSimpleButton_Click);
             // 
             // HoursEdit
@@ -114,7 +118,8 @@ namespace PayrollPersonnelManagement.View.FormSave
             0,
             0,
             0});
-            this.HoursEdit.Location = new System.Drawing.Point(197, 56);
+            this.HoursEdit.Location = new System.Drawing.Point(122, 31);
+            this.HoursEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HoursEdit.Name = "HoursEdit";
             this.HoursEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -123,20 +128,21 @@ namespace PayrollPersonnelManagement.View.FormSave
             0,
             0,
             0});
-            this.HoursEdit.Size = new System.Drawing.Size(401, 40);
+            this.HoursEdit.Size = new System.Drawing.Size(277, 24);
             this.HoursEdit.StyleController = this.layoutControl1;
             this.HoursEdit.TabIndex = 5;
             // 
             // dateEdit1
             // 
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(197, 12);
+            this.dateEdit1.Location = new System.Drawing.Point(122, 7);
+            this.dateEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(401, 40);
+            this.dateEdit1.Size = new System.Drawing.Size(277, 22);
             this.dateEdit1.StyleController = this.layoutControl1;
             this.dateEdit1.TabIndex = 4;
             // 
@@ -147,7 +153,8 @@ namespace PayrollPersonnelManagement.View.FormSave
             0,
             0,
             0});
-            this.SumEdit.Location = new System.Drawing.Point(197, 100);
+            this.SumEdit.Location = new System.Drawing.Point(122, 57);
+            this.SumEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SumEdit.Name = "SumEdit";
             this.SumEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -157,7 +164,7 @@ namespace PayrollPersonnelManagement.View.FormSave
             23,
             0,
             0});
-            this.SumEdit.Size = new System.Drawing.Size(401, 40);
+            this.SumEdit.Size = new System.Drawing.Size(277, 24);
             this.SumEdit.StyleController = this.layoutControl1;
             this.SumEdit.TabIndex = 5;
             // 
@@ -174,7 +181,7 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.layoutControlItem5,
             this.EmployeeLine});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(610, 324);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(407, 207);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -182,74 +189,75 @@ namespace PayrollPersonnelManagement.View.FormSave
             this.layoutControlItem1.Control = this.dateEdit1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(590, 44);
+            this.layoutControlItem1.Size = new System.Drawing.Size(393, 24);
             this.layoutControlItem1.Text = "Дата";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(173, 25);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(106, 16);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(295, 176);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(196, 100);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(295, 80);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(197, 66);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.HoursEdit;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 44);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(590, 44);
+            this.layoutControlItem2.Size = new System.Drawing.Size(393, 26);
             this.layoutControlItem2.Text = "Количество часов";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(173, 25);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(106, 16);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.SumEdit;
             this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 88);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(590, 44);
+            this.layoutControlItem3.Size = new System.Drawing.Size(393, 26);
             this.layoutControlItem3.Text = "Сумма";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(173, 25);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(106, 16);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.ContentVertAlignment = DevExpress.Utils.VertAlignment.Bottom;
             this.layoutControlItem4.Control = this.simpleButton1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 176);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 100);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(295, 128);
+            this.layoutControlItem4.Size = new System.Drawing.Size(196, 95);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.simpleButton2;
-            this.layoutControlItem5.Location = new System.Drawing.Point(295, 256);
+            this.layoutControlItem5.Location = new System.Drawing.Point(196, 166);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(295, 48);
+            this.layoutControlItem5.Size = new System.Drawing.Size(197, 29);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // EmployeeLine
             // 
             this.EmployeeLine.Control = this.EmployeeEdit;
-            this.EmployeeLine.Location = new System.Drawing.Point(0, 132);
+            this.EmployeeLine.Location = new System.Drawing.Point(0, 76);
             this.EmployeeLine.Name = "EmployeeLine";
-            this.EmployeeLine.Size = new System.Drawing.Size(590, 44);
+            this.EmployeeLine.Size = new System.Drawing.Size(393, 24);
             this.EmployeeLine.Text = "Сотрудник";
-            this.EmployeeLine.TextSize = new System.Drawing.Size(173, 25);
+            this.EmployeeLine.TextSize = new System.Drawing.Size(106, 16);
             // 
             // OneAccrualFormSave
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 324);
+            this.ClientSize = new System.Drawing.Size(407, 207);
             this.Controls.Add(this.layoutControl1);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OneAccrualFormSave";
             this.Load += new System.EventHandler(this.OneAccrualFormSave_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
