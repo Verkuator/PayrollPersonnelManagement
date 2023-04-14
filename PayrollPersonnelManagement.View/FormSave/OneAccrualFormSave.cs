@@ -21,7 +21,6 @@ namespace PayrollPersonnelManagement.View.FormSave
         {
             if (dateEdit1.EditValue != null &&
                 HoursEdit.EditValue != null &&
-                SumEdit.EditValue != null &&
                 EmployeeEdit.EditValue != null)
             {
                 var model = FormMapToModel();
@@ -41,7 +40,6 @@ namespace PayrollPersonnelManagement.View.FormSave
             {
                 dateEdit1.EditValue = Dto.InDate;
                 HoursEdit.EditValue = Dto.HoursMonth;
-                SumEdit.EditValue = Dto.Sum;
 
                 var EmployeeEditData = (ICollection<EmployeeDto>)EmployeeEdit.Properties.DataSource;
                 if (!EmployeeEditData.Select(c => c.Id).Contains(Dto.EmployeeId))
@@ -63,7 +61,6 @@ namespace PayrollPersonnelManagement.View.FormSave
             }
             res.InDate = dateEdit1.DateTime;
             res.HoursMonth = HoursEdit.Value;
-            res.Sum = SumEdit.Value;
             res.EmployeeId = ((EmployeeDto)EmployeeEdit.EditValue).Id;
             return res;
         }
@@ -72,7 +69,6 @@ namespace PayrollPersonnelManagement.View.FormSave
         {
             dateEdit1.EditValue = null;
             HoursEdit.EditValue = null;
-            SumEdit.EditValue = null;
             EmployeeEdit.EditValue = null;
         }
 

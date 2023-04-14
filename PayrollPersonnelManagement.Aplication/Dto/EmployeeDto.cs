@@ -22,7 +22,7 @@ namespace PayrollPersonnelManagement.Aplication.Dto
         public int SubdivisionId { get; set; }
         [Browsable(false)]
         public SubdivisionDto Subdivision { get; set; }
-        [DisplayName("Отдел")]
+        [DisplayName("Подразделение")]
         public string SubdivisionName { get; set; }
         [Browsable(false)]
         public int PostId { get; set; }

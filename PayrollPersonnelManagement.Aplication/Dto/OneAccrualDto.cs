@@ -12,7 +12,7 @@ namespace PayrollPersonnelManagement.Aplication.Dto
     {
         [Browsable(false)]
         public int Id { get; set; }
-        [DisplayName("Дата")]
+        [DisplayName("Дата начисления")]
         public DateTime InDate { get; set; }
         [DisplayName("Часов в месяц")]
         public decimal HoursMonth { get; set; }

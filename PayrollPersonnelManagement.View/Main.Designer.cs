@@ -37,6 +37,8 @@ namespace PayrollPersonnelManagement.View
             this.PostTab = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.EmployeeTab = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.SubdivisionTab = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.OneAccrualTab = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
@@ -45,8 +47,6 @@ namespace PayrollPersonnelManagement.View
             this.barMdiChildrenListItem2 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonControl2 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.OneAccrualTab = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -86,7 +86,7 @@ namespace PayrollPersonnelManagement.View
             this.PhisicalFaceTab.ImageOptions.ImageUri.Uri = "business%20objects/bo_customer";
             this.PhisicalFaceTab.Name = "PhisicalFaceTab";
             this.PhisicalFaceTab.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.PhisicalFaceTab.Text = "Физ. лицо";
+            this.PhisicalFaceTab.Text = "Физические лица";
             this.PhisicalFaceTab.Click += new System.EventHandler(this.PhisicalFaceTab_Click);
             // 
             // PostTab
@@ -112,6 +112,23 @@ namespace PayrollPersonnelManagement.View
             this.SubdivisionTab.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.SubdivisionTab.Text = "Подразделения";
             this.SubdivisionTab.Click += new System.EventHandler(this.SubdivisionTab_Click);
+            // 
+            // accordionControlElement1
+            // 
+            this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.OneAccrualTab});
+            this.accordionControlElement1.Expanded = true;
+            this.accordionControlElement1.ImageOptions.ImageUri.Uri = "business%20objects/bo_dashboard";
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Text = "Element1";
+            // 
+            // OneAccrualTab
+            // 
+            this.OneAccrualTab.ImageOptions.ImageUri.Uri = "icon%20builder/business_cash";
+            this.OneAccrualTab.Name = "OneAccrualTab";
+            this.OneAccrualTab.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.OneAccrualTab.Text = "Разовые начисления";
+            this.OneAccrualTab.Click += new System.EventHandler(this.OneAccrualTab_Click_1);
             // 
             // fluentDesignFormControl1
             // 
@@ -186,23 +203,6 @@ namespace PayrollPersonnelManagement.View
             this.ribbonControl2.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl2.Size = new System.Drawing.Size(741, 31);
             this.ribbonControl2.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
-            // 
-            // accordionControlElement1
-            // 
-            this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.OneAccrualTab});
-            this.accordionControlElement1.Expanded = true;
-            this.accordionControlElement1.ImageOptions.ImageUri.Uri = "business%20objects/bo_dashboard";
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Text = "Element1";
-            // 
-            // OneAccrualTab
-            // 
-            this.OneAccrualTab.ImageOptions.ImageUri.Uri = "icon%20builder/business_cash";
-            this.OneAccrualTab.Name = "OneAccrualTab";
-            this.OneAccrualTab.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.OneAccrualTab.Text = "Разовые начисления";
-            this.OneAccrualTab.Click += new System.EventHandler(this.OneAccrualTab_Click_1);
             // 
             // Main
             // 

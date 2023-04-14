@@ -11,7 +11,7 @@ namespace PayrollPersonnelManagement.Aplication.Dto
     {
         [Browsable(false)]
         public int Id { get; set; }
-        [DisplayName("Название")]
+        [DisplayName("Наименование")]
         public string Name { get; set; }
         [DisplayName("Надбавка")]
         public decimal Allowance { get; set; }

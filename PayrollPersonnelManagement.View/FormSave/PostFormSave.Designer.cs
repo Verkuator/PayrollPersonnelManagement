@@ -93,7 +93,7 @@ namespace PayrollPersonnelManagement.View.FormSave
             0,
             0,
             0});
-            this.SalaryEdit.Location = new System.Drawing.Point(148, 38);
+            this.SalaryEdit.Location = new System.Drawing.Point(110, 38);
             this.SalaryEdit.Name = "SalaryEdit";
             this.SalaryEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -102,18 +102,18 @@ namespace PayrollPersonnelManagement.View.FormSave
             23283064,
             0,
             0});
-            this.SalaryEdit.Size = new System.Drawing.Size(428, 24);
+            this.SalaryEdit.Size = new System.Drawing.Size(466, 24);
             this.SalaryEdit.StyleController = this.layoutControl1;
             this.SalaryEdit.TabIndex = 5;
             // 
             // NameEdit
             // 
-            this.NameEdit.Location = new System.Drawing.Point(148, 12);
+            this.NameEdit.Location = new System.Drawing.Point(110, 12);
             this.NameEdit.Name = "NameEdit";
             this.NameEdit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.NameEdit.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
             this.NameEdit.Properties.MaskSettings.Set("mask", "\\p{L}+");
-            this.NameEdit.Size = new System.Drawing.Size(428, 22);
+            this.NameEdit.Size = new System.Drawing.Size(466, 22);
             this.NameEdit.StyleController = this.layoutControl1;
             this.NameEdit.TabIndex = 4;
             // 
@@ -134,20 +134,22 @@ namespace PayrollPersonnelManagement.View.FormSave
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.NameEdit;
+            this.layoutControlItem1.CustomizationFormText = "Наименование";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(568, 26);
-            this.layoutControlItem1.Text = "Название должности";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(124, 16);
+            this.layoutControlItem1.Text = "Наименование";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(86, 16);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.SalaryEdit;
+            this.layoutControlItem3.CustomizationFormText = "Надбавка";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(568, 28);
-            this.layoutControlItem3.Text = "Зарплата";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(124, 16);
+            this.layoutControlItem3.Text = "Надбавка";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(86, 16);
             // 
             // layoutControlItem2
             // 
