@@ -24,6 +24,8 @@ namespace PayrollPersonnelManagement.View.FormSave
             {
                 dateEdit1.EditValue = Dto.InDate;
                 HoursEdit.EditValue = Dto.HoursMonth;
+                TotalSum.Text = Dto.Sum + " р";
+                sum = Dto.Sum;
 
                 var EmployeeEditData = (ICollection<EmployeeDto>)EmployeeEdit.Properties.DataSource;
                 if (!EmployeeEditData.Select(c => c.Id).Contains(Dto.EmployeeId))
