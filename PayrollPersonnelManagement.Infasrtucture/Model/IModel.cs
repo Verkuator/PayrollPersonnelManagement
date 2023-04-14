@@ -3,5 +3,6 @@
     public interface IModel
     {
         int Id { get; set; }
+        bool IsDelete { get; set; }
     }
 }

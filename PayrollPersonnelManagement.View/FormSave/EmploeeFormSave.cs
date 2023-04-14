@@ -66,13 +66,24 @@ namespace PayrollPersonnelManagement.View.FormSave
         {
             if(Dto != null)
             {
-                PhisicalFaceEdit.EditValue = ((ICollection<PhisicalFaceDto>)PhisicalFaceEdit.Properties.DataSource).Select((elem, index) => new { elem, index })
+                var PhisicalFaceEditData = (ICollection<PhisicalFaceDto>)PhisicalFaceEdit.Properties.DataSource;
+                if (!PhisicalFaceEditData.Select(c => c.Id).Contains(Dto.PhisicalFaceId))
+                    PhisicalFaceEditData.Add(Dto.PhisicalFace);
+                PhisicalFaceEdit.EditValue = PhisicalFaceEditData.Select((elem, index) => new { elem, index })
                         .First(p => p.elem.Id == Dto.PhisicalFaceId)
                         .elem;
-                PostEdit.EditValue = ((ICollection<PostDto>)PostEdit.Properties.DataSource).Select((elem, index) => new { elem, index })
+
+                var PostEditData = (ICollection<PostDto>)PostEdit.Properties.DataSource;
+                if (!PostEditData.Select(c => c.Id).Contains(Dto.PostId))
+                    PostEditData.Add(Dto.Post);
+                PostEdit.EditValue = PostEditData.Select((elem, index) => new { elem, index })
                         .First(p => p.elem.Id == Dto.PostId)
                         .elem;
-                SubdivisionEdit.EditValue = ((ICollection<SubdivisionDto>)SubdivisionEdit.Properties.DataSource).Select((elem, index) => new { elem, index })
+
+                var SubdivisionEditData = (ICollection<SubdivisionDto>)SubdivisionEdit.Properties.DataSource;
+                if (!SubdivisionEditData.Select(c => c.Id).Contains(Dto.SubdivisionId))
+                    SubdivisionEditData.Add(Dto.Subdivision);
+                SubdivisionEdit.EditValue = SubdivisionEditData.Select((elem, index) => new { elem, index })
                         .First(p => p.elem.Id == Dto.SubdivisionId)
                         .elem;
 

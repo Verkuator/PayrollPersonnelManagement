@@ -36,7 +36,11 @@ namespace PayrollPersonnelManagement.View.FormSave
                 dateEdit1.EditValue = Dto.InDate;
                 HoursEdit.EditValue = Dto.HoursMonth;
                 SumEdit.EditValue = Dto.Sum;
-                EmployeeEdit.EditValue = ((ICollection<EmployeeDto>)EmployeeEdit.Properties.DataSource).Select((elem, index) => new { elem, index })
+
+                var EmployeeEditData = (ICollection<EmployeeDto>)EmployeeEdit.Properties.DataSource;
+                if (!EmployeeEditData.Select(c => c.Id).Contains(Dto.EmployeeId))
+                    EmployeeEditData.Add(Dto.Employee);
+                EmployeeEdit.EditValue = EmployeeEditData.Select((elem, index) => new { elem, index })
                         .First(p => p.elem.Id == Dto.EmployeeId)
                         .elem;
                 

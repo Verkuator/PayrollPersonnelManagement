@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PayrollPersonnelManagement.context;
 
 namespace PayrollPersonnelManagement.Infasrtucture.Migrations
 {
     [DbContext(typeof(PayrollPersonnelManagementContext))]
-    partial class PayrollPersonnelManagementContextModelSnapshot : ModelSnapshot
+    [Migration("20230414132447_AddIsDelete")]
+    partial class AddIsDelete
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

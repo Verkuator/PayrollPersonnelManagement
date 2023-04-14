@@ -12,7 +12,8 @@ namespace PayrollPersonnelManagement.Aplication.AutotMapper
                 .ForMember(c => c.Employee, c => c.Ignore());
 
             CreateMap<OneAccrual, OneAccrualDto>()
-                .ForMember(c => c.Employee, c => c.MapFrom(b => b.Employee.PhisicalFace.ToString()))
+                .ForMember(c => c.EmployeeName, c => c.MapFrom(b => b.Employee.PhisicalFace.ToString()))
+                .ForMember(c => c.Employee, c => c.MapFrom(b => b.Employee))
                 .ReverseMap()
                 .ForMember(c => c.Employee, c => c.Ignore());
 

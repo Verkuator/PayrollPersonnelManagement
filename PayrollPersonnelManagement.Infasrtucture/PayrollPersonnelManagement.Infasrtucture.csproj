@@ -176,6 +176,10 @@
     <Compile Include="Migrations\20230328101449_UpdateLinks.designer.cs">
       <DependentUpon>20230328101449_UpdateLinks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230414132447_AddIsDelete.cs" />
+    <Compile Include="Migrations\20230414132447_AddIsDelete.designer.cs">
+      <DependentUpon>20230414132447_AddIsDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\PayrollPersonnelManagementContextModelSnapshot.cs" />
     <Compile Include="Model\IModel.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

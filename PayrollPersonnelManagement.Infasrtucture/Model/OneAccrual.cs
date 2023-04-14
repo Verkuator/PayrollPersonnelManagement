@@ -11,5 +11,6 @@ namespace PayrollPersonnelManagement.Common
         public decimal Sum { get; set; }
         public int EmployeeId { get; set; }
         public Employee Employee { get; set; }
+        public bool IsDelete { get; set; }
     }
 }
